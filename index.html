@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPF Knowledge Hub — Training Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d2318;
+  --bg2: #122b1e;
+  --bg3: #183526;
+  --card: #1a3d2b;
+  --card2: #204832;
+  --accent: #4eca7f;
+  --accent2: #2ea862;
+  --gold: #e8c96d;
+  --red: #e06060;
+  --white: #f0f8f3;
+  --muted: #89b49a;
+  --border: #2a5038;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+}
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+.screen { display: none; min-height: 100vh; }
+.screen.active { display: flex; flex-direction: column; }
+
+/* ── HOME ── */
+#screen-home {
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(ellipse at 30% 20%, #1e4a32 0%, var(--bg) 60%);
+}
+.home-inner { max-width: 620px; width: 100%; }
+.logo-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 50px; padding: 8px 20px; margin-bottom: 28px;
+  font-size: 13px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
+}
+.logo-badge svg { width: 16px; height: 16px; }
+.home-title { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin-bottom: 12px; }
+.home-title span { color: var(--accent); }
+.home-sub { color: var(--muted); font-size: 16px; margin-bottom: 36px; line-height: 1.6; }
+
+.settings-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; margin-bottom: 20px;
+}
+.settings-card h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 18px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+
+.setting-row { margin-bottom: 20px; }
+.setting-row:last-child { margin-bottom: 0; }
+.setting-label { font-size: 14px; color: var(--muted); margin-bottom: 10px; display: block; }
+.btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-opt {
+  padding: 9px 18px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg2); color: var(--white); font-size: 14px; cursor: pointer;
+  transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+}
+.btn-opt:hover { border-color: var(--accent); color: var(--accent); }
+.btn-opt.active { background: var(--accent2); border-color: var(--accent); color: #fff; }
+
+.mode-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.mode-tab {
+  flex: 1; padding: 14px; border-radius: 12px; border: 1px solid var(--border);
+  background: var(--bg2); cursor: pointer; text-align: center; transition: all 0.2s;
+}
+.mode-tab:hover { border-color: var(--accent); }
+.mode-tab.active { background: var(--card2); border-color: var(--accent); }
+.mode-tab .icon { font-size: 22px; margin-bottom: 6px; }
+.mode-tab .label { font-size: 13px; font-weight: 600; }
+.mode-tab .desc { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+.btn-start {
+  width: 100%; padding: 17px; border-radius: 12px; border: none;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: #0d2318; font-size: 17px; font-weight: 700; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s; letter-spacing: 0.5px;
+}
+.btn-start:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(78,202,127,0.3); }
+
+/* ── LOADING ── */
+#screen-loading {
+  align-items: center; justify-content: center;
+  background: radial-gradient(ellipse at center, #1a3d2b 0%, var(--bg) 70%);
+}
+.loader-inner { text-align: center; }
+.spinner {
+  width: 56px; height: 56px; border: 3px solid var(--border);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.8s linear infinite; margin: 0 auto 24px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loader-inner h3 { font-size: 20px; margin-bottom: 8px; }
+.loader-inner p { color: var(--muted); font-size: 14px; }
+.progress-bar-wrap { width: 280px; height: 4px; background: var(--border); border-radius: 2px; margin: 20px auto 0; }
+.progress-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s; }
+
+/* ── QUIZ ── */
+#screen-quiz {
+  background: var(--bg);
+}
+.quiz-header {
+  background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 16px 28px; display: flex; align-items: center; justify-content: space-between;
+}
+.quiz-progress-text { font-size: 13px; color: var(--muted); }
+.quiz-progress-num { font-size: 18px; font-weight: 700; color: var(--white); }
+.quiz-timer {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 14px; font-size: 18px; font-weight: 700;
+  font-variant-numeric: tabular-nums; min-width: 80px; justify-content: center;
+}
+.quiz-timer.warning { color: #e8a030; border-color: #e8a030; }
+.quiz-timer.danger { color: var(--red); border-color: var(--red); animation: pulse 0.5s ease-in-out infinite alternate; }
+@keyframes pulse { from { opacity: 1; } to { opacity: 0.6; } }
+.timer-icon { font-size: 14px; }
+.progress-track { height: 3px; background: var(--border); }
+.progress-track-fill { height: 100%; background: var(--accent); transition: width 0.3s; }
+
+.quiz-body { flex: 1; padding: 28px; max-width: 760px; margin: 0 auto; width: 100%; }
+
+.persona-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 20px; margin-bottom: 22px;
+  display: flex; align-items: center; gap: 14px;
+}
+.persona-avatar {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--accent2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.persona-name { font-weight: 600; font-size: 16px; }
+.persona-detail { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.persona-category {
+  margin-left: auto; background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--accent);
+  white-space: nowrap; text-transform: uppercase; letter-spacing: 1px;
+}
+
+.question-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; margin-bottom: 20px;
+}
+.question-num { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.question-text { font-size: 17px; line-height: 1.6; font-family: 'Playfair Display', serif; }
+
+.choices { display: flex; flex-direction: column; gap: 10px; }
+.choice-btn {
+  width: 100%; text-align: left; padding: 16px 20px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg2); color: var(--white);
+  font-size: 15px; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  display: flex; align-items: flex-start; gap: 14px; line-height: 1.5;
+}
+.choice-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--card2); }
+.choice-btn.selected { border-color: var(--accent); background: rgba(78,202,127,0.1); }
+.choice-btn.correct { border-color: var(--accent); background: rgba(46,168,98,0.2); }
+.choice-btn.wrong { border-color: var(--red); background: rgba(224,96,96,0.15); }
+.choice-letter {
+  width: 26px; height: 26px; border-radius: 50%; background: var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; flex-shrink: 0; margin-top: 1px;
+}
+.choice-btn.selected .choice-letter { background: var(--accent2); }
+.choice-btn.correct .choice-letter { background: var(--accent2); }
+.choice-btn.wrong .choice-letter { background: var(--red); }
+.choice-text { flex: 1; }
+
+.quiz-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px; }
+.btn-next {
+  padding: 13px 28px; border-radius: 10px; border: none;
+  background: var(--accent2); color: #fff; font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+  display: none;
+}
+.btn-next:hover { background: var(--accent); }
+.btn-skip {
+  padding: 13px 22px; border-radius: 10px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 15px; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.btn-skip:hover { color: var(--white); border-color: var(--white); }
+
+/* ── RESULTS ── */
+#screen-results {
+  background: var(--bg); padding: 40px 20px;
+}
+.results-inner { max-width: 760px; margin: 0 auto; }
+.score-circle-wrap { text-align: center; margin-bottom: 36px; }
+.score-label { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.score-circle {
+  width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 16px;
+  border: 6px solid var(--accent2); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; position: relative;
+  background: var(--card);
+}
+.score-num { font-size: 40px; font-weight: 700; font-family: 'Playfair Display', serif; color: var(--accent); }
+.score-denom { font-size: 14px; color: var(--muted); }
+.score-msg { font-size: 18px; font-weight: 600; }
+
+.results-actions { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+.btn-action {
+  padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s; flex: 1; min-width: 140px; text-align: center;
+}
+.btn-action.primary { border: none; background: var(--accent2); color: #fff; }
+.btn-action.primary:hover { background: var(--accent); }
+.btn-action.secondary { border: 1px solid var(--border); background: transparent; color: var(--white); }
+.btn-action.secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.review-section { margin-top: 8px; }
+.review-section h3 { font-size: 18px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.review-item {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 22px; margin-bottom: 16px;
+}
+.review-item.correct-item { border-left: 4px solid var(--accent2); }
+.review-item.wrong-item { border-left: 4px solid var(--red); }
+.review-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.review-badge {
+  padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+}
+.review-badge.correct-b { background: rgba(46,168,98,0.2); color: var(--accent); }
+.review-badge.wrong-b { background: rgba(224,96,96,0.2); color: var(--red); }
+.review-persona { font-size: 12px; color: var(--muted); }
+.review-q { font-size: 15px; font-weight: 600; margin-bottom: 10px; line-height: 1.5; }
+.review-answer { font-size: 14px; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; }
+.review-answer.your-ans { background: rgba(224,96,96,0.1); border: 1px solid rgba(224,96,96,0.3); }
+.review-answer.correct-ans { background: rgba(46,168,98,0.1); border: 1px solid rgba(46,168,98,0.3); }
+.review-explain { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+.faq-link {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+  color: var(--gold); text-decoration: none; border: 1px solid rgba(232,201,109,0.3);
+  border-radius: 6px; padding: 5px 12px;
+}
+.faq-link:hover { background: rgba(232,201,109,0.1); }
+
+/* ── EMAIL MODE ── */
+#screen-email { background: var(--bg); }
+.email-header {
+  background: var(--card); border-bottom: 1px solid var(--border);
+  padding: 16px 28px; display: flex; align-items: center; justify-content: space-between;
+}
+.email-header h2 { font-size: 20px; }
+.btn-back {
+  padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); font-size: 13px; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.btn-back:hover { color: var(--white); border-color: var(--white); }
+
+.email-body { flex: 1; padding: 28px; max-width: 840px; margin: 0 auto; width: 100%; }
+.email-scenario {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 22px; margin-bottom: 22px;
+}
+.email-scenario-label { font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.email-from { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.email-from-avatar {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--accent2);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.email-from-name { font-weight: 600; }
+.email-from-detail { font-size: 12px; color: var(--muted); }
+.email-subject { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+.email-enquiry { font-size: 15px; line-height: 1.7; color: var(--white); }
+.email-date { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+.email-reply-area { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 22px; }
+.email-reply-area h3 { font-size: 15px; margin-bottom: 18px; color: var(--muted); font-family: 'DM Sans', sans-serif; font-weight: 600; }
+.email-template {
+  font-size: 14px; line-height: 1.8; color: var(--white);
+}
+.email-template .fixed-text { color: var(--muted); }
+.email-template .choice-slot {
+  display: block; margin: 12px 0; padding: 4px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.email-choices { display: flex; flex-direction: column; gap: 8px; margin: 18px 0; }
+.email-choice-btn {
+  width: 100%; text-align: left; padding: 13px 18px; border-radius: 9px;
+  border: 1px solid var(--border); background: var(--bg2); color: var(--white);
+  font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+  display: flex; gap: 12px; align-items: flex-start; line-height: 1.5;
+}
+.email-choice-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--card2); }
+.email-choice-btn.selected { border-color: var(--accent); background: rgba(78,202,127,0.08); }
+.email-choice-btn.correct { border-color: var(--accent); background: rgba(46,168,98,0.15); }
+.email-choice-btn.wrong { border-color: var(--red); background: rgba(224,96,96,0.12); }
+.email-choice-letter {
+  width: 24px; height: 24px; border-radius: 50%; background: var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0;
+}
+.email-choice-btn.selected .email-choice-letter { background: var(--accent2); }
+.email-choice-btn.correct .email-choice-letter { background: var(--accent2); }
+.email-choice-btn.wrong .email-choice-letter { background: var(--red); }
+
+.email-submit-row { display: flex; justify-content: flex-end; gap: 10px; }
+.btn-email-submit {
+  padding: 12px 24px; border-radius: 10px; border: none;
+  background: var(--accent2); color: #fff; font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.btn-email-submit:hover { background: var(--accent); }
+.btn-email-new {
+  padding: 12px 24px; border-radius: 10px; border: 1px solid var(--border);
+  background: transparent; color: var(--white); font-size: 14px; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.btn-email-new:hover { border-color: var(--accent); color: var(--accent); }
+
+.email-explanation {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px; margin-top: 16px; font-size: 14px; line-height: 1.7; display: none;
+}
+.email-explanation.show { display: block; }
+.email-score-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 20px; margin-bottom: 20px; font-size: 14px;
+}
+.email-score-val { font-size: 22px; font-weight: 700; color: var(--accent); font-family: 'Playfair Display', serif; }
+
+/* Misc */
+.tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.tag-am { background: rgba(78,202,127,0.15); color: var(--accent); }
+.tag-mp { background: rgba(232,201,109,0.15); color: var(--gold); }
+.tag-ac { background: rgba(224,96,96,0.15); color: var(--red); }
+.tag-ds { background: rgba(100,160,240,0.15); color: #7ab5ff; }
+.tag-ss { background: rgba(200,150,240,0.15); color: #d4a0ff; }
+
+.difficulty-tag {
+  display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px; margin-left: 8px;
+}
+.diff-easy { background: rgba(46,168,98,0.2); color: var(--accent); }
+.diff-medium { background: rgba(232,201,109,0.2); color: var(--gold); }
+.diff-hard { background: rgba(224,96,96,0.2); color: var(--red); }
+
+.hidden { display: none !important; }
+.fade-in { animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+.stat-box {
+  flex: 1; min-width: 80px; background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; text-align: center;
+}
+.stat-box .stat-val { font-size: 26px; font-weight: 700; font-family: 'Playfair Display', serif; }
+.stat-box .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.stat-box.green .stat-val { color: var(--accent); }
+.stat-box.red .stat-val { color: var(--red); }
+.stat-box.gold .stat-val { color: var(--gold); }
+
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div id="screen-home" class="screen active">
+  <div class="home-inner fade-in">
+    <div class="logo-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      CPF Training Platform
+    </div>
+    <h1 class="home-title">Knowledge<br><span>Assessment</span> Hub</h1>
+    <p class="home-sub">Master CPF policies through scenario-based quizzes and email reply training. Practice handling real member enquiries across 5 categories.</p>
+
+    <div class="mode-tabs">
+      <div class="mode-tab active" data-mode="quiz" onclick="selectMode('quiz', this)">
+        <div class="icon">📝</div>
+        <div class="label">Quiz Mode</div>
+        <div class="desc">20 MCQ questions</div>
+      </div>
+      <div class="mode-tab" data-mode="email" onclick="selectMode('email', this)">
+        <div class="icon">✉️</div>
+        <div class="label">Email Reply Mode</div>
+        <div class="desc">Draft member replies</div>
+      </div>
+    </div>
+
+    <div class="settings-card" id="quiz-settings">
+      <h3>Quiz Settings</h3>
+      <div class="setting-row">
+        <span class="setting-label">Difficulty</span>
+        <div class="btn-group">
+          <button class="btn-opt active" onclick="setSetting('difficulty','easy',this)">Easy</button>
+          <button class="btn-opt" onclick="setSetting('difficulty','medium',this)">Medium</button>
+          <button class="btn-opt" onclick="setSetting('difficulty','hard',this)">Hard</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">Timer per question</span>
+        <div class="btn-group">
+          <button class="btn-opt active" onclick="setSetting('timer',0,this)">No timer</button>
+          <button class="btn-opt" onclick="setSetting('timer',30,this)">30s</button>
+          <button class="btn-opt" onclick="setSetting('timer',60,this)">60s</button>
+          <button class="btn-opt" onclick="setSetting('timer',90,this)">90s</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span class="setting-label">Category focus</span>
+        <div class="btn-group">
+          <button class="btn-opt active" onclick="setSetting('category','all',this)">All</button>
+          <button class="btn-opt" onclick="setSetting('category','Accounts Management',this)">Accounts</button>
+          <button class="btn-opt" onclick="setSetting('category','Member Particulars',this)">Particulars</button>
+          <button class="btn-opt" onclick="setSetting('category','Account Closure',this)">Closure</button>
+          <button class="btn-opt" onclick="setSetting('category','Digital Services',this)">Digital</button>
+          <button class="btn-opt" onclick="setSetting('category','SSS',this)">SSS</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card" id="email-settings" style="display:none">
+      <h3>Email Mode Settings</h3>
+      <div class="setting-row">
+        <span class="setting-label">Scenario complexity</span>
+        <div class="btn-group">
+          <button class="btn-opt active" onclick="setSetting('emailDiff','simple',this)">Simple (1 topic)</button>
+          <button class="btn-opt" onclick="setSetting('emailDiff','mixed',this)">Mixed (2–3 topics)</button>
+          <button class="btn-opt" onclick="setSetting('emailDiff','complex',this)">Complex (all topics)</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-start" onclick="startSession()">Begin Session →</button>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div id="screen-loading" class="screen">
+  <div class="loader-inner">
+    <div class="spinner"></div>
+    <h3>Generating Questions</h3>
+    <p id="loading-status">Preparing your personalised quiz...</p>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="loading-bar" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-header">
+    <div>
+      <div class="quiz-progress-text">Question</div>
+      <div class="quiz-progress-num"><span id="q-current">1</span> / <span id="q-total">20</span></div>
+    </div>
+    <div id="timer-display" class="quiz-timer hidden">
+      <span class="timer-icon">⏱</span>
+      <span id="timer-val">60</span>
+    </div>
+    <button class="btn-skip" onclick="goHome()">✕ Exit</button>
+  </div>
+  <div class="progress-track">
+    <div class="progress-track-fill" id="quiz-progress-fill" style="width:0%"></div>
+  </div>
+  <div class="quiz-body">
+    <div class="persona-card fade-in" id="persona-card">
+      <div class="persona-avatar" id="persona-avatar">👤</div>
+      <div>
+        <div class="persona-name" id="persona-name">—</div>
+        <div class="persona-detail" id="persona-detail">—</div>
+      </div>
+      <div class="persona-category" id="persona-category">—</div>
+    </div>
+    <div class="question-card fade-in" id="question-card">
+      <div class="question-num" id="question-num">Question 1 · Easy</div>
+      <div class="question-text" id="question-text">Loading...</div>
+    </div>
+    <div class="choices fade-in" id="choices-container"></div>
+    <div class="quiz-actions">
+      <button class="btn-skip" id="btn-skip" onclick="skipQuestion()">Skip →</button>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="screen-results" class="screen">
+  <div class="results-inner fade-in">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px">
+      <h2 style="font-size:28px">Quiz Results</h2>
+      <button class="btn-back" onclick="goHome()">← Home</button>
+    </div>
+    <div class="score-circle-wrap">
+      <div class="score-label">Your Score</div>
+      <div class="score-circle">
+        <div class="score-num" id="result-score">0</div>
+        <div class="score-denom" id="result-denom">/ 20</div>
+      </div>
+      <div class="score-msg" id="result-msg">—</div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box green"><div class="stat-val" id="stat-correct">0</div><div class="stat-label">Correct</div></div>
+      <div class="stat-box red"><div class="stat-val" id="stat-wrong">0</div><div class="stat-label">Wrong</div></div>
+      <div class="stat-box gold"><div class="stat-val" id="stat-skipped">0</div><div class="stat-label">Skipped</div></div>
+      <div class="stat-box"><div class="stat-val" id="stat-time">—</div><div class="stat-label">Avg time</div></div>
+    </div>
+    <div class="results-actions">
+      <button class="btn-action primary" onclick="startSession()">New Quiz</button>
+      <button class="btn-action secondary" id="btn-toggle-review" onclick="toggleReview()">Show Review ▼</button>
+      <button class="btn-action secondary" onclick="goHome()">Change Settings</button>
+    </div>
+    <div class="review-section" id="review-section" style="display:none"></div>
+  </div>
+</div>
+
+<!-- EMAIL MODE -->
+<div id="screen-email" class="screen">
+  <div class="email-header">
+    <h2>✉️ Email Reply Training</h2>
+    <button class="btn-back" onclick="goHome()">← Back to Home</button>
+  </div>
+  <div class="email-body">
+    <div class="email-score-bar">
+      <div>Session Score <span class="difficulty-tag diff-medium" id="email-diff-tag">Mixed</span></div>
+      <div><span class="email-score-val" id="email-score-val">0</span> / <span id="email-score-total">0</span> correct</div>
+    </div>
+    <div class="email-scenario fade-in" id="email-scenario-box">
+      <div class="email-scenario-label">📬 Member Enquiry</div>
+      <div class="email-from">
+        <div class="email-from-avatar" id="email-avatar">👤</div>
+        <div>
+          <div class="email-from-name" id="email-sender">Loading...</div>
+          <div class="email-from-detail" id="email-sender-detail">—</div>
+        </div>
+      </div>
+      <div class="email-subject" id="email-subject">—</div>
+      <div class="email-enquiry" id="email-enquiry">Generating scenario...</div>
+      <div class="email-date" id="email-date">—</div>
+    </div>
+
+    <div class="email-reply-area fade-in" id="email-reply-area">
+      <h3>Select the best opening paragraph for your reply:</h3>
+      <div class="email-template">
+        <div class="fixed-text">Dear <span id="et-salutation">Mr/Ms</span> <span id="et-lastname">—</span>,<br><br>
+        We refer to your enquiry of <span id="et-date">—</span>.<br><br></div>
+        <div class="choice-slot"><em style="color:var(--muted)">[Select the best response paragraph below]</em></div>
+      </div>
+      <div class="email-choices" id="email-choices-container"></div>
+      <div class="email-explanation" id="email-explanation"></div>
+      <div class="email-submit-row" style="margin-top:16px">
+        <button class="btn-email-new" onclick="newEmailScenario()">New Scenario</button>
+        <button class="btn-email-submit" id="btn-email-submit" onclick="submitEmail()">Submit Reply</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// FAQ DATA (embedded from Excel)
+// ═══════════════════════════════════════════════════
+const FAQ_DATA = {"Accounts Management": [{"q": "How do I get a document that shows I do not have a CPF account?", "a": "You can login to my cpf digital services via your Singpass. You will see a message \"No information can be displayed here as you do not have a CPF account.\"\n \n You can click on located above the graphic, to save or print a copy."}, {"q": "What is my CPF account number?", "a": "If you are currently/were previously a Singapore Citizen or a Permanent Resident, your CPF account number is the Unique Identification Number (UIN) stated on your NRIC, Citizenship Certificate, or entry permit (e.g. S1234567F or T1234567F).\n \n Otherwise, your CPF account number could begin with the letter ‘S’ or ‘T’, followed by the letter ‘A’, ‘B’, ‘C’, ‘D’ or ‘F’ (e.g. SA123456D or TC987654B)."}, {"q": "When do I have a CPF account?", "a": "Your CPF account is automatically created when a first top-up or CPF contribution is received."}, {"q": "How do I view my CPF Yearly Statement of Account?", "a": "You can view, print and/or download your CPF Yearly Statement of Account via Singpass login at my cpf digital services. Please note that we do not provide the service of retrieving CPF statements beyond the past 10 years. Please download your statements in a timely manner to ensure that you always have a copy for your own records. To find your downloaded documents on mobile devices, refer to this FAQ.\n \n For non-Singapore Citizens and non-Permanent Residents, please refer to our FAQ for more information."}, {"q": "I would like a hardcopy of my CPF Yearly Statement of Account (YSOA). Where can I get it?", "a": "As part of our efforts to go green, CPF Board has transformed the Yearly Statement of Account (YSOA) into a digital statement. We strongly encourage you to view your YSOA online to enjoy a richer and more interactive user experience.\n  \n You may log in to my cpf digital services to view, download and save/print your YSOA for the past 10 years by clicking the \"PDF icon\". To find your downloaded documents on mobile devices, refer to this FAQ."}, {"q": "How do I read my Digital Yearly Statement of Account?", "a": "You can view the guide on the Digital Yearly Statement of Account (YSOA) in your preferred language below:\n  \n YSOA Illustrated Summary Guide – English (PDF, 0.33MB)\n  \n YSOA Illustrated Summary Guide – Malay (PDF, 0.35MB)\n  \n YSOA Illustrated Summary Guide – Mandarin (PDF, 0.55MB)\n  \n YSOA Illustrated Summary Guide – Tamil (PDF, 0.37MB)"}, {"q": "What is the total employment contribution I received for the year?", "a": "You can sum up the “Employee Contribution” under the “You” category and “Employer Contribution” under “Employer” category to derive the total employment contributions for the year.\n  \n For more details on the rates, see rates for Singapore Citizens and Singapore Permanent Residents."}, {"q": "How do I derive the breakdown of employer and employee's contributions indicated on my Yearly Statement of Account?", "a": "The breakdown of the employer and employee's CPF contributions is meant to be indicative as general assumptions were used in the derivation. They are derived based on the amount submitted by your employer(s) in the past year as well as the assumptions below:\n  \n 1. Employee is a:\n  \n Singapore Citizen; or\n 3rd year and onwards Singapore Permanent Resident; or\n 1st and 2nd year Singapore Permanent Resident who has jointly applied with employer to pay full employer and employee CPF contribution rates; \n 2. Employee with multiple employments did not apply to limit their share of contribution on Ordinary Wage;\n  \n 3. Multiple CPF contributions made by the employer in the particular month were calculated on a per transaction basis rather than on an aggregated basis;\n  \n 4. The following are excluded in the breakdown: \n Adjustment(s) and refund(s) requested by employer(s);\n Voluntary CPF contributions made by your employer(s) or yourself; and\n MediSave contributions as a Self-employed Person. \n To determine the exact breakdown of your CPF contributions based on your total wages per month; please use our CPF contribution calculator."}, {"q": "How do I derive the interest indicated in my Yearly Statement of Account?", "a": "Please refer to the CPF interest page for more information on CPF interest. Details on extra interest and how CPF interest rates are determined can be found in our FAQs."}, {"q": "How can I check my Government cash grants or benefits received for the year?", "a": "We have moved records of CPF-administered cash grants from the Yearly Statement of Account to YourBenefits@LifeSG, as it provides a more comprehensive view of common Government-provided benefits you have received, covering schemes from multiple agencies including CPF Board. You would require Singpass to login. Please refer to the FAQ for more details."}, {"q": "How do I save or download a copy of my Digital Yearly Statement of Account?", "a": "On the Digital Yearly Statement of Account (YSOA) page, click on “PDF icon” to view, download and save a copy of your YSOA. To find your downloaded documents on mobile devices, refer to this FAQ."}, {"q": "How do I stop receiving my hardcopy Yearly Statement of Account?", "a": "As part of our efforts to go green, we have transformed the Yearly Statement of Account (YSOA) into a digital statement. If you wish to go green and stop receiving a hardcopy YSOA, please submit a request to us. Singpass login is required."}, {"q": "Is the notification from CPF Board relating to the Yearly Statement of Account (YSOA) legitimate? Why am I receiving the notification?", "a": "Notifications are sent to members who have registered their contact details with CPF Board.\n  \n To verify whether the notification is legitimate, check that the notifications are sent from the following sender:\n \n Mode of notification received\n \n Details\n \n Email\n \n ends with \"@e.cpf.gov.sg\"\n \n SMS\n \n gov.sg\n \n The SMS will also begin with \"Central Provident Fund Board\".\n \n CPF Mobile App\n \n CPF Mobile\n \n  \n Find out how you can protect yourself from phishing links."}, {"q": "I am the appointed donee/deputy for my next-of-kin. How do I request for the Yearly Statement of Account (YSOA) on behalf of my next-of-kin?", "a": "If you are the appointed donee or deputy, you can consider setting up the Singpass Multi-User SMS 2FA via the links below:\n  \n - Application for Donees with LPA\n - Application for Deputies with Court Order\n \n This allows you to conveniently access and view your next-of-kin’s Yearly Statement of Account (YSOA) without having to repeatedly provide supporting documents. \n  \n You will have to provide the necessary supporting documents for the one-time set-up via the links above. Please refer to Singpass FAQs for more information on Multi-User SMS 2FA.\n  \n If you are unable to set up the Singpass Multi-User SMS 2FA, you can Write to us to request for your next-of-kin’s statement on their behalf, by providing the following documents:\n  \n - For Donee appointed under a Lasting Power of Attorney (LPA): Submit the LPA document and a medical report certifying your next-of-kin’s loss of mental capacity\n - For Deputy appointed by the Singapore Court: Submit the Deputyship court order"}, {"q": "What are the CPF interest rates?", "a": "CPF Interest Rates (1 January 2026 to 31 March 2026)\n  \n Ordinary Account Special, MediSave and Retirement Account\n Interest Rate 2.5% 4%\n To help boost retirement savings, the Government pays extra interest on the first $60,000 of your combined CPF balances, which is capped at $20,000 for Ordinary Account (OA). Please refer to details on extra interest in the table below.\n  \n Age Extra interest\n Below 55 years old 1% per annum on the first $60,000 (capped at $20,000 for OA)\n 55 years old and above 2% per annum on the first $30,000, 1% per annum on the next $30,000\n (capped at $20,000 for OA)\n Extra interest earned on OA savings go into your Special Account (SA) or Retirement Account (RA) to enhance your retirement savings. If you are participating in the CPF LIFE scheme, you will still earn the extra interest on your combined CPF balances, including the savings used for CPF LIFE.\n  \n Please refer to the respective links for more information on the CPF interest rates and historical CPF interest rates (PDF, 0.16MB)."}, {"q": "How are CPF interest rates determined?", "a": "Savings in the Ordinary Account (OA) earn the 3-month average of major local banks’ interest rates, subject to the legislated minimum interest of 2.5% per annum. This is reviewed quarterly.\n  \n Savings in the Special, MediSave and Retirement Account (SMRA) earn the 12-month average yield of 10-year Singapore Government Securities (10YSGS) plus 1%, subject to the current floor interest rate of 4% per annum. This is reviewed quarterly.\n  \n Please refer to the CPF interest rates and MOF website for more information.\n  \n Computation of CPF OA Interest Rate and HDB Mortgage Rate for 1 January 2026 to 31 March 2026 \n  \n Average banks' interest rate from August 2025 to October 2025 0.36% (see note) \n CPF OA interest rate for January 2026 to March 2026 2.50% per annum (legislated minimum rate) \n Plus: Fee to cover Cost of Loan Administration 0.10%\n HDB mortgage rate for January 2026 to March 2026 2.60% per annum\n  \n Note:\n 12-month deposit rate\n \n (% per annum)\n \n Savings Rate\n \n (% per annum)\n \n Average\n \n (% per annum)\n \n Month / Year DBS1 OCBC2 UOB3 DBS4 OCBC5 UOB6 Using the 80FD:20SD formula\n 31 August 2025 0.0500 0.1000 1.5000 0.0500 0.0500 0.0500 0.4500\n 30 September 2025 0.0500 0.1000 1.0000 0.0500 0.0500 0.0500 0.3167\n 31 October 2025 0.0500 0.1000 1.0000 0.0500 0.0500 0.0500 0.3167\n  \n 1Balances of $20,000 to < $50,000\n 2Balances > $20,000 to $50,000\n 3Balances < $50,000\n 4Balances > $10,000 to $100,000 (AUTO-SAVE Account)\n 5Entire Account Balance (EASI-SAVE Account) \n 6Balances > $15,000 to $100,000 (UNIPLUS Account)\n  \n Computation of CPF SMRA Interest Rate for 1 January 2026 to 31 March 2026 \n  \n Average yield of 10YSGS from November 2024 to October 2025 2.43%\n Plus: 1.00% 1.00%\n Computed CPF SMRA interest rate for January 2026 to March 2026 3.43%\n CPF SMRA interest rate floor for January 2026 to March 2026 4.00%\n CPF SMRA interest rate for January 2026 to March 2026 4.00% per annum\n  \n \n Source: Yields of 10-Year Singapore Government Securities are obtained from mas.gov.sg/bonds-and-bills"}, {"q": "How much extra interest can I earn on my CPF savings?", "a": "To help boost retirement savings, the Government pays extra interest on the first $60,000 of your combined CPF balances, which is capped at $20,000 for Ordinary Account (OA). Extra interest is structured so that all CPF members benefit, and members with lower balances benefit more. The amount of extra interest paid to you would depend on your combined CPF balances and age.\n  \n If you are below 55 years old, you will earn an extra interest of 1% per annum on the first $60,000 of your combined CPF balances (capped at $20,000 for OA). The extra interest earned on your Special Account (SA) and MediSave Account (MA) balances will go to the respective accounts, while the extra interest earned on your OA balances will go into your SA to enhance your retirement savings.\n  \n If you are 55 years old and above, you will earn an extra interest of 2% per annum on the first $30,000 and 1% per annum on the next $30,000 of your combined CPF balances (capped at $20,000 for OA). The extra interest earned on your Retirement Account (RA) and MA balances will go to the respective accounts, while the extra interest earned on your OA balances will go into your RA to enhance your retirement savings. If you have joined the CPF LIFE scheme, the extra interest earned will be paid into your RA or accumulated with the interest earned on the CPF LIFE premiums of all CPF LIFE members.\n  \n How is my combined CPF balance computed?\n  \n Your accounts are used to compute your combined CPF balances in the following order:\n  \n - 1st: Retirement Account (RA), including any CPF LIFE premium balance\n  \n - 2nd: OA, with a cap of $20,000*\n  \n - 3rd: Special Account (SA)\n  \n - 4th: MediSave Account (MA)\n  \n *A cap of $20,000 from OA is imposed because OA savings are short-term in nature and can be withdrawn on demand for a few purposes such as housing and education."}, {"q": "How is my CPF interest computed and credited into my accounts?", "a": "CPF interest is computed monthly. It is credited to your respective accounts by the following year and compounded annually.\n  \n CPF balances used for interest computation are affected by the transactions in your account. For instance, contributions (including refunds) received this month start earning interest next month. Withdrawals/deductions in this month will not earn interest from this month onwards.\n  \n There are strict procedures in place to ensure the accuracy of members’ CPF accounts and transactions (including interest payments). To further ensure that our system is sound and robust, our statutory auditor performs regular reviews of formulas and computations in our systems for accuracy, and conducts independent verifications of the transactions and account balances."}, {"q": "Will the interest rates on savings in the Special, MediSave and Retirement Account be maintained at a floor rate?", "a": "To help CPF members grow their savings, the Government has decided to further extend the 4% floor rate for interest earned on all Special, MediSave and Retirement Account (SMRA) savings for another year until 31 December 2026.\n  \n SMRA savings will earn a minimum 4% interest rate per annum until 31 December 2026.\n  \n Please refer to our FAQ on how CPF interest rates are determined for more information."}, {"q": "Who is exempted from receiving CPF contributions?", "a": "Employees should receive CPF contributions from their employers. However, the following employees are exempted from receiving CPF contributions:\n \n 1. Students who fulfil exemption criteria. Find out more about Who you need to pay CPF contributions for (PDF, 0.2MB) under the header “Students”.\n \n 2. Foreigners. Persons who are not Singapore Citizens or Permanent Residents.\n \n 3. Domestic employees with employment not exceeding 14 hours in any week. Examples include cooks, maids and gardeners.\n \n 4. Employees of the United Nations (UN) Organisation, or any agency, institution or related organisation of the UN Organisation that is located in Singapore. Please refer to the UN System Chart (PDF, 0.08 MB) for the list of organisations that are within the United Nations System.\n \n 5. Employees of any of the following entities, which is part of the World Bank Group (a specialised agency of the United Nations Organisation), that is located in Singapore:\n i. International Centre for Settlement of Investment Disputes; or\n ii. Multilateral Investment Guarantee Agency\n \n 6. Employees of the Organisation for Economic Cooperation and Development, who is assigned to work for the International Energy Agency Regional Cooperation Centre that is located in Singapore.\n \n 7. Seamen who are Singapore Citizens and are employed: \n i. in a Swedish ship on terms and conditions of service applicable to Swedish seamen; or\n ii. in a Norwegian ship on terms and conditions of service applicable to Norwegian seamen; or\n iii. by the East Asiatic Co. Ltd. of Denmark on terms and conditions of the agreement between the Danish Shipowners’ Association and the Seamen’s Union in Denmark."}, {"q": "I have just obtained my Singapore Permanent Resident status. Do I need to contribute CPF?", "a": "Yes, CPF contributions are payable from the day you obtained your Singapore Permanent Resident (SPR) status.\n \n In the first two years of obtaining the SPR status, you and your employer will contribute to CPF at graduated rates to help you adjust to the lower take-home pay. However, you and your employer have the option to apply jointly to CPF Board to contribute at higher rates."}, {"q": "How do I determine the year of my Singapore Permanent Resident status for the purpose of CPF contributions?", "a": "The year of Singapore Permanent Resident (SPR) status determines your CPF contribution rates as an SPR.\n \n The first year rate applies from the day you obtain your SPR status. This refers to the date indicated on your entry permit (Form 5/5A) issued by the Immigration and Checkpoints Authority of Singapore (ICA). It ends on the last day of the month of your first anniversary of SPR conversion.\n \n The second and third year rates apply from the month following the anniversary of your conversion to an SPR.\n \n Example\n \n If you have obtained your SPR status on 15 January 2020, the start and end dates for first, second and third year of obtaining SPR status are shown in the table below:"}, {"q": "I have just converted from a Singapore Permanent Resident to a Singapore Citizen. When should I apply the CPF contribution rates applicable to Singapore Citizens?", "a": "The CPF contribution rates for a Singapore Citizen will apply from the date you have converted to a Singapore Citizen.\n \n For Ordinary Wages (OW), your employer will need to pro-rate your OW and apply the appropriate rates to determine your CPF contributions. Your employer can write to us for assistance on the computation if the OW for the month exceeds the OW ceiling or if the pro-rated wages are below $750.\n \n For Additional Wages (AW), your employer will need to apply the applicable contribution rate depending on when the AW is payable to you.\n \n Example:\n \n Assuming you are in your second year of Singapore Permanent Resident (SPR) status and become a Singapore Citizen on 15 June 2020:\n \n For OW\n \n The second year SPR rate should be applied on the pro-rated wages for the period 1 June to 14 June 2020.\n The Singapore Citizen rate should be applied on the pro-rated wages for the period of 15 June to 30 June 2020.\n For AW\n \n The second year SPR rate should be applied on the AW if it is payable between 1 June and 14 June 2020.\n The Singapore Citizen rate should be applied on the AW if it is payable between 15 June and 30 June 2020."}, {"q": "What is the minimum age to qualify for CPF contributions?", "a": "As an employee, you are required to pay CPF contributions as long as you are a Singapore Citizen or Permanent Resident, and are employed in Singapore under a contract of service."}, {"q": "I have successfully applied for a new Re-Entry Permit and retained my Singapore Permanent Resident status. How will this impact my CPF contributions?", "a": "As a Singapore Permanent Resident (SPR), you are required to make CPF contributions on wages earned in Singapore. CPF contributions are not payable for employees who are neither Singapore Citizens nor SPRs.\n \n Determining your Year of SPR status\n Your CPF contribution rates as an SPR depend on how long you have held Permanent Resident status.\n \n First-year rate: Applies from the day you obtain your SPR status, [i.e. the date indicated on your Entry Permit (Form 5/5A) issued by the Immigration & Checkpoints Authority (ICA)] until the last day of the month of your first anniversary of SPR.\n \n Second-year rate: Applies from the month following your first anniversary as an SPR until the last day of the month of your second anniversary.\n \n Third-year rate: Applies from the month following your second anniversary as an SPR onwards.\n \n Example\n If you have obtained your SPR status on 15 January 2026, the start and end dates for first, second and third year of obtaining SPR status are shown in the table below: \n \n Year of obtaining SPR status\n Starts from\n Ends on\n First year\n 15 January 2026\n 31 January 2027\n Second year\n 1 February 2027\n 31 January 2028\n Third year\n 1 February 2028\n Not applicable"}, {"q": "How can I top up to myself, my children or my loved ones' 3 CPF accounts?", "a": "You can make a top up via Top up your 3 CPF accounts using PayNow QR1.\n \n You will be prompted to key in your Recipient's NRIC/CPF Account Number if you are making a top-up on another person’s behalf.\n \n All applications and payments should reach CPF Board by the last day of the calendar year for it to be counted as the year’s CPF Annual Limit. Backdating of top-ups to previous years is not allowed.\n \n Tax relief is only applicable if you are a self employed-person with assessable net trade income for the year of assessment, when you make a self top-up or receive a top-up from another person.\n \n You can find out more on the different voluntary top-ups.\n \n For self-employed persons, amounts allocated to your MediSave Account from these top-ups will be used to offset your MediSave payable and meet the MediSave requirement for Workfare Income Supplement (if eligible).\n \n 1Subsequent or duplicate payments made using the same PayNow QR code will be refunded. To ensure that your cash top-ups are processed successfully, please only scan the PayNow QR code and make payment once. You will need to submit a new application each time you wish to make another top-up."}, {"q": "How can I top up to myself, my children or my loved ones' MediSave Account?", "a": "You can make a top-up via Top up MediSave Account using PayNow QR1.\n \n You will be prompted to key in your Recipient’s NRIC/CPF Account Number if you are making a top-up to your loved ones.\n \n You are encouraged to make top-ups early. All applications and payments should reach CPF Board by the last day of the calendar year to enjoy tax relief for the following year’s Tax Assessment. Backdating of top-ups to previous years is not allowed.\n \n Please note that there is no tax relief for top-ups made to your children. Find out more about tax relief for your MediSave top-ups.\n \n You can find out more on which voluntary top-up is applicable to you.\n \n To make MediSave top-ups to yourself or a loved one, you are required to have fully settled or be on a monthly instalment plan for your MediSave payable under the Self-Employed Scheme. You may make payment for your MediSave payable via the payment modes.\n \n 1Subsequent or duplicate payments made using the same PayNow QR code will be refunded. To ensure that your cash top-ups are processed successfully, please only scan the PayNow QR code and make payment once. You will need to submit a new application each time you wish to make another top-up."}, {"q": "How do I make a top up to my MediSave Account?", "a": "You can make a top up to your MediSave Account using the Top up MediSave Account form and complete your payment using PayNow QR.\n \n We have guides available in multiple languages to help you through the process:\n \n Guide (PDF) \n English\n Chinese\n Malay\n Tamil"}, {"q": "What happens if I do not have the Basic Healthcare Sum when I turn age 65?", "a": "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account (MA) to cover your basic subsidised healthcare expenses in old age and is the maximum amount you can hold in your MA. If your balance is less than the BHS at age 65, you are not required to top up your MA. However, if you wish to build up your healthcare savings, you can choose to top up your MA with cash. You can do so via this form to make cash top-ups to your own or your loved ones’ MA."}, {"q": "If I am 66 years old in 2026 and my applicable Basic Healthcare Sum (BHS) is $75,500, am I allowed to maintain a balance greater than my applicable BHS in my MediSave Account?", "a": "You can only save up to your applicable Basic Healthcare Sum (BHS) in your MediSave Account (MA), which is the maximum amount you can hold in your MA. The BHS is designed to cover your basic subsidised healthcare needs in old age and to prevent the excessive accumulation of funds in your MA."}, {"q": "What is the Basic Healthcare Sum?", "a": "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account (MA) to cover your basic subsidised healthcare needs in old age and is the maximum amount you can hold in your MA.\n \n For CPF members below age 65, the BHS is adjusted annually to keep pace with rising healthcare consumption. This ensures that the BHS remains relevant when each cohort reaches retirement age.\n \n Once CPF members reach age 65, their BHS is fixed and will remain unchanged for the rest of their lives.\n \n For CPF members below age 65 in 2026\n The prevailing BHS is $79,000 , and will be adjusted yearly.\n \n For CPF members who turn age 65 in 2026\n The cohort BHS is $79,000 and will remain fixed thereafter.\n \n The table below summarises the BHS for each cohort that turned age 65 in the respective years:\n \n Age in 2026\n Year when cohort turned age 65\n Cohort BHS\n (fixed for life)\n 65\n 2026\n $79,000\n 66\n 2025\n $75,500\n 67\n 2024\n $71,500\n 68\n 2023\n $68,500\n 69\n 2022\n $66,000\n 70\n 2021\n $63,000\n 71\n 2020\n $60,000\n 72\n 2019\n $57,200\n 73\n 2018\n $54,500\n 74\n 2017\n $52,000\n 75 and above\n 2016 or earlier\n $49,800"}, {"q": "Is there a maximum amount that I can save in my MediSave Account?", "a": "You can save up to the prevailing Basic Healthcare Sum (BHS) in your MediSave Account (MA) if you have not turned age 65. It is the maximum amount you can hold in your MA.\n \n From 1 January 2026, the BHS is $79,000 for all CPF members aged 65 years and below. The BHS applicable to you will be adjusted yearly to keep pace with rising healthcare consumption until you turn age 65. For example, if you are aged 65 years old in 2026, your applicable BHS will be fixed at $79,000 for the rest of your life. The table below summarises the BHS for each cohort that turned aged 65 in the respective years:\n \n Age in 2026 Year when cohort turned age 65 Cohort BHS(fixed for life)\n 65 2026 $79,000\n 66 2025 $75,500\n 67 2024 $71,500\n 68 2023 $68,500\n 69 2022 $66,000\n 70 2021 $63,000\n 71 2020 $60,000\n 72 2019 $57,200\n 73 2018 $54,500\n 74 2017 $52,000\n 75 and above 2016 or earlier $49,800"}, {"q": "If I work after age 65, do I still need to contribute to my MediSave Account?", "a": "As long as you continue to work, you will need to contribute to your MediSave Account (MA). These contributions will accumulate up to the Basic Healthcare Sum and help cover your medical expenses during retirement."}, {"q": "How is the Basic Healthcare Sum determined?", "a": "The Basic Healthcare Sum is an estimate of your likely medical expenses from age 65 onwards. It is determined based on past trends in MediSave usage among the elderly and is intended to cover your own basic subsidised healthcare expenses, as well as health and long-term care insurance premiums during old age."}, {"q": "Why is the Basic Healthcare Sum adjusted yearly?", "a": "The Basic Healthcare Sum (BHS) is adjusted annually for cohorts below age 65 to ensure it remains relevant and keeps pace with rising healthcare consumption, especially with increasing healthcare costs and expansions in MediSave usage.\n \n For each cohort, the BHS is fixed from age 65 onwards and remains the same for the rest of their lives. This helps members save adequately for their basic subsidised healthcare needs in old age, while providing certainty on the amount they need to set aside in their MediSave Account."}, {"q": "What is the Basic Healthcare Sum when I turn 65 years old?", "a": "For each cohort turning 65 years old, the applicable Basic Healthcare Sum (BHS) is fixed at that year's amount for the rest of their life. It is the maximum amount you can hold in your MediSave Account (MA). For example, if you are 65 years old in 2026, your applicable BHS is $79,000 and will remain unchanged for life.\n \n The table below summarises the BHS for each cohort that turned age 65 in the respective years:\n \n \n Age in 2026\n \n Year when cohort turned age 65\n \n Cohort BHS\n \n (fixed for life)\n \n 65\n \n 2026 $79,000\n 66\n \n 2025 $75,500\n 67\n \n 2024 $71,500\n 68\n \n 2023 $68,500\n 69\n \n 2022\n \n $66,000\n \n 70\n \n 2021\n \n $63,000\n \n 71\n \n 2020\n \n $60,000\n \n 72\n \n 2019\n \n $57,200\n \n 73\n \n 2018\n \n $54,500\n \n 74\n \n 2017\n \n $52,000\n \n 75 and above\n \n 2016 or earlier\n \n $49,800"}, {"q": "Do I have to top up my MediSave Account to the Basic Healthcare Sum if I start withdrawing my CPF savings from age 55?", "a": "You do not need to top up your MediSave Account (MA) when you begin withdrawing your CPF savings from age 55. The Basic Healthcare Sum (BHS) is the estimated savings you need in your MA to cover your basic subsidised healthcare needs in old age and is the maximum amount you can hold in your MA."}, {"q": "If I do not have my cohort’s Basic Healthcare Sum when I reach my Payout Eligibility Age and I intend to start receiving my retirement payouts, do I need to top up my MediSave Account?", "a": "You do not need to top up your MediSave Account (MA) to the Basic Healthcare Sum (BHS) in order to receive your retirement payouts. The BHS is the estimated savings you need in your MA to cover your basic subsidised healthcare needs in old age and is the maximum amount you can hold in your MA."}, {"q": "As an employee, how much do I contribute to my MediSave Account (MA)?", "a": "A portion of your monthly CPF contributions is allocated to your MediSave Account depending on your age group. You can refer to the CPF contribution and allocation rates."}, {"q": "I am a government pensioner receiving lifelong medical benefits. Is the Basic Healthcare Sum (BHS) applicable to me?", "a": "The Basic Healthcare Sum (BHS) for government pensioners differs from that of other CPF members in the same cohort, depending on the coverage of their Post-Retirement Medical Benefits Schemes.\n \n The BHS does not apply to government pensioners under the Fixed Amount on Ward Charges Scheme (FAW). All working contributions allocated to their MediSave Account (MA) and any MediSave top-ups will be transferred to their other CPF accounts.\n \n Pensioners under the Co-payment on Ward Charges Scheme (CPW) have a lower BHS than other CPF members in their cohort. Once this BHS is reached, any working contributions allocated to their MA and any MediSave top-ups will be transferred to their other CPF accounts.\n \n Pensioners under the Comprehensive Co-Payment Scheme (CCS) and MediSave-cum-Subsidised Outpatient (MSO) Scheme will have the same BHS as other CPF members in their cohort.\n \n Dependants of pensioners will also have the same BHS as other CPF members in their cohort. They can refer to the FAQ ‘What is the Basic Healthcare Sum when I turn 65 years old?’ to find out their applicable BHS."}, {"q": "What is the minimum balance I need to set aside in my MediSave Account?", "a": "There is no minimum amount required to set aside in your MediSave Account (MA). A portion of your working contributions will be allocated to your MA until your balance reaches the Basic Healthcare Sum (BHS). The BHS is the estimated savings you need in your MA to cover your basic subsidised healthcare needs in old age and is the maximum amount you can hold in your MA. Any amount above the BHS will be channelled to your other CPF accounts, depending on your age. You can find out how MediSave contributions above the BHS are channelled to other CPF accounts via this link"}, {"q": "I have saved the Basic Healthcare Sum (BHS) in my MediSave Account (MA). What happens to the savings in my MA above the BHS?", "a": "Any savings in your MediSave Account (MA) above the Basic Healthcare Sum (BHS) will be channelled to your CPF Special Account (SA) or Retirement Account (RA), depending on your age. The BHS cap and overflow arrangement are designed to prevent excessive saving in your MA while helping to supplement your retirement savings, which can be withdrawn according to the CPF withdrawal rules.\n \n If your MA savings exceed the BHS, the excess will be channelled to your Ordinary Account (OA) if you are:\n Below 55 years old and have met the current Full Retirement Sum (FRS) (consisting of your SA balance and any active CPFIS-SA investments) in your SA; or\n 55 years old or older and have set aside your FRS (which can be entirely in cash or a combination of property and cash) in your RA.\n Savings in the OA can be used for other purposes, such as housing repayment or withdrawn if you meet the withdrawal requirements."}, {"q": "What happens if I do not have the Basic Healthcare Sum when I turn age 65?", "a": "The Basic Healthcare Sum (BHS) is the estimated savings you need in your MediSave Account (MA) to cover your basic subsidised healthcare expenses in old age and is the maximum amount you can hold in your MA. If your balance is less than the BHS at age 65, you are not required to top up your MA. However, if you wish to build up your healthcare savings, you can choose to top up your MA with cash. You can do so via this form to make cash top-ups to your own or your loved ones’ MA."}, {"q": "If I am 66 years old in 2026 and my applicable Basic Healthcare Sum (BHS) is $75,500, am I allowed to maintain a balance greater than my applicable BHS in my MediSave Account?", "a": "You can only save up to your applicable Basic Healthcare Sum (BHS) in your MediSave Account (MA), which is the maximum amount you can hold in your MA. The BHS is designed to cover your basic subsidised healthcare needs in old age and to prevent the excessive accumulation of funds in your MA."}], "Member Particulars": [{"q": "How do I inform CPF Board of a change in my address?", "a": "By default, CPF letters are sent to your residential address on your Singapore Identity Card. If you are residing at a new address and have been receiving your CPF letters at your old residential address, please apply for the change of your residential address (local or overseas) via Immigration & Checkpoints Authority’s (ICA) e-Services using your Singpass.\n \n Participating government agencies and statutory boards (including CPF Board) will be informed of the change in address through the One-Stop Change of Address Reporting Service (OSCARS) within one day. You will not be receiving an additional acknowledgement from CPF Board for updates via OSCARS.\n \n Please visit ICA website for more information."}, {"q": "When and how should I inform CPF Board about changes to my particulars?", "a": "For Singapore Citizens/Permanent Residents, you do not need to inform us separately as your latest particulars will automatically be updated in our records."}, {"q": "How can I inform CPF Board if I changed my name?", "a": "We use the principal name registered in your NRIC to transact with you. Principal name usually excludes variants such as hanyu pinyin, married name and other aliases.\n \n If you have updated your principal name registered in your NRIC recently, you do not need to inform us separately. Your name will automatically be updated in our records.\n \n If you have not updated the name registered in your NRIC or would like to transact with us using your hanyu pinyin, married or other aliases, you will need to update your principal name in your NRIC first."}, {"q": "What should I do if I receive mails from CPF Board that do not belong to me and my family member(s) at our address?", "a": "If you received mails from CPF Board that do not belong to you and your family member(s) at your address, please state the reason for return, e.g. 'no such person' or 'change of owner', and drop the mail into SingPost's \"Return Mail Here\" mailbox. The undelivered mail will be returned to us."}, {"q": "How long does it take to update my particulars?", "a": "Please refer to the table for the service standards in updating your particulars.\n \n Service Normal Processing Time\n Update of Personal Particulars for Singapore Citizens/Permanent Residents 3 working days\n Merging of CPF accounts 7 working days"}, {"q": "Do I need to inform CPF Board of my new Singapore Citizenship or Permanent Residency?", "a": "You do not need to inform us of your latest particulars when you become a new Singapore Citizen or Permanent Resident. Your Singapore identity card number will be used as your CPF account number to transact with us.\n \n However, if you are already holding an existing CPF account (example: SA123456D or TC987654B), you would need to inform us so that we can combine your CPF accounts. Please submit the following documents/information to us where applicable by post or in-person at our CPF Service Centres.\n \n To facilitate your transaction with us, we will combine your CPF accounts within seven working days after we have successfully verified your identity.\n \n Recently obtained Singapore Citizenship\n \n If you are:\n Documents/Information Required\n Additional document(s)\n Ex-Malaysian\n 1. Both sides of your Singapore Identity Card\n 2. Both sides of your Singapore Citizenship Certificate\n 3. Change of name document (example: deed poll), if you have changed your name\n 4. Your email address and contact number (we will contact you if we require more information)\n NA\n Ex-foreigner (excluding ex-Malaysian)\n Your old passport page(s) showing your personal particulars and passport number registered with us earlier\n Recently obtained Permanent Residency\n Malaysian\n 1. Both sides of your Singapore Identity Card\n 2. Your current passport page(s) showing your passport number, personal particulars and re-entry permit or Form 7 issued by Immigration and Checkpoint Authority\n 3. Change of name document (example: deed poll), if you have changed your name\n 4. Your email address and contact number (we will contact you if we require more information)\n Both sides of your Malaysia Identity Card\n Foreigner (excluding Malaysian)\n Your old passport page(s) showing your personal particulars and passport number registered with us earlier\n \n By Post\n Our mailing details are as follows:\n Central Provident Fund Board\n Accounts Information & Services Department\n Privy Box No. 920651\n Singapore 929292\n \n Please note that your documents must be certified true by an official from a Singapore Overseas Mission with his/her official seal/stamp duly affixed. You may wish to visit the Singapore Ministry of Foreign Affairs website to locate the Singapore Overseas Mission nearest to you.\n \n In-person at our CPF Service Centres\n Please bring along your original documents and book an appointment to visit us at our CPF Service Centres."}, {"q": "How do I inform CPF Board if I have changed my contact details?", "a": "Notifications will be sent to you whenever you make a transaction. Also, we may contact you to perform further verification checks on your transactions for added security. Hence, it is important to check and keep your contact details updated.\n \n You can update your mobile number and/or email address via the Account Settings page with your Singpass. An SMS or email One-Time Password (OTP) will be sent to your new mobile or email address for verification before the changes can be submitted.\n \n Please note that any changes to your contact details will be subject to a 12-hour cooling period and you may be subject to enhanced authentication measures to verify your identity.\n \n You can also watch the instructional video below on how to update your contact details with CPF Board."}, {"q": "Can I make further changes to my contact details while my current request is still in the 12-hour cooling period?", "a": "Yes, you can submit further changes to your contact details via the Account settings page with your Singpass.\n \n Please note that your most recent request will supersede the previous submission and the changes will take effect after the 12-hour cooling period."}, {"q": "What should I do if I receive a notification that is not meant for me?", "a": "This could happen because:\n \n You are sharing contact detail(s) with your next-of-kin for handling of CPF matters; or\n Your contact detail is a recycled mobile number/email address registered by another member with us previously; or\n You are using a common business mobile number/email address shared within a company.\n If you did not intentionally share your contact details with another member or wish to stop this arrangement, please write to us with a screenshot of the notification you have received."}, {"q": "Would other members receive my CPF notifications if they have registered the same contact detail(s) as me?", "a": "Members will receive CPF notifications at their email address and/or mobile number registered with us.\n \n Other members can receive your CPF notifications only if they share the same email address or mobile number as you."}, {"q": "I have reviewed my contact detail(s) and am aware that it is also registered under another family member. Can we continue to share contact detail(s)?", "a": "We understand that some CPF members require help from family members on their CPF matters, and could have registered the same contact details with us. \n \n No further action is needed if your contact details are still valid.\n \n Otherwise, you can update your new contact details via the Account settings page with your Singpass."}, {"q": "Can I view my child's CPF statements online?", "a": "You can view your child’s Transaction History statement as well as the Healthcare Payments and Claims statement (if applicable) for the last 15 months online if:\n  \n 1. You and your child are Singapore Citizens or Permanent Residents, and\n  \n 2. Your child is below the age of 21 and has received CPF contributions (including Government Grants such as MediSave Grant for Newborns).\n  \n Simply login to my cpf Home > Child Dashboard with your Singpass to access this information.\n  \n If you do not see your child’s name listed in the Child Dashboard, you can write to us with the following supporting documents and we will be happy to assist.\n  \n Supporting documents required:\n Birth certificate of your child\n Citizenship certificate if your child was a foreigner at birth (where applicable)."}, {"q": "If I am granted sole custody of my child following a divorce, can I request to remove my ex-spouse's access to our child's CPF statement?", "a": "Yes, you can write to us using your Singpass and attach the Court Order as a supporting document."}], "Account Closure": [{"q": "When will my CPF account be closed if I am not a Singapore Citizen or Permanent Resident?", "a": "If you are not a Singapore Citizen or Permanent Resident before 1 April 2024, your CPF account will be automatically closed in April 2024 and any remaining savings will stop earning the prevailing CPF interest.\n \n As a concession, these savings will earn interest similar to commercial bank interest rates until 31 March 2027. Subsequently, no interest will be paid. You are encouraged to transfer the remaining savings to your bank account as soon as possible.\n \n If you renounced Singapore Citizenship or Permanent Residency from 1 April 2024, please close your CPF account and transfer your CPF savings to your bank account when your renunciation is completed, i.e. when you are no longer a Singapore Citizen or Permanent Resident.\n \n If you do not do so, your CPF account will be automatically closed in the month following your renunciation, i.e. if you renounced your Singapore Citizenship or Permanent Residency in April 2024, your account will be closed in May 2024. Any remaining savings will stop earning the prevailing CPF interest.\n \n As a concession, these savings will earn interest similar to commercial bank interest rates until 31 March 2027. Subsequently, no interest will be paid."}, {"q": "Can I still request information regarding my CPF balances, CPF interest earned or, my CPF transaction statement after renunciation of my Singapore Citizenship/ Permanent Residency?", "a": "If you have just renounced your Singapore Citizenship/ Permanent Residency, please download any CPF information required, and settle any housekeeping matters, while you still have access to your Singpass account, via my cpf digital services or CPF Mobile app. \n \n Due to difficulties in authenticating a caller’s identity over the phone and email, we seek your understanding that the Board is unable to disclose any information relating to a specific CPF account over phone or email. This is for your own protection.\n \n The Board would like to assure that your full CPF balances will be transferred to your bank account upon your request, after the closure of your CPF account."}, {"q": "What happens when my CPF account is closed after my renunciation of Singapore Citizenship/ Permanent Residency and I have yet to transfer my CPF savings to my bank account?", "a": "Once your CPF account is closed, any remaining savings in your account will stop earning the prevailing CPF interest.\n \n As a transitory measure, these savings will earn interest based on the 3-month average of the three local banks’ savings account interest rates. This is because non-Singapore Citizens and non-Permanent Residents can transfer these monies to their bank account at any time. The applicable rate is 0.05% per annum from April 2024 and will be fixed for a 3-year period until 31 March 2027. From 1 April 2027, any remaining savings will no longer earn any interest.\n \n You can still transfer the remaining savings to your bank account at any time.\n \n Your participation in all the schemes administered by the CPF Board will also cease. Please refer to the section \"Schemes' participation upon account closure\" for more information regarding schemes’ participation when your CPF account is closed."}, {"q": "What happens to my CPF account if I am no longer a Singapore Citizen or Permanent Resident?", "a": "Your CPF account will be closed, and you are required to transfer your CPF savings to your bank account. To transfer your CPF savings, please refer to the steps mentioned in this FAQ."}, {"q": "How can I inform CPF Board of a change in my mailing address if I am not a Singapore Citizen (SC) /Permanent Resident (PR)?", "a": "With the closure of your CPF account as a non-Singapore Citizen (SC)/non-Permanent Resident (PR) from 1 April 2024, you do not have to inform CPF Board of any changes in your mailing address. You may refer to our webpage for more information on account closure."}, {"q": "Are all non-Singapore Citizens and non-Permanent Residents eligible for account closure?", "a": "Yes, all non-Singapore Citizens and non-Permanent Residents should close their CPF account and transfer their CPF savings to their bank account by submitting the account closure form."}, {"q": "I am not a Singapore Citizen or Permanent Resident. I have recently checked my CPF account and noticed that my CPF balance is $0. Why is this so, as I have yet to withdraw my CPF monies?", "a": "As you are no longer a Singapore Citizen / Permanent Resident, your CPF account has been automatically closed in the month following your renunciation. Any remaining CPF savings have been transferred out of your CPF account into the General Moneys of the Fund (GMF)* and stopped earning the prevailing CPF interest.\n \n As a concession, the savings will earn interest similar to commercial bank interest rates until 31 March 2027. You are encouraged to transfer your savings to your bank account as soon as possible.\n \n To transfer your CPF savings to your bank account, please refer to the steps, under “Take Action”.\n \n * The GMF is an account where CPF Board holds unclaimed monies on behalf of CPF members, nominees or beneficiaries."}, {"q": "What happens to my Dependants’ Protection Scheme (DPS) cover when my account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "Your Dependants' Protection Scheme (DPS) coverage will be terminated on the date of Singapore Citizenship/Permanent Residency renunciation, as the scheme is only applicable to Singapore Citizens and Permanent Residents.\n \n Your DPS insurer will refund any unused DPS premiums for the current policy year to your CPF account. The refund amount is calculated on a pro-rated basis. This means that you will receive a refund for the remaining months of coverage in your current policy year after your DPS termination date. For example, if your policy year runs from January to December and your DPS is terminated in June, you would receive a refund for the unused premium covering July to December.\n \n The unused DPS premiums will be paid to you together with your CPF savings when you transfer your CPF savings to your bank account.\n \n If you wish to find out more about your specific refund amount or have questions about the calculation, please contact your DPS insurer, Great Eastern Life at greateasternlife.com > Contact us."}, {"q": "What happens to my Home Protection Scheme (HPS) cover when my account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "When you have renounced your Singapore Citizenship or Permanent Residency, your Home Protection Scheme (HPS) cover will cease upon the sale of your HDB flat or at the end of the current HPS policy year, whichever is earlier. There will be no further renewal of your HPS cover, even if you are in the process of selling your HDB flat, as the scheme is only applicable to Singapore Citizens and Permanent Residents."}, {"q": "What happens to my MediShield Life/ElderShield plans when my account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "If you are a non-Singapore Citizen/non-Permanent Resident covered under MediShield Life/ElderShield before 1 April 2024,\n \n (i) your cover(s) will cease unless you inform us of your intention to continue your cover(s) via Write to Us and make alternative payment arrangements for the premiums to be paid.\n \n (ii) ElderShield policyholders with paid-up policies will remain covered. No further action is required.\n \n For more details on MediShield Life\n \n For more details on ElderShield"}, {"q": "What happens if I used my Retirement Account (RA) savings to purchase annuity(ies) under the Retirement Sum Scheme (RSS) or used my annuity(ies) to apply for exemption from setting aside a retirement sum?", "a": "Once your CPF account is closed and your CPF savings are transferred to your bank account, the surrender value of your annuity, if any, will be paid directly to you by your insurer, in the event of termination of the annuity(ies), or to your beneficiary upon your demise."}, {"q": "What happens to my CPF savings if I have an outstanding CPF education loan when my account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "If you have used another CPF member’s CPF savings for your education and have an outstanding CPF education loan owed to him, your CPF savings may be used to pay the education loan before the remaining CPF savings are transferred to your bank account. In the event that your CPF savings are not sufficient to cover your full education loan, your repayment liability remains even after your CPF account is closed.\n \n If you have used your CPF savings for your education or your child/spouse/siblings/relative’s education, the repayment of all such outstanding CPF Education Loans to you will be waived."}, {"q": "What happens to the top-ups I had received in my Special or Retirement Account when my account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "Any remaining monies which you have received through CPF transfers and cash top-ups will be paid to you, along with your CPF savings, when you transfer your savings to your bank account. This is subject to safeguards to prevent premature withdrawals."}, {"q": "What happens to my CPF LIFE plan when my CPF account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "Your CPF LIFE plan will be terminated, and you will receive your CPF LIFE premium balance (if any) together with your CPF savings when you transfer your savings to your bank account."}, {"q": "Do I have to refund the sale proceeds when I sell my property after my CPF account is closed upon my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "Yes, you must refund your CPF principal amount withdrawn with accrued interest or amount you have pledged to refund if you have not transferred your CPF savings to your bank account upon renunciation, by the time you sell your property."}, {"q": "What happens to my investments when my CPF account is closed after my renunciation of Singapore Citizenship/ Permanent Residency?", "a": "The treatment of your investments when your CPF account is closed will depend on the investment scheme you have participated in.\n \n CPF Investment Scheme – Ordinary Account (CPFIS-OA)\n We will inform the agent bank to close your CPF Investment Account. The agent bank will then contact you for the withdrawal# of your investments and cash balance (if any). Your investments will be transferred to your own name and you may thereafter continue servicing your investments using cash or liquidate them as you wish and have the sale proceeds paid to you directly.\n \n Once transferred, your CPFIS investments and cash balance in your CPF Investment Account will no longer be protected from any claims by your creditors and/or the Official Assignee.\n Please notify the Board via Write to Us if you have not received your cheque/ Cashier Order within two months from the point of form submission.\n # Central Depository (Pte) Ltd (“CDP”) imposes a transfer fee of $10.00 (excluding GST) for every share counter transferred from your CPF Investment Account to your CDP Account.\n \n CPF Investment Scheme – Special Account (CPFIS-SA)\n We will inform your product provider(s) to transfer your investment to your own name. Thereafter, you may liquidate them as you wish and have the sale proceeds paid to you directly.\n \n Once transferred, your CPFIS investments will no longer be protected from any claims by your creditors and/or the Official Assignee.\n \n Special Discounted Shares (SDS) Scheme\n Your discounted Singtel shares will be automatically liquidated in the month following the automatic closure of your CPF account. The sales proceeds will be held together with your CPF savings, which you can transfer to your bank account at any point in time.\n \n If you do not wish for your discounted Singtel shares to be automatically liquidated, please liquidate them before you renounce your Singapore Citizenship or Permanent Residency."}, {"q": "What happens to my CPF savings if I have unpaid taxes, MediShield Life premiums, CareShield Life premiums or outstanding education loan owed to a CPF member when my account is closed after my renunciation of Singapore citizenship/ permanent residency?", "a": "If you have unpaid taxes/MediShield Life premiums/CareShield Life premiums/outstanding education loan owed to a CPF member, we may recover the unpaid amount from your CPF savings when your CPF account is closed.\n \n You are encouraged to settle any outstanding liabilities (e.g. insurance, tax and housing liabilities) before your CPF account is closed."}, {"q": "What if a non-Singapore Citizen or non-Permanent Resident with a CPF account has passed away before he had closed his account and transferred all his CPF savings?", "a": "The next of kin will have to inform CPF Board of his passing with the original death certificate. Thereafter, the deceased’s remaining savings will be distributed to his beneficiaries, depending on whether he had made a valid CPF nomination before his passing."}, {"q": "What can I do if I have not received my cheque/Cashier’s Order or my cheque/Cashier’s Order has expired?", "a": "Please notify the Board via Write to Us if you have not received your cheque/ Cashier Order within two months from the point of form submission."}, {"q": "Can I choose to receive my CPF savings partially when my CPF account is closed after my renunciation of Singapore citizenship/ permanent residency?", "a": "No, your CPF savings will be paid to you in full."}, {"q": "When can I expect to receive my CPF savings upon account closure?", "a": "The time taken to receive your CPF savings depends on the type of application submitted.\n \n Type of application Normal Processing Time \n Online applications (for Malaysians only) Six weeks from the point of submission but may take longer if additional supporting documents are required. \n Other application mode:\n \n by post\n at the CPF Service Centre\n via Write to Us \n 12 weeks from receipt of all documents. \n \n Please note that this excludes the time taken to transfer your CPF savings to your bank account, which depends on the payment mode: \n \n Bank transfer via Interbank GIRO to a bank account in Singapore: Two working days;\n Telegraphic transfer: Five to 12 working days\n To keep your savings safe, CPF Board carefully checks every application, especially for those without Singpass to ensure that the CPF savings are disbursed correctly.\n \n We are working hard to process your application, so please wait at least three months from your application date before checking with us on your application status. This helps us focus our efforts on processing the applications received. We seek your understanding that we may not be responding to any enquiries prior to that."}, {"q": "I am not a Singapore Citizen or Permanent Resident, how do I receive my CPF savings?", "a": "You will need to submit an application to receive your CPF savings if you are no longer a Singapore Citizen or Permanent Resident. For details on the various application modes, please refer to this FAQ. When submitting your application, you may choose to receive your CPF monies via one of the following two options:\n \n 1. Bank transfers via Interbank GIRO (IBG) to your Singapore bank account\n \n 2. Telegraphic transfer to your bank account overseas\n \n Please ensure that the bank accepts payment in Singapore dollars. Otherwise, we will convert the payment to US dollars. You will need to bear all bank charges, including any foreign exchange rate differences and conversion charges:\n \n i. for telegraphic transfer to an overseas bank account\n ii. if you provide insufficient bank account details resulting in an unsuccessful telegraphic transfer."}, {"q": "How do I cancel my Permanent Resident status if I intend to close my CPF account upon leaving Singapore?", "a": "As cancellation of Permanent Resident status is administered by the Immigration & Checkpoints Authority (ICA), you may submit your request via ICA | Feedback"}, {"q": "How can I get the letter from Immigration & Checkpoints Authority confirming the cancellation of my Singapore Permanent Residency?", "a": "To obtain the letter from Immigrations & Checkpoints Authority (ICA) confirming the cancellation of your Singapore Permanent Residency, you may submit your request via ICA | Feedback.\n \n *If you are a Malaysian, you are not required to obtain the letter from ICA."}, {"q": "I am not a Singapore Citizen or Permanent Resident. How do I close my CPF account and transfer my CPF savings to my bank account?", "a": "If you are not a Singapore Citizen or Permanent Resident and would like to close your CPF account, you can do so through one of the following methods:\n \n For Malaysians For all other non-Singapore Citizens and non-Permanent Residents\n Online Form \n Complete the online form.\n \n You will need your CPF Account Number to submit your application via the online form. If you do not have your CPF Account Number*, please apply via the alternate ways listed below.\n \n The Board may request additional supporting documents to assess your eligibility.\n \n *Please note that we are unable to disclose your CPF Account Number over the phone and email.\n \n Not Applicable\n With Singpass \n Submit your application via Write to Us, which requires you to login with your Singpass.\n \n For more details, please refer to the alternative channels.\n \n Single-name POSB/DBS/OCBC/UOB bank account under your Singapore NRIC \n If you do not have a valid Singpass, but have a single-name POSB/DBS/OCBC/UOB bank account maintained under your Singapore NRIC number, please submit your application via this link.\n \n For more details, please refer to the alternative channels.\n \n In Singapore \n Submit your application before leaving Singapore for faster processing. Once you have left the country, additional verification will be required for forms completed overseas as certification at a Singapore Overseas Mission is required. These may incur additional administrative charges.\n \n Please make an appointment to visit the CPF Service Centre to submit your application. Please note that no walk-ins are allowed without an appointment.\n \n When visiting the CPF Service Centre, please bring along your original copies of the supporting documents stated on the CPF account closure form.\n \n Not in Singapore \n If you do not meet the conditions of all the application modes mentioned above, please submit your application form and required supporting documents by post via registered mail.\n \n Both the application form and all original supporting documents must be witnessed/certified true by an official of a Singapore Overseas Mission (SOM) with his official seal/stamp duly affixed. Please make an appointment in advance before you visit the SOM as walk-in applicants may not be served.\n \n Alternatively, if you are residing in a country which is part of the Apostille Convention, your documents must be:\n \n witnessed and certified true by a Notary Public; and then\n certified by the designated Competent Authority of your country via the issuance of an apostille certificate.\n Below age 21 Your parent or legal guardian will have to submit your application via this form, on your behalf."}, {"q": "What is a Singapore Overseas Mission?", "a": "Singapore Overseas Missions located in certain countries can help CPF members residing overseas in witnessing and certification of application forms and documents.\n \n You will need to visit the Singapore Overseas Mission in person. Find out where the overseas mission nearest to you is."}, {"q": "How do I apply to be insured under the Home Protection Scheme (HPS) after I obtained Singapore Citizenship or Permanent Residency again?", "a": "You may re-apply for a Home Protection Scheme cover online, using your Singpass, if your previous HPS cover has ceased and you are the owner of a HDB flat with an outstanding housing loan.\n \n Your eligibility for HPS coverage is subject to approval and your current health condition."}, {"q": "Do I need to refund the transferred CPF savings if I decide to obtain Singapore Citizenship or Permanent Residency again after I have closed my account?", "a": "If you decide to reinstate your Singapore Citizenship or Permanent Residency after closing your CPF account, you are required to refund your CPF savings with accrued interest. The amount to be refunded includes: \n \n Savings transferred to your bank account upon account closure;\n Savings used for participation in CPF schemes (e.g. CPF Investment Scheme);\n Contributions that should have been paid prior to account closure (e.g. outstanding MediSave liabilities for self-employed persons);\n Savings used to clear past debts upon account closure (e.g. tax arrears, education loan)."}, {"q": "Will I be able to return to Singapore for work if I have closed my CPF account?", "a": "For enquiries on work permit or employment pass application, please contact Ministry of Manpower at 6438 5122 or send your enquiries to them using the online feedback service.\n \n For enquiries on applying for Permanent Residency in Singapore, you may submit your request via ICA | Feedback."}], "Digital Services": [{"q": "What is Central Provident Fund (CPF)?", "a": "The Central Provident Fund (CPF) is a comprehensive social security system that enables working Singapore Citizens and Permanent Residents to set aside funds for retirement. It also addresses healthcare, home ownership, family protection and asset enhancement.\n \n Working Singaporeans and their employers make monthly contributions to the CPF and these contributions go into three accounts:\n \n Ordinary Account - the savings can be used to buy a home, pay for CPF insurance, investment and education.\n \n Special Account - for old age and investment in retirement-related financial products.\n \n MediSave Account - the savings can be used for hospitalisation expenses and approved medical insurance.\n \n Please refer to the CPF website for an overview of CPF."}, {"q": "What is the CPF website?", "a": "The CPF website (cpf.gov.sg) gives you quick access to information on CPF schemes and services, and the latest CPF news. Members can also perform CPF transactions such as accessing their CPF account information and transacting online through my cpf digital services."}, {"q": "I have issues with my Singpass. What should I do?", "a": "Singpass is an authentication service governed by GovTech. CPF Board is one of the government agencies using Singpass and its two-factor authentication (2FA) service.\n \n If you have any Singpass issues (e.g. unable to login via Singpass, forgot Singpass password, unable to receive SMS OTP), please contact the Singpass Helpdesk directly."}, {"q": "How do I change or reset my Singpass password online?", "a": "To change or reset your Singpass password, please complete the following steps:\n \n Visit Singpass website\n Select 'Log in'\n Select ‘Reset password’ (under the ‘Services’ tab)\n Follow the instructions on the website to complete the changing or resetting of Singpass password\n If you require further assistance, please contact the Singpass Helpdesk directly."}, {"q": "Why is Singpass Face Verification failing for me?", "a": "There may be several possible reasons for this. For ways to improve the success of Singpass Face Verification, you should ensure that:\n \n Your face is not covered\n You keep still while scanning is in progress\n Your environment is not too dark\n There is no strong lighting in the background\n You use a minimum resolution of two megapixels for the camera. If you are using a laptop, you may wish to try again using a mobile phone which has a better camera\n If you require assistance with Singpass Face Verification, please contact the Singpass Helpdesk directly."}, {"q": "What is Singpass?", "a": "Singpass stands for Singapore Personal Access and it is your common password to transact with the Government online. Please visit Singpass website for more information on Singpass."}, {"q": "How do I get a Singpass?", "a": "To obtain a Singpass, you can either:\n \n visit Singpass website to apply for your Singpass online or\n visit any of the Singpass counters located islandwide in-person."}, {"q": "Why am I unable to log in to CPF Mobile through the Singpass QR code?", "a": "The Singpass app is required in order to log in to CPF Mobile using the Singpass QR code. Singpass app is compatible with the following mobile browsers:\n \n Safari versions: 12.1 and above\n Chrome versions: 78 above\n You may encounter login errors if you have set other browsers as your mobile device’s default browser. To ensure a seamless login experience, please set one of the browsers above as your mobile device’s default browser. Alternatively, you may log in without the Singpass app by selecting ‘Password login’ on the Singpass login page and logging in using your Singpass ID and password. If you continue to face issues pertaining to Singpass login, please contact the Singpass Helpdesk directly for further assistance.\n \n If you are experiencing other login issues, please refer to our FAQ on troubleshooting for more information."}, {"q": "I am a foreigner. I can't seem to be able to login to CPF digital services using my Singpass, why is it so?", "a": "With the discontinuation of the OneKey Token from 1 April 2021, foreign CPF members will no longer be able to access CPF digital services using the Singpass which was registered under their CPF issued account numbers (e.g. SA987654C or TC123456A) previously.\n \n Foreign CPF members with CPF issued accounts and are currently holding FIN may apply for a new Singpass under the FIN to access CPF digital services for their CPF SA/SB/TC account. You may refer to the Singpass website at singpass.gov.sg for the steps to apply.\n \n CPF members who do not meet the above criteria may Write to Us for assistance."}, {"q": "How do I set up Singpass Face Verification (SFV)?", "a": "Singpass Face Verification (SFV) does not require any setup. It will automatically be triggered for potentially suspicious or higher-risk logins and transactions.\n \n Please contact the Singpass Helpdesk directly for more information on Singpass Face Verification."}, {"q": "Why am I prompted for Singpass Face Verification when performing transactions using my cpf digital services?", "a": "This is an additional safeguard against unauthorised usage of your Singpass account on transactions that require Singpass.\n \n Please contact the Singpass Helpdesk directly for more information on Singpass Face Verification."}, {"q": "What should I do if I face difficulty logging into my cpf digital services?", "a": "Here are some ways for you to troubleshoot when encountering login issues:\n \n Check your internet connection to ensure it is stable.\n Clear your browser cache before trying again (please refer to this link for instructions on how to clear the cache for all major browsers).\n Relaunch CPF website and try to log in again.\n Check that your browser is updated. my cpf digital services is compatible with the two most recent versions of commonly used web browsers such as Chrome and Safari.\n Check that your device date-time setting is set to “Automatic” or the current date and time\n Try logging in to other government websites to determine if the issue occurs on these other platforms.\n If the issue persists, please write to us for further assistance."}, {"q": "How can I download CPF Mobile?", "a": "You can download CPF Mobile directly to your mobile phone from either the Apple App Store or the Google Play Store. Please ensure that the developer of the application is Central Provident Fund Board."}, {"q": "What is CPF Mobile?", "a": "CPF Mobile provides you with easy access to your personal CPF information on the go and quick access to your CPF statement and services to manage your CPF. You can also receive push notification alerts and updates regarding your personal CPF matters, educational articles, CPF tips and events even when you are on the move. For more information, please see CPF Mobile services. It is available in both the Apple App Store and Google Play Store."}], "SSS": [{"q": "What is the Silver Support Scheme?", "a": "The Silver Support (SS) Scheme is part of a wider suite of schemes (e.g. healthcare subsidies, GST voucher) that the Government has put in place to give seniors greater assurance in retirement.\n  \n It provides a quarterly cash supplement to seniors who had low incomes during their working years and now have less in retirement. The Government reviews the Scheme periodically to ensure that it continues to target deserving seniors.\n  \n Seniors who qualify for SS will automatically receive their cash supplement. No application is required.\n  \n To check your eligibility status or submit an enquiry, log in to e-services."}, {"q": "Do I need to apply for the Silver Support Scheme?", "a": "There is no need to apply for the Silver Support (SS) Scheme.\n  \n CPF Board will automatically review your eligibility for the SS Scheme every year. Eligible seniors will automatically receive SS every quarter.\n  \n Seniors who qualify will receive a notification from CPF Board in December of the preceding year."}, {"q": "Do I qualify for the Silver Support Scheme?", "a": "The Silver Support (SS) Scheme is meant to support seniors who had low incomes during their working years and now have less in retirement. To identify this target group, three criteria are used in tandem – lifetime wages, housing type, and the level of household support.\n  \n Singapore citizens aged 65 and above will be eligible for the SS Scheme if they meet all of the following criteria:\n  \n 1. Low lifetime wages - Total CPF contributions by age 55 is not more than $140,000. This refers to the total sum in an individual’s Ordinary Account and Special Account, including the amounts withdrawn for housing, education and investment.\n  \n Self-employed persons and platform workers should also have an average annual net trade income of not more than $27,600 when they were between the ages of 45 and 54. Net trade income refers to the gross trade income minus all allowable business expenses, capital allowances and trade losses as determined by IRAS; and\n  \n 2. Housing type - Live in a 1- to 5-room HDB flat; and do not own, or have a spouse who owns, a 5-room or larger HDB flat, private property or multiple properties; and\n  \n 3. Low household support - Live in a household with a monthly income per person of not more than $2,300 (was $1,800 in year 2024).\n  \n CPF Board will automatically review your eligibility for SS every year. Eligible seniors turning age 65 will start receiving SS in the quarter they turn 65. Seniors who qualify for SS will receive a notification in December of the preceding year.\n  \n In addition to the notification, all Singaporeans aged 65 and above can check their SS eligibility by logging in to the SS e-services using their Singpass."}, {"q": "How much Silver Support will I receive?", "a": "Eligible seniors will receive Silver Support (SS) every quarter, depending on their household monthly income per person, and the type of HDB flat that they live in. Those living in smaller flats will receive higher SS. Seniors who are ComCare Long Term Assistance (LTA) recipients will receive SS of $430 per quarter, regardless of their flat type.\n  \n    HDB Flat Type2\n    Silver Support Per Quarter\n      Total CPF contributions of not more than $140,000 by age 551\n      Household monthly income per person of $1,500 or less\n    Household monthly income per person of above $1,500 but not more than $2,300\n      1- and 2-Room\n    $1,080\n    $540\n      3-Room\n    $860\n    $430\n      4-Room\n    $650\n    $325\n      5-Room3\n    $430\n    $215\n    \n  \n Note:\n 1. Self-employed persons and platform workers should also have an average annual net trade income of not more than $27,600 when they were aged 45 to 54.\n 2. Senior should not own, and not have a spouse who owns, a 5-room or larger HDB flat or private property or multiple properties. \n 3. Senior may live in, but do not own, a 5-room HDB flat.\n  \n Eligible seniors will receive SS according to the following schedule.\n  \n    Eligibility period\n    Payment Date\n      January - March\n    31 December of the preceding year\n      April - June\n    31 March\n      July - September\n    30 June\n      October - December\n    30 September\n    \n  \n Those who turn 65 in the year will start receiving SS in the quarter they turn 65."}, {"q": "How do I check my Silver Support Scheme eligibility?", "a": "If you are eligible for Silver Support Scheme (SSS), we will send you a letter in December to inform you of next year’s eligibility. \n  \n To check your eligibility status or contact us, log in to e-services."}, {"q": "Can Permanent Residents qualify for the Silver Support Scheme?", "a": "Only Singapore Citizens are eligible for the Silver Support Scheme."}, {"q": "I am a Pioneer Generation / Merdeka Generation member. Will I automatically qualify for the Silver Support Scheme?", "a": "Pioneer and Merdeka Generation members do not automatically qualify for the Silver Support (SS) Scheme.\n  \n The SS Scheme is meant for seniors who had low incomes during their working years and now have less in retirement.\n  \n The Pioneer Generation (PG) and Merdeka Generation (MG) Packages are one-off schemes to honour PG and MG seniors for their contributions in the early years of Singapore's nation-building.\n  \n PG and MG members will be means-tested for SS like all other seniors aged 65 and above, and those who meet the eligibility criteria will receive SS."}, {"q": "I am a ComCare Long Term Assistance (previously known as Public Assistance) recipient who is receiving Silver Support. Can I qualify for higher Silver Support?", "a": "Seniors aged 65 and above on the ComCare Long Term Assistance (LTA) Scheme will automatically qualify for the Silver Support (SS) Scheme and receive a flat amount of $430 per quarter (was $360 in year 2024), regardless of their HDB flat type.\n \n The SS supplements the assistance that ComCare LTA beneficiaries receive, which includes monthly cash assistance to cover the recipient's daily living expenses, assistance with their medical bills at public healthcare institutions, and free or highly subsidised social services such as home help or Active Ageing Centres funded by the government."}, {"q": "How can I receive SMS notifications on my Silver Support Payments?", "a": "We will send SMS notifications on Silver Support (SS) payments to the mobile number that you have registered with CPF Board.\n  \n To receive SMS notifications on your SS payments, you may update your mobile number via my cpf digital services – Account settings with your Singpass."}, {"q": "Why are my total CPF contributions used as a reflection of my lifetime wages in the assessment of eligibility of the Silver Support Scheme?", "a": "CPF contributions are proportionate to a person’s wage. They thus serve as an indicator of one’s ability to save.\n  \n We will look at the senior’s total CPF contributions by the age of 55 to assess his/her eligibility for the Silver Support Scheme. This refers to the sum of contributions to the Ordinary Account (OA) and Special Account (SA), as well as any CPF savings that had been withdrawn for housing, investment and education."}, {"q": "Why is the age cut-off for total CPF contributions set at 55 for the assessment of eligibility for the Silver Support Scheme?", "a": "For the assessment of eligibility for the Silver Support Scheme, we do not look at CPF contributions after the age of 55, so as to encourage older Singaporeans to continue working and saving for retirement.\n  \n We have also set the cut-off age at 55 to provide a meaningful comparison across cohorts, which experience different sets of CPF withdrawal rules and wage adjustments after age 55."}, {"q": "Why is the threshold for total CPF contributions set at $140,000 to be eligible for the Silver Support Scheme?", "a": "An eligibility criterion of $140,000 set for the Silver Support Scheme would include seniors who were earning lower wages through their working lives, and those who did not work due to reasons such as care-giving responsibilities and medical conditions.\n  \n The Total CPF Contributions threshold was increased from $70,000 to $140,000 in 2021 to strengthen support for seniors with lesser means. The Government will review the criteria from time to time, to ensure that the Silver Support Scheme is able to reach those who need it most."}, {"q": "How can I check how much total CPF contributions I have at age 55 for assessing my eligibility for the Silver Support Scheme?", "a": "Only Singaporean seniors aged 65 and above can be assessed for eligibility for the Silver Support (SS) Scheme.\n  \n You may request to find out your total CPF contributions (TCC) used for the SS Scheme by writing in to us."}, {"q": "I am a self-employed person / platform worker. How will the Government assess my eligibility for the Silver Support Scheme?", "a": "As it is not mandatory for self-employed persons to contribute to their Ordinary and Special Accounts (OA and SA), and the requirements for platform workers to contribute to their OA and SA will only take effect from 1 Jan 2025 for platform workers born in 1995 or later, self-employed persons and platform workers would naturally have made less CPF contributions than employees.\n \n For seniors who were self-employed or platform workers in their working years, we will consider their average annual net trade income, as determined by their annual income tax assessments, in addition to the total CPF contributions they made by the age of 55.\n \n To qualify for the Silver Support Scheme, their average annual net trade income should be not more than $27,600 between the ages of 45 and 54. The average annual net trade income threshold was increased from $22,800 to $27,600 in 2021 to strengthen support for seniors with lesser means. The Government will review the threshold from time to time, to ensure that the Silver Support Scheme is able to reach those who need it most."}, {"q": "What is net trade income?", "a": "Net trade income is your gross trade income minus all allowable business expenses, capital allowances and trade losses as determined by the Inland Revenue Authority of Singapore (IRAS)."}, {"q": "Why is household monthly income per person used as an indication of my household support for the Silver Support Scheme?", "a": "The Silver Support (SS) Scheme is meant for seniors who had low incomes during their working years and now have less in retirement.\n  \n To automatically identify seniors who are eligible for SS, the Government has to rely on available data as broad indicators of an individual’s ability to save for retirement, access to resources and family support.\n  \n We have relied on the household monthly income per person as a broad indicator of the level of family support available."}, {"q": "Why is the threshold for household monthly income per person set at $2,300 to be eligible for the Silver Support Scheme?", "a": "The Silver Support (SS) Scheme is meant for seniors who had low incomes during their working years and now have less in retirement.\n \n The threshold of $2,300 (was $1,800 in year 2024) enables seniors who have little or no family support to benefit from SS."}, {"q": "Who should be considered as a member of my household for the computation of my household income used for assessing my eligibility for the Silver Support Scheme?", "a": "Only family members related by blood, marriage and/or legal adoption (e.g. spouse, parents, children, grandparents, grandchildren, siblings, uncles, aunts, cousins and in-laws) and who live at the same residence are considered members of your household for the computation of your household income used for assessing your eligibility for the Silver Support (SS) Scheme.\n  \n Domestic helpers, unrelated tenants, godparents and friends living at the same address are not considered members of your household. Family members not living at your address are not considered members of your household.\n  \n If there are recent household changes that you want us to take into account to reassess your SS eligibility, please write to us and we will work with the Household Means Eligibility System (HOMES) to have your household means tested."}, {"q": "How will the household monthly income per person be determined for assessing one's eligibility for the Silver Support Scheme?", "a": "The household monthly income per person is calculated by dividing the total gross household monthly income by the total number of family members living together. Gross monthly household income includes basic employment income, trade/self-employed income, overtime pay, allowances, cash awards, commissions, and bonuses.\n  \n The monthly income of each member will be determined based on the following: \n  \n Salaried Employees: \n  Monthly income as declared to CPF Board by the member’s employer(s), averaged over 12 months; or\n The latest available annual income assessment by the Inland Revenue Authority of Singapore (IRAS) within the last two calendar years.\n   \n Self-Employed Persons: \n  Monthly income as declared to CPF Board by the member as a self-employed person, averaged over 12 months; or\n The latest available annual income assessment by the Inland Revenue Authority of Singapore (IRAS) within the last two calendar years. \n   \n  Platform Workers:\n  Monthly income as declared to CPF Board by the member’s platform operator(s), averaged over 12 months; or\n The latest available annual income assessment by the Inland Revenue Authority of Singapore (IRAS) within the last two calendar years. \n   \n If there have been recent changes to your circumstances that may affect your eligibility, please write to us for a reassessment and we will work with the HOusehold Means Eligibility System (HOMES) team to have your household means tested."}, {"q": "What is HOMES?", "a": "The Household Means Eligibility System (HOMES) is a Government system supporting public schemes, including the Silver Support Scheme, in their conduct of means-tests as part of their assessment in determining the level of assistance for them."}, {"q": "I received a call/email/letter claiming they are from the Household Means Eligibility System (HOMES). Are they legitimate?", "a": "HOMES is a Government system supporting the Silver Support (SS) Scheme in conducting household means-tests, which are used to assess a senior’s eligibility for the SS Scheme. If you or your family member had asked for a reassessment of SS eligibility, and there is a need for further clarification regarding your household information, the HOMES team may contact you via phone, email or letter to find out more on your household circumstances.\n  \n If you are unsure of the authenticity of the mobile number that you have received, please call their hotline 6818 1422 for confirmation.\n  \n If you have any query on HOMES, you may visit the HOMES website to provide your contact details and a brief description of your query."}, {"q": "How do you determine my housing type when assessing my eligibility for the Silver Support Scheme?", "a": "Your housing type is based on your address as registered in your NRIC."}, {"q": "Why is a senior not eligible for the Silver Support Scheme if he and/or his spouse together own a 5-room or larger HDB flat, private property or multiple properties?", "a": "The type of home owned is an indicator of the senior’s resources. Those who own a 5-room or larger HDB flat, private property or multiple properties are more likely to have more resources and access to additional retirement income. They would be less likely to require assistance through the Silver Support (SS) Scheme.\n  \n There are other schemes to help seniors cope with daily expenses, finance their healthcare needs and increase their retirement savings. Even if you do not qualify for the SS, you can still benefit from many of these schemes.\n  \n Those who need additional support can turn to other forms of assistance such as ComCare and MediFund. They may wish to approach a nearby Social Service Office for assistance."}, {"q": "Will the Silver Support Scheme cover seniors living in residential facilities (e.g. Nursing Homes/ Welfare Homes/ Home for the Aged and Adult Disability Home)?", "a": "Seniors aged 65 and above, including those living in residential facilities that provide long-term care, will be assessed for the Silver Support (SS) Scheme. Seniors whose NRIC address reflects one of these facilities will receive SS if they meet all the other eligibility criteria. Seniors whose NRIC address does not reflect one of these facilities will receive SS based on the housing type of their NRIC address, if they meet all the other eligibility criteria."}, {"q": "How will I receive my Silver Support?", "a": "You will receive your Silver Support (SS) through one of the following methods:\n  \n  PayNow-NRIC: If you have linked your NRIC to PayNow, your SS payout will go directly to your linked bank account. Please check with your bank to confirm your PayNow-NRIC details. \n Bank transfer: If you have registered your DBS/POSB, OCBC or UOB bank account number with the Government previously but have not linked your NRIC to PayNow, you will receive your SS payout via bank transfer. You can check or update your bank details by logging in to our e-services using your Singpass.\n GovCash: If you don’t have PayNow-NRIC or a previously registered bank account, your SS payout will be credited to you via GovCash.\n  To receive your benefits earlier, please link your NRIC to PayNow through any participating bank if you have not done so."}, {"q": "How can I change my bank details for Silver Support? / I have already registered for PayNow-NRIC to receive my Government cash benefits. Do I still need to provide my bank account details?", "a": "You are encouraged to register for PayNow-NRIC with a PayNow-GIRO-participating local or foreign bank in Singapore to receive your Silver Support (SS) earlier. Payment will be made by default to your PayNow-NRIC-linked bank account.\n  \n If you do not have a PayNow-NRIC-linked bank account, you can update your bank account details by logging in to our SSS e-services with your Singpass. The instruction will only take effect from the next quarter of SS, if you continue to be eligible. The Government will be validating the bank account details that you have registered. If you have closed your bank account, ceased being a joint account holder, or have provided the wrong bank account details, we will inform you to update your bank account details. You will receive a notification sent to your Singpass app. If you do not have the app, a letter will be sent to your NRIC address. This notification will not be sent via SMS, WhatsApp or any other platforms.\n  \n If you have not linked your NRIC to PayNow or have not provided a valid bank account to the Government, you will receive future Government cash benefits via GovCash. GovCash is a payment mode where you can withdraw your Government benefits in cash from OCBC ATMs.\n  \n Citizens who are on GovCash will receive their cash benefits 2-3 weeks later than those who have linked their NRIC to PayNow or have provided a valid bank account."}, {"q": "What is PayNow and how do I link my NRIC to PayNow?", "a": "PayNow is a secure funds transfer service that allows customers to receive money into their bank account using their NRIC/FIN or mobile number.\n  \n With PayNow, the recipient’s bank information remains private. The recipient needs to provide their mobile number or NRIC/FIN to the sender to receive money. Other PayNow users will not have access to your personal details.\n  \n To receive government benefits via PayNow, you must link your NRIC to PayNow. PayNow-Mobile number is not accepted. The NRIC is a stable proxy issued by the Government, whereas mobile numbers can be easily changed. To ensure funds are credited to the correct recipient’s bank account, only an NRIC is accepted as the proxy for Government benefits via PayNow.\n  \n You can register and link your NRIC to PayNow if you have a bank account with one of the following participating banks in Singapore:\n  \n    Bank\n      Bank of China\n      CIMB\n      Citibank\n      DBS Bank / POSB\n      GXS Bank\n      HL Bank\n      HSBC Bank\n      ICBC\n      MariBank\n      Maybank\n      OCBC\n      RHB Bank\n      Standard Chartered Bank\n      State Bank of India\n      Trust Bank\n      UOB\n    \n  \n The list of PayNow-GIRO banks is updated as of 28 March 2025."}, {"q": "My mobile number is already registered to my bank account on PayNow. Can the Government credit my Government cash benefits to me via PayNow-Mobile instead of via PayNow-NRIC?", "a": "We can only credit your Government cash benefits to you via your PayNow-NRIC-linked bank account. NRIC is an unchanged proxy issued by the Government, compared to mobile numbers which may be easily changed. To ensure that the money is credited to the correct recipient’s bank account, only NRIC will be accepted as the proxy for Government benefits via PayNow.\n  \n Eligible seniors who have linked their NRIC to PayNow, with a PayNow-GIRO-participating bank will receive the benefits in this bank account."}, {"q": "How can I update my mode of payment to receive cash benefits from the Government?", "a": "There are two options which you can choose to update the mode of payment for your government cash benefits:\n \n Option 1: Register for PayNow-NRIC\n You can register for PayNow-NRIC if you have a bank account with the participating banks. Please refer to your respective bank's website for specific details on how to link your NRIC to PayNow. Please note that PayNow-Mobile number is not accepted.\n \n You are encouraged to register for PayNow-NRIC as government cash benefits will be credited to your PayNow-NRIC-linked bank account by default.\n \n PayNow is a secure funds transfer service that allows customers to receive money into their bank account via NRIC/FIN and/or mobile number. With PayNow, the recipient's bank information will be kept private. The recipient will need to provide their mobile number or NRIC/FIN to the sender to send money. Other PayNow users will not have access to your personal details unless it is provided by you.\n \n Option 2: Provide your bank account details\n You may provide your bank account details by logging in to our e-services with your Singpass. The bank account that you have provided will only be used if you do not have a PayNow-NRIC linked bank account.\n \n Bank crediting is only available via the three local banking groups DBS/POSB, OCBC, UOB, and your bank account must be a personal or joint account registered with your NRIC number.\n \n The Government will validate the bank account details that you have registered with your bank. If you have closed your bank account, ceased being a joint account holder, or have provided the wrong bank account details, we will inform you to update your bank account details. You will receive a letter sent to your NRIC address."}, {"q": "What is GovCash?", "a": "GovCash is a payment mode that allows Singapore citizens to withdraw their Government benefits in cash from over 500 OCBC ATMs located across Singapore.\n  \n For Singaporeans who need assistance with GovCash withdrawals, OCBC provides support at its ATMs where Digital Ambassadors are available during operating hours to guide recipients. In addition, GovCash offers convenient digital options such as the scan-and-pay function and PayNow transfers through the LifeSG mobile app. This allows recipients to easily access their benefits with various assistance options available to suit their needs.\n  \n GovCash adopts the Singpass Face Verification technology to authenticate users, including a liveness-detection capability that blocks the use of photographs, videos, or masks during the verification process. Users are also required to key in their unique 8-digit Payment Reference Number (PRN) during the withdrawal of the Government benefits at the OCBC ATMs."}, {"q": "How do I get my cash benefits via GovCash?", "a": "There are three options for receiving your cash benefit via GovCash:\n  \n Option 1: Use LifeSG to transfer to PayNow-NRIC linked bank account\n  \n If you have an existing bank account, you can link your account to PayNow-NRIC with your bank. Thereafter, login to LifeSG mobile app (LifeSG) using your Singpass to transfer your GovCash to your PayNow-NRIC linked bank account. The LifeSG app can be downloaded from the Apple App store or Google Play Store.\n  \n Option 2: Use LifeSG for Scan & Pay\n  \n You can use LifeSG to scan participating merchants' QR codes for purchases or scan your friend's/family’s QR code to transfer your GovCash to them. Purchases are only allowed at merchants that accept PayNow/NETS QR codes using the LifeSG app. Look out for the PayNow/NETS logo on the SG QR label displayed by merchants.\n  \n Once your GovCash balance is deducted on the LifeSG mobile app, the payment cannot be cancelled.\n  \n Option 3: Withdraw from OCBC ATMs\n  \n You can withdraw your cash benefit at OCBC ATMs islandwide. You just need to enter:\n  \n (i) your unique 8-digit Payment Reference Number (PRN)\n (ii) your NRIC number; and\n (iii) pass the facial verification\n  \n You do not need to have an OCBC bank account to use this service.\n  \n You will receive the Payment Reference Number (PRN) via letter, your Singpass app (if any) or SMS after your cash benefits have been paid. You can also log into the e-services with your Singpass and select “GovCash PRN” from the left menu to view your PRN. This will only be available after the payment has been made."}, {"q": "I lost my letter containing the Payment Reference Number, can someone else access my money?", "a": "To ensure security, it is not possible to withdraw the money using only the Payment Reference Number. GovCash uses the Singpass Face Verification technology during the withdrawal process at OCBC ATMs. This technology incorporates a liveness-detection, which prevents the use of photographs, videos or masks for verification.\n  \n This security feature prevents fraudulent withdrawals of Government benefits by third parties using photographs or videos of the beneficiary. It ensures that only eligible Singaporean can access and withdraw their Government benefits."}, {"q": "Can you re-send my Payment Reference Number to me?", "a": "You can log in to the e-services with your Singpass to view your Payment Reference Number (PRN). Select “GovCash PRN” from the menu on the left. The PRN will be available after the payment has been processed through GovCash."}, {"q": "What should I do if my facial recognition at the ATM with GovCash functions is unsuccessful?", "a": "If you are unable to verify your identity via Singpass Face Verification at the ATM despite repeated tries, you may visit a NEW ATM located at selected OCBC branches (refer to OCBC website for latest list of NEW ATMs) during the branch operating hours, and OCBC's Digital Ambassadors will be available to assist you."}, {"q": "Where can I seek help regarding my GovCash withdrawal?", "a": "If you are unable to verify your identity via Singpass Face Verification at an OCBC ATM after several attempts or if you require assistance with your GovCash withdrawals, you can visit a NEW ATM located at selected OCBC branches (refer to OCBC website for latest list of New ATMs) during the branch operating hours. OCBC Digital Ambassadors will be available to assist you."}, {"q": "Is there a specific time frame for me to withdraw or use my GovCash?", "a": "You can withdraw or use your GovCash at your convenience, as there is no specific time frame. However, you are encouraged to do so as the intent of the scheme is to supplement your income and retirement savings."}, {"q": "How do I check my GovCash balance?", "a": "To check your GovCash balance, visit any OCBC ATMs with your 8-digit Payment Reference Number (PRN). Upon successful authentication, you will be able to view your GovCash balance. Alternatively, you can log in to the LifeSG mobile app using your Singpass to view your balance and transaction history."}, {"q": "How do I know if the merchants allow me to make purchases using my GovCash?", "a": "You can only make purchases using GovCash at merchants that accept PayNow/NETS QR code using the LifeSG app. You can look out for the PayNow/NETS logo on the SG QR label that is displayed by the merchants."}, {"q": "Can I cancel the payment after I have confirmed the payment utilising my GovCash on the LifeSG mobile app?", "a": "No, your GovCash balance will be deducted upon successful payment."}, {"q": "How can I opt out of receiving payments via GovCash?", "a": "If you prefer not to receive your payments via Govcash, there are two options available:\n  \n Option 1: Link your NRIC to PayNow with a participating bank\n We encourage you to link your NRIC to PayNow with a participating PayNow-GIRO bank.\n \n The list of PayNow-GIRO-participating banks are: Bank of China, CIMB, Citibank, DBS Bank / POSB, GXS Bank, HL Bank, HSBC Bank, ICBC, MariBank, Maybank, OCBC Bank, RHB Bank, Standard Chartered Bank, State Bank of India, Trust Bank and UOB Bank.\n \n If your preferred bank is on this list, contact your bank for details on how to link your NRIC to PayNow.\n \n Once you link your NRIC to PayNow, future Government benefits you are eligible for will be automatically credited to your PayNow-linked bank account.\n  \n Option 2: Register your bank account details\n Alternatively, you can choose to receive your payments via crediting to your bank account. To do so, log in to the e-services using your Singpass, select “Bank Account Submission” and update your POSB/DBS, OCBC or UOB bank account details.\n  \n Bank crediting is available only via the three local banking groups DBS/POSB, OCBC, UOB, and your bank account must be a personal or joint account registered with your NRIC number.\n  \n The Government will verify the bank account details you have registered with your bank. If you have closed your bank account, ceased being a joint account holder, or have provided incorrect bank account details, you will be asked to update your bank account details. A letter will be sent to your NRIC address."}, {"q": "Can Silver Support be paid on a monthly basis instead of a quarterly basis?", "a": "Silver Support (SS) payments are made ahead of the quarter, as shown below:\n  \n    Eligibility period\n    Payment Date\n      January - March\n    31 December of the preceding year\n      April - June\n    31 March\n      July - September\n    30 June\n      October - December\n    30 September\n    \n  \n Paying ahead in 3-month tranches gives the recipients greater flexibility to manage their expenses. Monthly payments will reduce such flexibility."}, {"q": "How can I help a beneficiary who is illiterate, digitally unable or has medical condition(s) and does not have Singpass to check their eligibility for Silver Support benefits?", "a": "To safeguard citizens’ interests and confidentiality, beneficiaries must check their own benefits on the govbenefits website using their Singpass. Citizens who are illiterate or unable to use the website may seek assistance at any ServiceSG centres or community centres. However, if the beneficiary has a medical condition and is unable to do so, you can help them check their eligibility for Government benefits if you are:\n  \n  aged 21 and above; and\n a next-of-kin or appointed donee under the Lasting Power of Attorney (LPA), or court-appointed Deputy of the beneficiary.\n   \n To assist the beneficiary in checking their eligibility for Government Benefits, you will need to provide the following supporting documents:\n  \n If you are a next-of-kin or caregiver of the beneficiary, please contact us on govbenefits with the scanned copies of the following document(s):\n  \n  documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n the beneficiary’s NRIC.\n   \n If you are the appointed donee under the Lasting Power of Attorney of the beneficiary, please contact us on govbenefits with the scanned copies of the following document(s):\n  \n  Lasting Power of Attorney of the beneficiary;\n documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n beneficiary’s NRIC.\n   \n If you are the court-appointed Deputy, please contact us on govbenefits with the scanned copies of the following document(s):\n  \n  court order authorising you to perform financial transactions on behalf of the beneficiary;\n your NRIC; and\n beneficiary’s NRIC."}, {"q": "How can I help a beneficiary with medical condition(s) to provide/update their bank account details registered with the Government to receive Silver Support?", "a": "Silver Support (SS) will be credited to the beneficiary’s PayNow-NRIC-linked bank account by default. If they do not have a PayNow-NRIC-linked bank account with a PayNow-GIRO-participating bank in Singapore but have provided their bank account number to the Government previously, they will receive their SS via bank transfer. If they do not have a bank account, the amount will be credited to them via GovCash.\n \n If a beneficiary is unable to perform these transactions due to a medical condition, you may assist them in providing or updating their bank account details registered with the Board, if you are:\n  \n  aged 21 and above; and\n a next-of-kin or appointed donee under the Lasting Power of Attorney (LPA), or court-appointed Deputy of the beneficiary.\n  \n Option 1: To update to a bank account held in trust for the beneficiary\n \n You can write to us with the scanned copies of the following document(s):\n  \n  bank book/statement reflecting that the account is held in trust for the beneficiary;\n your NRIC; and\n beneficiary’s NRIC.\n  \n Option 2: To update to a personal or joint bank account in the beneficiary’s name\n \n If you are a next-of-kin or caregiver of the beneficiary, you can write to us with the scanned copies of the following document(s):\n  \n  documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n the beneficiary’s NRIC.\n   \n If you are the appointed donee under the Lasting Power of Attorney of the beneficiary, you can write to us with the scanned copies of the following document(s):\n  \n  Lasting Power of Attorney of the beneficiary;\n documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n beneficiary’s NRIC.\n  \n If you are the court-appointed Deputy, you can write to us with the scanned copies of the following document(s):\n  \n  court order authorising you to perform financial transactions on behalf of the beneficiary;\n your NRIC; and\n beneficiary’s NRIC.\n  \n Please note the bank account must include the beneficiary's name. This is to help the Board safeguard the beneficiary's interests. If you are unable to fulfil any of the above options, you can write to us for further advice."}, {"q": "How can I help a beneficiary with medical condition(s) to withdraw their GovCash?", "a": "You can help a beneficiary with medical condition (e.g. who is physically incapacitated) withdraw their GovCash if you are:\n  \n  aged 21 and above; and\n a next-of-kin or appointed donee under the Lasting Power of Attorney (LPA), or court-appointed Deputy of the beneficiary.\n   \n To help the beneficiary with the withdrawal of the GovCash monies, visit any OCBC-New ATM during branch operating hours, where OCBC Digital Ambassadors will be available to render assistance:\n  \n If you are a next-of-kin or caregiver of the beneficiary, please bring the following document(s):\n  \n  documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your original NRIC;\n a photocopy of the beneficiary’s NRIC; and\n beneficiary’s GovCash Payment Reference Number (PRN).\n   \n If you are the appointed donee under the Lasting Power of Attorney of the beneficiary, please bring the following document(s):\n  \n  Lasting Power of Attorney of the beneficiary;\n documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your original NRIC;\n a photocopy of the beneficiary’s NRIC; and\n beneficiary’s GovCash Payment Reference Number (PRN).\n   \n If you are the court-appointed Deputy, please bring the following document(s):\n  \n  court order authorising you to perform financial transactions on behalf of the beneficiary;\n your original NRIC;\n a photocopy of the beneficiary’s NRIC; and\n beneficiary’s GovCash Payment Reference Number (PRN).\n   \n You may be required to sign a Letter of Indemnity at the bank, witnessed by the bank officer."}, {"q": "How can I help a beneficiary with medical condition(s) to appeal to receive Silver Support?", "a": "Eligibility for Silver Suport(SS) is automatically assessed and no action is required. However, if the beneficiary’s circumstances have changed, you may assist a beneficiary with medical condition in appealing for SS, if you are:\n  \n  aged 21 and above; and\n a next-of-kin or appointed donee under the Lasting Power of Attorney (LPA), or court-appointed Deputy of the beneficiary.\n   \n To assist the beneficiary to appeal for SS, you will need to provide the following supporting documents:\n  \n If you are a next-of-kin or caregiver of the beneficiary, you can write to us with the scanned copies of the following document(s):\n  \n  documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year, unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n the beneficiary’s NRIC.\n   \n If you are the appointed donee under the Lasting Power of Attorney of the beneficiary, you can write to us with the scanned copies of the following document(s):\n  \n  Lasting Power of Attorney of the beneficiary;\n documentary evidence stating the beneficiary's medical condition (e.g. doctor's memorandum, medical report, or court order). The document(s) should be dated within the last year unless it specifically states that the condition is permanent or if the condition is known to be permanent (e.g. physically incapacitated, autism, Down syndrome, cerebral palsy, etc.);\n your NRIC; and\n beneficiary’s NRIC.\n   \n If you are the court appointed Deputy, you can write to us with the scanned copies of the following document(s):\n  \n  court order authorising you to perform financial transactions on behalf of the beneficiary;\n your NRIC; and\n beneficiary’s NRIC.\n   \n If you are unable to fulfil any of the options, you can write to us for further advice."}, {"q": "What happens to the Silver Support paid via GovCash if the beneficiary passes away?", "a": "If the beneficiary passes away before fully using their GovCash, the remaining balance will be credited to their CPF Ordinary Account. This amount will form part of their CPF monies and will be distributed according to their CPF Nomination, if any."}]};
+</script>
+<script>
+// ═══════════════════════════════════════════════════
+// PERSONAS
+// ═══════════════════════════════════════════════════
+const PERSONAS = [
+  { name: "Tan Ah Kow", age: 67, background: "retired bus driver", gender: "M", emoji: "👴", salutation: "Mr", lastname: "Tan" },
+  { name: "Siti Rahimah", age: 45, background: "primary school teacher", gender: "F", emoji: "👩‍🏫", salutation: "Mdm", lastname: "Rahimah" },
+  { name: "Rajesh Kumar", age: 38, background: "IT engineer at a local SME", gender: "M", emoji: "👨‍💻", salutation: "Mr", lastname: "Kumar" },
+  { name: "Lim Mei Ling", age: 29, background: "marketing executive", gender: "F", emoji: "👩", salutation: "Ms", lastname: "Lim" },
+  { name: "Ahmad Fadzillah", age: 52, background: "hawker stall owner", gender: "M", emoji: "👨‍🍳", salutation: "Mr", lastname: "Ahmad" },
+  { name: "Chen Wei Ming", age: 61, background: "former civil servant, recently retired", gender: "M", emoji: "👴", salutation: "Mr", lastname: "Chen" },
+  { name: "Priya Devi", age: 34, background: "hospital nurse", gender: "F", emoji: "👩‍⚕️", salutation: "Ms", lastname: "Priya" },
+  { name: "Ng Boon Kiat", age: 55, background: "construction project manager", gender: "M", emoji: "👷", salutation: "Mr", lastname: "Ng" },
+  { name: "Fatimah Zahra", age: 72, background: "homemaker, widowed", gender: "F", emoji: "👵", salutation: "Mdm", lastname: "Zahra" },
+  { name: "Kevin Ong", age: 24, background: "fresh graduate starting first job", gender: "M", emoji: "👦", salutation: "Mr", lastname: "Ong" },
+  { name: "Mary Pereira", age: 48, background: "self-employed accountant", gender: "F", emoji: "👩‍💼", salutation: "Ms", lastname: "Pereira" },
+  { name: "Lee Chong Wei", age: 43, background: "logistics company director", gender: "M", emoji: "👨‍💼", salutation: "Mr", lastname: "Lee" },
+  { name: "Noor Hidayah", age: 31, background: "social worker", gender: "F", emoji: "👩", salutation: "Ms", lastname: "Noor" },
+  { name: "Ho Swee Lian", age: 58, background: "cleaner at a shopping mall", gender: "F", emoji: "👵", salutation: "Mdm", lastname: "Ho" },
+  { name: "Suresh Nair", age: 40, background: "taxi driver, recently became PR", gender: "M", emoji: "🚕", salutation: "Mr", lastname: "Nair" },
+  { name: "Chua Beng Huat", age: 66, background: "retired factory supervisor", gender: "M", emoji: "👴", salutation: "Mr", lastname: "Chua" },
+  { name: "Jessica Tan", age: 27, background: "graphic designer, freelancer", gender: "F", emoji: "👩‍🎨", salutation: "Ms", lastname: "Tan" },
+  { name: "Mohamed Shariff", age: 50, background: "secondary school principal", gender: "M", emoji: "👨‍🏫", salutation: "Mr", lastname: "Shariff" },
+  { name: "Grace Loh", age: 36, background: "physiotherapist", gender: "F", emoji: "👩‍⚕️", salutation: "Ms", lastname: "Loh" },
+  { name: "David Koh", age: 53, background: "property agent, recently divorced", gender: "M", emoji: "🏠", salutation: "Mr", lastname: "Koh" },
+];
+
+const CATEGORY_TAGS = {
+  "Accounts Management": "tag-am",
+  "Member Particulars": "tag-mp",
+  "Account Closure": "tag-ac",
+  "Digital Services": "tag-ds",
+  "SSS": "tag-ss"
+};
+
+const FAQ_URLS = {
+  "Accounts Management": "https://www.cpf.gov.sg/member/faq/account-services/account-management",
+  "Member Particulars": "https://www.cpf.gov.sg/member/faq/account-services/member-particulars",
+  "Account Closure": "https://www.cpf.gov.sg/member/faq/account-services/account-closure",
+  "Digital Services": "https://www.cpf.gov.sg/member/faq/account-services/digital-services",
+  "SSS": "https://www.cpf.gov.sg/member/faq/retirement-income/silver-support-scheme"
+};
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let settings = { difficulty: 'easy', timer: 0, category: 'all', mode: 'quiz', emailDiff: 'simple' };
+let quizState = { questions: [], current: 0, answers: [], timers: [], timerInterval: null, startTimes: [] };
+let emailState = { correct: 0, total: 0, currentQ: null };
+
+// ═══════════════════════════════════════════════════
+// UI HELPERS
+// ═══════════════════════════════════════════════════
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function selectMode(mode, el) {
+  settings.mode = mode;
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('quiz-settings').style.display = mode === 'quiz' ? 'block' : 'none';
+  document.getElementById('email-settings').style.display = mode === 'email' ? 'block' : 'none';
+}
+
+function setSetting(key, val, el) {
+  settings[key] = val;
+  const group = el.closest('.btn-group');
+  group.querySelectorAll('.btn-opt').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function goHome() {
+  if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+  show('screen-home');
+}
+
+function toggleReview() {
+  const sec = document.getElementById('review-section');
+  const btn = document.getElementById('btn-toggle-review');
+  if (sec.style.display === 'none') {
+    sec.style.display = 'block';
+    btn.textContent = 'Hide Review ▲';
+  } else {
+    sec.style.display = 'none';
+    btn.textContent = 'Show Review ▼';
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// GET FAQS FOR CATEGORY
+// ═══════════════════════════════════════════════════
+function getFAQsForCategory(cat) {
+  if (cat === 'all') {
+    let all = [];
+    for (const k of Object.keys(FAQ_DATA)) all = all.concat(FAQ_DATA[k].map(f => ({...f, category: k})));
+    return all;
+  }
+  return (FAQ_DATA[cat] || []).map(f => ({...f, category: cat}));
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+// ═══════════════════════════════════════════════════
+// CLAUDE API CALL
+// ═══════════════════════════════════════════════════
+async function callClaude(prompt, systemPrompt = '') {
+  const messages = [{ role: 'user', content: prompt }];
+  const body = {
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 1000,
+    messages
+  };
+  if (systemPrompt) body.system = systemPrompt;
+
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  const data = await resp.json();
+  const text = data.content?.map(c => c.text || '').join('') || '';
+  return text;
+}
+
+// ═══════════════════════════════════════════════════
+// GENERATE QUIZ QUESTIONS via Claude
+// ═══════════════════════════════════════════════════
+async function generateQuizBatch(faqs, personas, difficulty, count = 20) {
+  const faqSample = shuffle(faqs).slice(0, Math.min(count, faqs.length));
+  const personaPool = shuffle([...PERSONAS]);
+
+  const faqList = faqSample.map((f, i) => `${i+1}. [${f.category}] Q: ${f.q}\nA: ${f.a.substring(0,400)}`).join('\n\n');
+
+  const diffInstructions = {
+    easy: 'Easy: Ask direct factual questions with one clearly correct answer. Wrong choices should be clearly different.',
+    medium: 'Medium: Ask questions that require understanding of policy nuances. Wrong choices are plausible but incorrect.',
+    hard: 'Hard: Ask tricky edge-case or scenario-based questions. All wrong choices should seem reasonable but have a subtle error.'
+  };
+
+  const prompt = `You are generating quiz questions for CPF (Central Provident Fund) customer service officer training.
+
+${diffInstructions[difficulty]}
+
+Based on these FAQs, generate exactly ${count} quiz questions as a JSON array. Each element:
+{
+  "faq_index": <0-based index into FAQ list>,
+  "question": "<the quiz question to display>",
+  "correct": "<the correct answer option text>",
+  "wrong1": "<plausible wrong option>",
+  "wrong2": "<plausible wrong option>",
+  "wrong3": "<plausible wrong option>",
+  "explanation": "<1-2 sentences explaining why the correct answer is right>",
+  "category": "<category name>"
+}
+
+FAQs:
+${faqList}
+
+Return ONLY the JSON array. No markdown, no preamble.`;
+
+  const raw = await callClaude(prompt);
+  let clean = raw.replace(/```json|```/g, '').trim();
+  const parsed = JSON.parse(clean);
+
+  return parsed.map((q, i) => {
+    const faq = faqSample[q.faq_index] || faqSample[i % faqSample.length];
+    const persona = personaPool[i % personaPool.length];
+    const choices = shuffle([
+      { text: q.correct, correct: true },
+      { text: q.wrong1, correct: false },
+      { text: q.wrong2, correct: false },
+      { text: q.wrong3, correct: false }
+    ]);
+    return {
+      question: q.question,
+      choices,
+      explanation: q.explanation,
+      category: q.category || faq.category,
+      faq,
+      persona
+    };
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// START SESSION
+// ═══════════════════════════════════════════════════
+async function startSession() {
+  if (settings.mode === 'email') {
+    emailState = { correct: 0, total: 0, currentQ: null };
+    document.getElementById('email-score-val').textContent = '0';
+    document.getElementById('email-score-total').textContent = '0';
+    document.getElementById('email-diff-tag').textContent =
+      settings.emailDiff === 'simple' ? 'Simple' :
+      settings.emailDiff === 'mixed' ? 'Mixed' : 'Complex';
+    document.getElementById('email-diff-tag').className =
+      'difficulty-tag ' + (settings.emailDiff === 'simple' ? 'diff-easy' : settings.emailDiff === 'mixed' ? 'diff-medium' : 'diff-hard');
+    show('screen-loading');
+    document.getElementById('loading-status').textContent = 'Generating member scenario...';
+    document.getElementById('loading-bar').style.width = '40%';
+    await newEmailScenario();
+    document.getElementById('loading-bar').style.width = '100%';
+    show('screen-email');
+    return;
+  }
+
+  show('screen-loading');
+  document.getElementById('loading-status').textContent = 'Sampling FAQ topics...';
+  document.getElementById('loading-bar').style.width = '10%';
+
+  try {
+    const faqs = getFAQsForCategory(settings.category);
+    document.getElementById('loading-bar').style.width = '30%';
+    document.getElementById('loading-status').textContent = 'Asking Claude to craft questions...';
+
+    const questions = await generateQuizBatch(faqs, PERSONAS, settings.difficulty, 20);
+    document.getElementById('loading-bar').style.width = '90%';
+
+    quizState = {
+      questions,
+      current: 0,
+      answers: new Array(questions.length).fill(null),
+      timers: new Array(questions.length).fill(null),
+      timerInterval: null,
+      startTimes: [],
+      elapsed: new Array(questions.length).fill(0)
+    };
+
+    document.getElementById('loading-bar').style.width = '100%';
+    await new Promise(r => setTimeout(r, 300));
+    renderQuestion(0);
+    show('screen-quiz');
+  } catch (e) {
+    console.error(e);
+    document.getElementById('loading-status').textContent = 'Error generating quiz. Retrying...';
+    setTimeout(startSession, 2000);
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER QUESTION
+// ═══════════════════════════════════════════════════
+function renderQuestion(idx) {
+  const q = quizState.questions[idx];
+  if (!q) return;
+
+  const total = quizState.questions.length;
+  document.getElementById('q-current').textContent = idx + 1;
+  document.getElementById('q-total').textContent = total;
+  document.getElementById('quiz-progress-fill').style.width = `${(idx / total) * 100}%`;
+
+  // Persona
+  const p = q.persona;
+  document.getElementById('persona-avatar').textContent = p.emoji;
+  document.getElementById('persona-name').textContent = `${p.name}, ${p.age}`;
+  document.getElementById('persona-detail').textContent = p.background.charAt(0).toUpperCase() + p.background.slice(1);
+  const catTag = document.getElementById('persona-category');
+  catTag.textContent = q.category;
+  catTag.className = `persona-category tag ${CATEGORY_TAGS[q.category] || 'tag-am'}`;
+
+  // Question
+  const diffTag = `<span class="difficulty-tag diff-${settings.difficulty}">${settings.difficulty}</span>`;
+  document.getElementById('question-num').innerHTML = `Question ${idx + 1} · ${q.category} ${diffTag}`;
+  document.getElementById('question-text').textContent = q.question;
+
+  // Choices
+  const container = document.getElementById('choices-container');
+  container.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+  q.choices.forEach((choice, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = `<span class="choice-letter">${letters[i]}</span><span class="choice-text">${choice.text}</span>`;
+    btn.onclick = () => selectChoice(idx, i, btn);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('btn-next').style.display = 'none';
+  document.getElementById('btn-skip').style.display = 'inline-block';
+
+  // Timer
+  if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+  quizState.startTimes[idx] = Date.now();
+
+  if (settings.timer > 0) {
+    const display = document.getElementById('timer-display');
+    display.classList.remove('hidden', 'warning', 'danger');
+    let remaining = settings.timer;
+    document.getElementById('timer-val').textContent = remaining;
+    quizState.timerInterval = setInterval(() => {
+      remaining--;
+      document.getElementById('timer-val').textContent = remaining;
+      if (remaining <= 10) display.classList.add('danger');
+      else if (remaining <= 20) display.classList.add('warning');
+      if (remaining <= 0) {
+        clearInterval(quizState.timerInterval);
+        skipQuestion();
+      }
+    }, 1000);
+  } else {
+    document.getElementById('timer-display').classList.add('hidden');
+  }
+
+  // Re-apply previous answer if going back (not implemented, but state preserved)
+  document.getElementById('persona-card').classList.remove('fade-in');
+  document.getElementById('question-card').classList.remove('fade-in');
+  document.getElementById('choices-container').classList.remove('fade-in');
+  void document.getElementById('persona-card').offsetWidth;
+  document.getElementById('persona-card').classList.add('fade-in');
+  document.getElementById('question-card').classList.add('fade-in');
+  document.getElementById('choices-container').classList.add('fade-in');
+}
+
+function selectChoice(qIdx, choiceIdx, btn) {
+  if (quizState.answers[qIdx] !== null) return;
+  if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+
+  quizState.answers[qIdx] = choiceIdx;
+  quizState.elapsed[qIdx] = Math.round((Date.now() - quizState.startTimes[qIdx]) / 1000);
+
+  const q = quizState.questions[qIdx];
+  const allBtns = document.querySelectorAll('#choices-container .choice-btn');
+  allBtns.forEach((b, i) => {
+    b.disabled = true;
+    if (q.choices[i].correct) b.classList.add('correct');
+    else if (i === choiceIdx) b.classList.add('wrong');
+  });
+
+  document.getElementById('btn-next').style.display = 'inline-block';
+  document.getElementById('btn-skip').style.display = 'none';
+}
+
+function skipQuestion() {
+  const idx = quizState.current;
+  if (quizState.answers[idx] === null) quizState.answers[idx] = -1;
+  quizState.elapsed[idx] = Math.round((Date.now() - (quizState.startTimes[idx] || Date.now())) / 1000);
+  nextQuestion();
+}
+
+function nextQuestion() {
+  if (quizState.timerInterval) clearInterval(quizState.timerInterval);
+  quizState.current++;
+  if (quizState.current >= quizState.questions.length) {
+    showResults();
+  } else {
+    renderQuestion(quizState.current);
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// RESULTS
+// ═══════════════════════════════════════════════════
+function showResults() {
+  const qs = quizState.questions;
+  const ans = quizState.answers;
+  let correct = 0, wrong = 0, skipped = 0, totalTime = 0;
+
+  ans.forEach((a, i) => {
+    if (a === -1 || a === null) { skipped++; return; }
+    const q = qs[i];
+    if (q.choices[a]?.correct) correct++;
+    else wrong++;
+    totalTime += quizState.elapsed[i] || 0;
+  });
+
+  const total = qs.length;
+  const answered = correct + wrong;
+  const avgTime = answered > 0 ? Math.round(totalTime / answered) : 0;
+  const pct = Math.round((correct / total) * 100);
+  const msgs = ['Keep Practising', 'Getting There', 'Good Work', 'Well Done!', 'Excellent!', 'Outstanding!'];
+  const msg = pct < 40 ? msgs[0] : pct < 55 ? msgs[1] : pct < 70 ? msgs[2] : pct < 80 ? msgs[3] : pct < 90 ? msgs[4] : msgs[5];
+
+  document.getElementById('result-score').textContent = correct;
+  document.getElementById('result-denom').textContent = `/ ${total}`;
+  document.getElementById('result-msg').textContent = `${pct}% — ${msg}`;
+  document.getElementById('stat-correct').textContent = correct;
+  document.getElementById('stat-wrong').textContent = wrong;
+  document.getElementById('stat-skipped').textContent = skipped;
+  document.getElementById('stat-time').textContent = avgTime > 0 ? `${avgTime}s` : '—';
+
+  // Build review
+  const rev = document.getElementById('review-section');
+  rev.innerHTML = '<h3>Question Review</h3>';
+  qs.forEach((q, i) => {
+    const a = ans[i];
+    const isSkipped = a === -1 || a === null;
+    const isCorrect = !isSkipped && q.choices[a]?.correct;
+    const item = document.createElement('div');
+    item.className = `review-item ${isCorrect ? 'correct-item' : 'wrong-item'} fade-in`;
+
+    const yourAns = isSkipped ? 'Skipped' : q.choices[a]?.text;
+    const correctAns = q.choices.find(c => c.correct)?.text;
+    const url = FAQ_URLS[q.category] || 'https://www.cpf.gov.sg/member/faq';
+
+    item.innerHTML = `
+      <div class="review-top">
+        <span class="review-badge ${isCorrect ? 'correct-b' : 'wrong-b'}">${isCorrect ? '✓ Correct' : isSkipped ? '— Skipped' : '✗ Wrong'}</span>
+        <span class="review-persona">${q.persona.name}, ${q.persona.age} · <span class="tag ${CATEGORY_TAGS[q.category] || 'tag-am'}">${q.category}</span></span>
+      </div>
+      <div class="review-q">${q.question}</div>
+      ${!isCorrect ? `<div class="review-answer your-ans">Your answer: ${yourAns}</div>` : ''}
+      <div class="review-answer correct-ans">Correct: ${correctAns}</div>
+      <div class="review-explain">${q.explanation}</div>
+      <a href="${url}" target="_blank" class="faq-link">📖 View ${q.category} FAQs →</a>
+    `;
+    rev.appendChild(item);
+  });
+
+  document.getElementById('review-section').style.display = 'none';
+  document.getElementById('btn-toggle-review').textContent = 'Show Review ▼';
+  show('screen-results');
+}
+
+// ═══════════════════════════════════════════════════
+// EMAIL MODE
+// ═══════════════════════════════════════════════════
+async function newEmailScenario() {
+  document.getElementById('email-explanation').classList.remove('show');
+  document.getElementById('btn-email-submit').disabled = false;
+
+  const persona = rand(PERSONAS);
+  const today = new Date();
+  const dateStr = today.toLocaleDateString('en-SG', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  let categories;
+  if (settings.emailDiff === 'simple') categories = [rand(Object.keys(FAQ_DATA))];
+  else if (settings.emailDiff === 'mixed') {
+    const keys = shuffle(Object.keys(FAQ_DATA));
+    categories = keys.slice(0, 2 + Math.floor(Math.random() * 2));
+  } else {
+    categories = shuffle(Object.keys(FAQ_DATA)).slice(0, 3 + Math.floor(Math.random() * 2));
+  }
+
+  const faqsForPrompt = [];
+  for (const cat of categories) {
+    const catFaqs = shuffle(FAQ_DATA[cat]).slice(0, 2);
+    catFaqs.forEach(f => faqsForPrompt.push({...f, category: cat}));
+  }
+  const faqContext = faqsForPrompt.map(f => `[${f.category}] Q: ${f.q}\nA: ${f.a.substring(0,300)}`).join('\n\n');
+
+  const prompt = `You are generating a realistic CPF member enquiry email and a multiple-choice quiz for officer training.
+
+Member: ${persona.name}, ${persona.age}, ${persona.background}
+
+Relevant CPF FAQs (topics to include in the scenario):
+${faqContext}
+
+Generate a JSON object:
+{
+  "subject": "<email subject line>",
+  "enquiry": "<2-4 paragraph member email. Make it sound like a real worried/confused Singaporean member. Reference their background naturally. Ask about ${categories.join(' and ')} topics.>",
+  "correct_paragraph": "<The ideal reply paragraph (2-4 sentences) addressing their main concern accurately based on the FAQ answers>",
+  "wrong1": "<A wrong paragraph – partially correct but misses a key point>",
+  "wrong2": "<A wrong paragraph – gives incorrect information>",
+  "wrong3": "<A wrong paragraph – correct tone but unhelpful/vague>",
+  "added_text": "<The sign-off text already in the template, e.g. 'Please do not hesitate to contact us if you require further clarification. We apologise for any inconvenience caused.'>",
+  "explanation": "<1-2 sentences explaining why the correct paragraph is best>"
+}
+
+Return ONLY the JSON. No markdown.`;
+
+  const raw = await callClaude(prompt);
+  let clean = raw.replace(/```json|```/g, '').trim();
+  const data = JSON.parse(clean);
+
+  const choices = shuffle([
+    { text: data.correct_paragraph, correct: true },
+    { text: data.wrong1, correct: false },
+    { text: data.wrong2, correct: false },
+    { text: data.wrong3, correct: false }
+  ]);
+
+  emailState.currentQ = { data, choices, persona, dateStr, categories };
+
+  // Render
+  document.getElementById('email-avatar').textContent = persona.emoji;
+  document.getElementById('email-sender').textContent = persona.name;
+  document.getElementById('email-sender-detail').textContent = `${persona.age} · ${persona.background} · ${categories.join(', ')}`;
+  document.getElementById('email-subject').textContent = data.subject;
+  document.getElementById('email-enquiry').textContent = data.enquiry;
+  document.getElementById('email-date').textContent = `Sent: ${dateStr}`;
+
+  document.getElementById('et-salutation').textContent = persona.salutation;
+  document.getElementById('et-lastname').textContent = persona.lastname;
+  document.getElementById('et-date').textContent = dateStr;
+
+  const container = document.getElementById('email-choices-container');
+  container.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+  choices.forEach((choice, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'email-choice-btn';
+    btn.innerHTML = `<span class="email-choice-letter">${letters[i]}</span><span>${choice.text}</span>`;
+    btn.onclick = () => {
+      container.querySelectorAll('.email-choice-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      emailState.selectedChoice = i;
+    };
+    container.appendChild(btn);
+  });
+  emailState.selectedChoice = null;
+  document.getElementById('email-explanation').classList.remove('show');
+}
+
+async function submitEmail() {
+  const sel = emailState.selectedChoice;
+  if (sel === null) { alert('Please select a reply paragraph first.'); return; }
+
+  const { choices } = emailState.currentQ;
+  const isCorrect = choices[sel].correct;
+  emailState.total++;
+  if (isCorrect) emailState.correct++;
+
+  document.getElementById('email-score-val').textContent = emailState.correct;
+  document.getElementById('email-score-total').textContent = emailState.total;
+
+  const container = document.getElementById('email-choices-container');
+  container.querySelectorAll('.email-choice-btn').forEach((btn, i) => {
+    btn.disabled = true;
+    if (choices[i].correct) btn.classList.add('correct');
+    else if (i === sel) btn.classList.add('wrong');
+  });
+
+  const expBox = document.getElementById('email-explanation');
+  expBox.innerHTML = `<strong>${isCorrect ? '✅ Correct!' : '❌ Incorrect.'}</strong> ${emailState.currentQ.data.explanation}`;
+  expBox.classList.add('show');
+  document.getElementById('btn-email-submit').disabled = true;
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+show('screen-home');
+</script>
+
+
+</body>
+</html>
