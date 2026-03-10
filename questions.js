@@ -6673,4 +6673,5 @@ const EMAIL_SCENARIOS = [
     "explain": "Household support is assessed via 'Average Monthly Household Income Per Person'.",
     "categories": ["SSS"]
   }
+ }
 ];
