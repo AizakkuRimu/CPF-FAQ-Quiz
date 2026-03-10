@@ -11906,6 +11906,7 @@ const QUESTIONS = [
       "salutation": "Mr",
       "lastname": "George"
     },
+   }
   {
     "q": "What is the primary role of an appointed Trusted Contact in the CPF notification service?",
     "choices": [
