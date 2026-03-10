@@ -11905,6 +11905,1605 @@ const QUESTIONS = [
       "emoji": "🌐",
       "salutation": "Mr",
       "lastname": "George"
+    },
+  {
+    "q": "What is the primary role of an appointed Trusted Contact in the CPF notification service?",
+    "choices": [
+      {
+        "text": "To make CPF transactions and change account settings on behalf of the member.",
+        "correct": false
+      },
+      {
+        "text": "To receive a copy of important transaction notifications and alert the member of unusual activities.",
+        "correct": true
+      },
+      {
+        "text": "To act as a legal guardian and manage the member's retirement funds.",
+        "correct": false
+      },
+      {
+        "text": "To provide financial advice and approve the member's withdrawal requests.",
+        "correct": false
+      }
+    ],
+    "explanation": "A Trusted Contact's role is limited to receiving a copy of notifications for critical transactions and alerting the member to unusual activity. They cannot make transactions or change settings.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Siti Nurhaliza",
+      "age": 32,
+      "bg": "Marketing Executive",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Siti"
+    }
+  },
+  {
+    "q": "By which date must an employer pay CPF contributions for each month's wages to avoid late payment interest?",
+    "choices": [
+      {
+        "text": "By the last day of the current month.",
+        "correct": false
+      },
+      {
+        "text": "By the 14th of the following month.",
+        "correct": true
+      },
+      {
+        "text": "By the 7th of the following month.",
+        "correct": false
+      },
+      {
+        "text": "By the 21st of the following month.",
+        "correct": false
+      }
+    ],
+    "explanation": "Employers must pay CPF contributions by the 14th of the following month (or the next working day if it falls on a weekend/holiday). Late payments incur 1.5% interest per month.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Jason Lim",
+      "age": 45,
+      "bg": "Small Business Owner",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "How far in advance can a member book an appointment at a CPF Service Centre?",
+    "choices": [
+      {
+        "text": "Up to 1 month in advance.",
+        "correct": false
+      },
+      {
+        "text": "Up to 2 weeks in advance.",
+        "correct": true
+      },
+      {
+        "text": "Up to 3 months in advance.",
+        "correct": false
+      },
+      {
+        "text": "Appointments must be made at least 48 hours before the visit.",
+        "correct": false
+      }
+    ],
+    "explanation": "Service Centre appointment bookings are opened 2 weeks in advance to ensure customer service officers are accessible to those who need assistance promptly.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Grace Tan",
+      "age": 28,
+      "bg": "Bank Officer",
+      "emoji": "👩‍💻",
+      "salutation": "Ms",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Which of these updates to a member's CPF account will trigger a notification to their Trusted Contact?",
+    "choices": [
+      {
+        "text": "Viewing the yearly statement of account.",
+        "correct": false
+      },
+      {
+        "text": "A daily withdrawal limit update.",
+        "correct": true
+      },
+      {
+        "text": "Changing the theme of the CPF Mobile app.",
+        "correct": false
+      },
+      {
+        "text": "Updating the relationship status in member particulars.",
+        "correct": false
+      }
+    ],
+    "explanation": "Notifications for critical transactions like bank account updates, contact details updates, and daily withdrawal limit updates are copied to the Trusted Contact.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Bala Krishnan",
+      "age": 60,
+      "bg": "Security Guard",
+      "emoji": "👨‍✈️",
+      "salutation": "Mr",
+      "lastname": "Krishnan"
+    }
+  },
+  {
+    "q": "If an employer pays CPF contributions after the 14th of the following month, what is the interest rate charged per month for late payment?",
+    "choices": [
+      {
+        "text": "1.0%",
+        "correct": false
+      },
+      {
+        "text": "1.5%",
+        "correct": true
+      },
+      {
+        "text": "2.0%",
+        "correct": false
+      },
+      {
+        "text": "0.5%",
+        "correct": false
+      }
+    ],
+    "explanation": "Late payment of CPF contributions by employers incurs interest charged at 1.5% per month.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Linda Teo",
+      "age": 38,
+      "bg": "Human Resources Manager",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Teo"
+    }
+  },
+  {
+    "q": "For how long can a member view their CPF Transaction History online?",
+    "choices": [
+      {
+        "text": "For the past 6 months.",
+        "correct": false
+      },
+      {
+        "text": "For the past 12 months.",
+        "correct": false
+      },
+      {
+        "text": "For the past 15 months.",
+        "correct": true
+      },
+      {
+        "text": "For the past 24 months.",
+        "correct": false
+      }
+    ],
+    "explanation": "CPF Transaction History provides records for the latest 15 months. Records beyond that must be accessed via the Yearly Statement of Account.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Robert Ng",
+      "age": 52,
+      "bg": "Sales Director",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Ng"
+    }
+  },
+  {
+    "q": "When updating a bank account for PayNow NRIC-linked payments, how long does it usually take for the update to reflect?",
+    "choices": [
+      {
+        "text": "Immediately.",
+        "correct": false
+      },
+      {
+        "text": "12 hours.",
+        "correct": true
+      },
+      {
+        "text": "24 hours.",
+        "correct": false
+      },
+      {
+        "text": "2 working days.",
+        "correct": false
+      }
+    ],
+    "explanation": "For PayNow NRIC-linked bank accounts, the update in the CPF system will be reflected after 12 hours.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Ahmad Ibrahim",
+      "age": 24,
+      "bg": "Delivery Rider",
+      "emoji": "🛵",
+      "salutation": "Mr",
+      "lastname": "Ibrahim"
+    }
+  },
+  {
+    "q": "What happens if a Trusted Contact appointee does not respond to the appointment request within 7 days?",
+    "choices": [
+      {
+        "text": "The request is automatically approved.",
+        "correct": false
+      },
+      {
+        "text": "The request will automatically expire, and a new request must be submitted.",
+        "correct": true
+      },
+      {
+        "text": "The request is sent to an alternative contact person.",
+        "correct": false
+      },
+      {
+        "text": "The appointer's account is temporarily locked for security.",
+        "correct": false
+      }
+    ],
+    "explanation": "A Trusted Contact appointee has 7 days to respond. After this period, the request expires and the member must submit a new request.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Tan Mei Ling",
+      "age": 41,
+      "bg": "Teacher",
+      "emoji": "👩‍🏫",
+      "salutation": "Mdm",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Which service is specifically NOT available at CPF Service Centres and must be handled via digital services or hotline?",
+    "choices": [
+      {
+        "text": "Retirement payout inquiries.",
+        "correct": false
+      },
+      {
+        "text": "Healthcare claim assistance.",
+        "correct": false
+      },
+      {
+        "text": "Employer or self-employed matters.",
+        "correct": true
+      },
+      {
+        "text": "Singpass password resets.",
+        "correct": false
+      }
+    ],
+    "explanation": "Services for employer or self-employed matters are only available through digital services, the hotline, or 'Write to Us', not at Service Centres.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Kenji Wong",
+      "age": 35,
+      "bg": "Freelance Consultant",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Wong"
+    }
+  },
+  {
+    "q": "How long does it generally take for an Interbank GIRO bank account update to be activated after the bank confirms ownership?",
+    "choices": [
+      {
+        "text": "12 hours.",
+        "correct": false
+      },
+      {
+        "text": "1 working day.",
+        "correct": false
+      },
+      {
+        "text": "Up to two working days.",
+        "correct": true
+      },
+      {
+        "text": "5 working days.",
+        "correct": false
+      }
+    ],
+    "explanation": "Interbank GIRO account updates generally take up to two working days to be activated after the bank confirms the account belongs to the member.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Catherine Low",
+      "age": 58,
+      "bg": "Retired Nurse",
+      "emoji": "👩‍⚕️",
+      "salutation": "Mdm",
+      "lastname": "Low"
+    }
+  },
+  {
+    "q": "What is the maximum period CPF Board provides for the retrieval of past CPF statements?",
+    "choices": [
+      {
+        "text": "5 years.",
+        "correct": false
+      },
+      {
+        "text": "10 years.",
+        "correct": true
+      },
+      {
+        "text": "15 years.",
+        "correct": false
+      },
+      {
+        "text": "The entire history of the account.",
+        "correct": false
+      }
+    ],
+    "explanation": "CPF Board does not provide retrieval services for statements beyond the past 10 years. Members are encouraged to download them annually.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Samuel Seah",
+      "age": 22,
+      "bg": "University Student",
+      "emoji": "👨‍🎓",
+      "salutation": "Mr",
+      "lastname": "Seah"
+    }
+  },
+  {
+    "q": "Why is the Trusted Contact notified when a member updates their bank account or daily withdrawal limit?",
+    "choices": [
+      {
+        "text": "To allow the Trusted Contact to approve the change for it to take effect.",
+        "correct": false
+      },
+      {
+        "text": "Because scammers may try to update this info if they obtain unauthorized access.",
+        "correct": true
+      },
+      {
+        "text": "To keep the Trusted Contact informed about the member's financial status.",
+        "correct": false
+      },
+      {
+        "text": "It is a legal requirement for all CPF members over age 55.",
+        "correct": false
+      }
+    ],
+    "explanation": "Trusted Contacts are alerted because scammers often target these settings. The notification allows the Trusted Contact to spot unusual activity early.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lim Boon Hock",
+      "age": 68,
+      "bg": "Retired Taxi Driver",
+      "emoji": "🚖",
+      "salutation": "Mr",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "A member wants to change their bank account for payouts. What should they do if they have a pending withdrawal application?",
+    "choices": [
+      {
+        "text": "Update the bank account immediately to ensure the payout goes to the new bank.",
+        "correct": false
+      },
+      {
+        "text": "Wait until the pending withdrawal is complete before updating the bank account.",
+        "correct": true
+      },
+      {
+        "text": "Cancel the withdrawal, change the bank, and then re-apply.",
+        "correct": false
+      },
+      {
+        "text": "Contact the bank to reroute the CPF payment.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members should consider updating their bank account after a pending withdrawal is complete to ensure successful processing of the current application.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Wong Siew Lan",
+      "age": 56,
+      "bg": "Part-time Admin",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Wong"
+    }
+  },
+  {
+    "q": "What is the consequence if a Trusted Contact is suspected of being a scammer or acting in bad faith?",
+    "choices": [
+      {
+        "text": "CPF Board will automatically remove them from the service.",
+        "correct": false
+      },
+      {
+        "text": "The member should remove them immediately via the 'Add or remove Trusted Contact' e-form.",
+        "correct": true
+      },
+      {
+        "text": "The Trusted Contact's own CPF account will be frozen.",
+        "correct": false
+      },
+      {
+        "text": "Nothing can be done once the appointment is accepted.",
+        "correct": false
+      }
+    ],
+    "explanation": "If a member suspects their Trusted Contact, they should remove them immediately using the digital service e-form.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Kevin Koh",
+      "age": 33,
+      "bg": "Software Engineer",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "In cases where a company is in financial difficulty, what does CPF Board state regarding unpaid contributions?",
+    "choices": [
+      {
+        "text": "The government will pay the contributions on behalf of the company.",
+        "correct": false
+      },
+      {
+        "text": "CPF arrears may not always be recoverable despite enforcement efforts.",
+        "correct": true
+      },
+      {
+        "text": "The company directors are personally liable to pay from their own CPF accounts.",
+        "correct": false
+      },
+      {
+        "text": "The member's retirement age will be extended to compensate for the loss.",
+        "correct": false
+      }
+    ],
+    "explanation": "If a company is in financial difficulty, CPF arrears may not always be recoverable, although the Board takes enforcement action.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Suresh Mani",
+      "age": 44,
+      "bg": "Warehouse Supervisor",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Mani"
+    }
+  },
+  {
+    "q": "Which of these is a requirement before a member can appoint a Trusted Contact?",
+    "choices": [
+      {
+        "text": "The member must be at least 55 years old.",
+        "correct": false
+      },
+      {
+        "text": "The member must verify that their own contact details registered with CPF are correct.",
+        "correct": true
+      },
+      {
+        "text": "The member must have at least $50,000 in their Ordinary Account.",
+        "correct": false
+      },
+      {
+        "text": "The appointee must be a next-of-kin.",
+        "correct": false
+      }
+    ],
+    "explanation": "Before proceeding with an appointment, the member must verify that their own contact details are correct so they can receive notifications and manage the service.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Michelle Goh",
+      "age": 29,
+      "bg": "Graphic Designer",
+      "emoji": "👩‍🎨",
+      "salutation": "Ms",
+      "lastname": "Goh"
+    }
+  },
+  {
+    "q": "If an employer pays CPF contributions on the 16th of the following month, on which day does the late payment interest begin to accrue?",
+    "choices": [
+      {
+        "text": "From the 1st of that month.",
+        "correct": false
+      },
+      {
+        "text": "From the first day after the due date (the 1st of the following month).",
+        "correct": true
+      },
+      {
+        "text": "From the 15th of the following month.",
+        "correct": false
+      },
+      {
+        "text": "Only after a 30-day grace period.",
+        "correct": false
+      }
+    ],
+    "explanation": "Late payment interest is charged commencing from the first day after the due date (which is the last day of the calendar month). Enforcement starts after the 14th.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Tan Wei Kiat",
+      "age": 31,
+      "bg": "Accountant",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "A member wants to see contributions from 3 years ago. Which document should they access?",
+    "choices": [
+      {
+        "text": "CPF Transaction History.",
+        "correct": false
+      },
+      {
+        "text": "Yearly Statement of Account.",
+        "correct": true
+      },
+      {
+        "text": "Healthcare Payments and Claims Statement.",
+        "correct": false
+      },
+      {
+        "text": "The Child Dashboard.",
+        "correct": false
+      }
+    ],
+    "explanation": "Transaction History only shows the last 15 months. For records beyond that (up to 10 years), the Yearly Statement of Account is required.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Elizabeth Low",
+      "age": 48,
+      "bg": "Home Maker",
+      "emoji": "👩‍🍳",
+      "salutation": "Mdm",
+      "lastname": "Low"
+    }
+  },
+  {
+    "q": "What detail is NOT required when submitting the e-form to add a Trusted Contact?",
+    "choices": [
+      {
+        "text": "Full name as per NRIC.",
+        "correct": false
+      },
+      {
+        "text": "NRIC number.",
+        "correct": false
+      },
+      {
+        "text": "Relationship to the member.",
+        "correct": false
+      },
+      {
+        "text": "Monthly income of the appointee.",
+        "correct": true
+      }
+    ],
+    "explanation": "To add a Trusted Contact, you need their full name, NRIC number, and relationship. Income details are not required.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Daniel Foo",
+      "age": 36,
+      "bg": "Insurance Agent",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Foo"
+    }
+  },
+  {
+    "q": "How can a member inform CPF Board of a potential scam after spotting unusual activity with their Trusted Contact?",
+    "choices": [
+      {
+        "text": "Update their address with ICA.",
+        "correct": false
+      },
+      {
+        "text": "Lodge a police report and inform CPF Board.",
+        "correct": true
+      },
+      {
+        "text": "Call their bank to freeze their CPF account.",
+        "correct": false
+      },
+      {
+        "text": "Post a warning on social media.",
+        "correct": false
+      }
+    ],
+    "explanation": "If scams are suspected, the member should lodge a police report and immediately inform CPF Board.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Noor Aisha",
+      "age": 50,
+      "bg": "Social Worker",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Aisha"
+    }
+  },
+  {
+    "q": "Can a Trusted Contact view a member's CPF account balance?",
+    "choices": [
+      {
+        "text": "Yes, they have full viewing access.",
+        "correct": false
+      },
+      {
+        "text": "Only if the member is above age 70.",
+        "correct": false
+      },
+      {
+        "text": "No, they can only view the information included in the transaction notifications.",
+        "correct": true
+      },
+      {
+        "text": "Yes, but they cannot make any transactions.",
+        "correct": false
+      }
+    ],
+    "explanation": "Trusted Contacts cannot view account details beyond what is provided in the specific notifications they are copied on.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Viknesh Raja",
+      "age": 27,
+      "bg": "Legal Associate",
+      "emoji": "👨‍⚖️",
+      "salutation": "Mr",
+      "lastname": "Raja"
+    }
+  },
+  {
+    "q": "What should a member do if they cannot find a suitable Service Centre appointment within the next 2 weeks?",
+    "choices": [
+      {
+        "text": "Wait for 2 weeks to book a slot for the following month.",
+        "correct": false
+      },
+      {
+        "text": "Use digital services, the hotline, or 'Write to Us' for assistance.",
+        "correct": true
+      },
+      {
+        "text": "Walk in to a Service Centre without an appointment.",
+        "correct": false
+      },
+      {
+        "text": "Email the CEO of CPF Board.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members are encouraged to use digital services or the hotline if they need immediate assistance or cannot find a suitable appointment.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Peggy Lim",
+      "age": 62,
+      "bg": "Store Assistant",
+      "emoji": "👩‍🏪",
+      "salutation": "Mdm",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "Once CPF Board receives a contribution from an employer, how long does it take to credit it to the member's account?",
+    "choices": [
+      {
+        "text": "Immediately.",
+        "correct": false
+      },
+      {
+        "text": "Within 24 hours.",
+        "correct": false
+      },
+      {
+        "text": "Within three working days.",
+        "correct": true
+      },
+      {
+        "text": "7 working days.",
+        "correct": false
+      }
+    ],
+    "explanation": "Once payment is received, contributions are credited to the member's account within three working days.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Chong Wei Ming",
+      "age": 30,
+      "bg": "Logistics Coordinator",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Chong"
+    }
+  },
+  {
+    "q": "What is the reason CPF Board gives for not allowing bookings more than 2 weeks in advance?",
+    "choices": [
+      {
+        "text": "System limitations on the website.",
+        "correct": false
+      },
+      {
+        "text": "To prevent missed appointments due to changing circumstances.",
+        "correct": true
+      },
+      {
+        "text": "Because they only release schedules on a fortnightly basis.",
+        "correct": false
+      },
+      {
+        "text": "To prioritize urgent cases over routine inquiries.",
+        "correct": false
+      }
+    ],
+    "explanation": "Booking too far in advance often leads to missed appointments when members' plans change, so the window is kept to 2 weeks.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Jessica Oh",
+      "age": 34,
+      "bg": "Event Planner",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Oh"
+    }
+  },
+  {
+    "q": "Can a foreign CPF member holding a FIN use the OneKey Token to log in to CPF digital services?",
+    "choices": [
+      {
+        "text": "Yes, as long as it is still working.",
+        "correct": false
+      },
+      {
+        "text": "No, OneKey Token was discontinued on 1 April 2021.",
+        "correct": true
+      },
+      {
+        "text": "Only for viewing balances, not for transactions.",
+        "correct": false
+      },
+      {
+        "text": "Only if they are residing overseas.",
+        "correct": false
+      }
+    ],
+    "explanation": "OneKey Token was discontinued in April 2021. Foreign members with a FIN should use Singpass registered under their FIN.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Hans Muller",
+      "age": 47,
+      "bg": "Technical Engineer",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Muller"
+    }
+  },
+  {
+    "q": "Why must a member register contact details before they can update their bank account details?",
+    "choices": [
+      {
+        "text": "To verify the member's residential address.",
+        "correct": false
+      },
+      {
+        "text": "To receive notifications that help prevent unauthorized bank updates.",
+        "correct": true
+      },
+      {
+        "text": "It is a requirement for the bank's KYC process.",
+        "correct": false
+      },
+      {
+        "text": "To allow the bank to contact the member for marketing purposes.",
+        "correct": false
+      }
+    ],
+    "explanation": "SMS or email notifications are sent for bank updates; registered contact details ensure the member is alerted to prevent unauthorized changes.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Patricia Koh",
+      "age": 53,
+      "bg": "Customer Service lead",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "A member's employer is in arrears but provides an explanation. What is the member's next recommended step if the response is unsatisfactory?",
+    "choices": [
+      {
+        "text": "Stop going to work.",
+        "correct": false
+      },
+      {
+        "text": "Lodge a report with CPF Board.",
+        "correct": true
+      },
+      {
+        "text": "Deduct the amount from the company's petty cash.",
+        "correct": false
+      },
+      {
+        "text": "Sue the employer in the High Court immediately.",
+        "correct": false
+      }
+    ],
+    "explanation": "If an employer's response regarding late CPF contributions is unsatisfactory, the member should lodge a report with CPF Board.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Zulkifli Amin",
+      "age": 26,
+      "bg": "Technician",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Amin"
+    }
+  },
+  {
+    "q": "Where can a member find the instructional video on how to update bank account details?",
+    "choices": [
+      {
+        "text": "On YouTube only.",
+        "correct": false
+      },
+      {
+        "text": "At the CPF Service Centre reception.",
+        "correct": false
+      },
+      {
+        "text": "Via my cpf digital services - Account settings.",
+        "correct": true
+      },
+      {
+        "text": "By calling the CPF hotline.",
+        "correct": false
+      }
+    ],
+    "explanation": "Instructional videos for updating bank details are available via the 'my cpf' digital services portal under Account settings.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Florence Ng",
+      "age": 44,
+      "bg": "Admin Assistant",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Ng"
+    }
+  },
+  {
+    "q": "Which of these allows a member to customize their view of contributions to specifically show 'Self-Employed Contributions'?",
+    "choices": [
+      {
+        "text": "Yearly Statement of Account.",
+        "correct": false
+      },
+      {
+        "text": "CPF Transaction History filter.",
+        "correct": true
+      },
+      {
+        "text": "MediSave Claim History.",
+        "correct": false
+      },
+      {
+        "text": "Personal Particulars page.",
+        "correct": false
+      }
+    ],
+    "explanation": "The CPF Transaction History has a filter option that allows members to specifically view Employment, Platform, or Self-Employed contributions.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Steven Tiong",
+      "age": 39,
+      "bg": "Freelance Photographer",
+      "emoji": "📸",
+      "salutation": "Mr",
+      "lastname": "Tiong"
+    }
+  },
+  {
+    "q": "Does a Trusted Contact receive a copy of a member's monthly contribution notifications?",
+    "choices": [
+      {
+        "text": "Yes, every transaction is copied.",
+        "correct": false
+      },
+      {
+        "text": "No, only critical transactions or updates with high scam risk are copied.",
+        "correct": true
+      },
+      {
+        "text": "Only if the contribution is above $5,000.",
+        "correct": false
+      },
+      {
+        "text": "Yes, but only for members aged 65 and above.",
+        "correct": false
+      }
+    ],
+    "explanation": "Only critical transactions (withdrawals, bank updates) are copied to avoid overwhelming Trusted Contacts with routine notifications.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lily Chen",
+      "age": 33,
+      "bg": "Data Analyst",
+      "emoji": "👩‍💻",
+      "salutation": "Ms",
+      "lastname": "Chen"
+    }
+  },
+  {
+    "q": "How can a member rescedule an appointment with a Customer Service Executive?",
+    "choices": [
+      {
+        "text": "Call the hotline and wait for an operator.",
+        "correct": false
+      },
+      {
+        "text": "Go to 'Book an appointment' on the CPF website.",
+        "correct": true
+      },
+      {
+        "text": "Email the Service Centre manager.",
+        "correct": false
+      },
+      {
+        "text": "Book a new appointment; the old one will auto-cancel.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members can check, reschedule, or cancel their sessions at the 'Book an appointment' section on the CPF website.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Bryan Heng",
+      "age": 25,
+      "bg": "Retail Associate",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Heng"
+    }
+  },
+  {
+    "q": "What identification is used for a foreign member's CPF issued account number if they do not have an NRIC?",
+    "choices": [
+      {
+        "text": "Their Passport Number.",
+        "correct": false
+      },
+      {
+        "text": "A number starting with 'S' or 'T' followed by letters like 'A', 'B', or 'C'.",
+        "correct": true
+      },
+      {
+        "text": "Their Foreign Identification Number (FIN).",
+        "correct": false
+      },
+      {
+        "text": "A randomly generated 12-digit code.",
+        "correct": false
+      }
+    ],
+    "explanation": "Non-SC/PR members' account numbers often start with 'S' or 'T', followed by letters like 'A', 'B', 'C', 'D', or 'F'.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Rajesh Gupta",
+      "age": 42,
+      "bg": "IT Architect",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Gupta"
+    }
+  },
+  {
+    "q": "Under what circumstance will CPF Board notify a member to update their contact details specifically for bank updates?",
+    "choices": [
+      {
+        "text": "Every 6 months as part of routine maintenance.",
+        "correct": false
+      },
+      {
+        "text": "When the member tries to update their bank account without having registered contact info.",
+        "correct": true
+      },
+      {
+        "text": "When the bank reports that the member's phone number is disconnected.",
+        "correct": false
+      },
+      {
+        "text": "When the member's Singpass password expires.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members must have registered contact details to receive security notifications before they can successfully update bank account details.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Kimberly Tan",
+      "age": 23,
+      "bg": "Intern",
+      "emoji": "👩‍🎓",
+      "salutation": "Ms",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Which platform can be used to view the Healthcare Payments and Claims statement for a child?",
+    "choices": [
+      {
+        "text": "The parent's CPF Transaction History.",
+        "correct": false
+      },
+      {
+        "text": "The Child Dashboard.",
+        "correct": true
+      },
+      {
+        "text": "The HealthHub App only.",
+        "correct": false
+      },
+      {
+        "text": "A physical statement sent to the parent's address.",
+        "correct": false
+      }
+    ],
+    "explanation": "Parents can view their child's transaction and healthcare statements via the Child Dashboard on the CPF website.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Melissa Liew",
+      "age": 35,
+      "bg": "Staff Nurse",
+      "emoji": "👩‍⚕️",
+      "salutation": "Ms",
+      "lastname": "Liew"
+    }
+  },
+  {
+    "q": "What should a member do if they suspect their Singpass has been compromised?",
+    "choices": [
+      {
+        "text": "Contact CPF Board to reset the Singpass.",
+        "correct": false
+      },
+      {
+        "text": "Contact the Singpass Helpdesk directly.",
+        "correct": true
+      },
+      {
+        "text": "Change their registered address with ICA.",
+        "correct": false
+      },
+      {
+        "text": "Delete the CPF Mobile app.",
+        "correct": false
+      }
+    ],
+    "explanation": "Singpass is managed by GovTech. Any issues, including suspected compromise, should be handled by the Singpass Helpdesk.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ivan Seah",
+      "age": 40,
+      "bg": "Project Manager",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Seah"
+    }
+  },
+  {
+    "q": "How long is a Yearly Statement of Account (YSOA) available for download before it is removed from the portal?",
+    "choices": [
+      {
+        "text": "5 years.",
+        "correct": false
+      },
+      {
+        "text": "10 years.",
+        "correct": true
+      },
+      {
+        "text": "2 years.",
+        "correct": false
+      },
+      {
+        "text": "Indefinitely.",
+        "correct": false
+      }
+    ],
+    "explanation": "CPF Board provides the Yearly Statement of Account for the past 10 years only.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lim Hwee Hua",
+      "age": 55,
+      "bg": "Civil Servant",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "A member wants to add a Trusted Contact but their appointee is not a Singapore Citizen. Can they proceed?",
+    "choices": [
+      {
+        "text": "No, both must be Singapore Citizens.",
+        "correct": false
+      },
+      {
+        "text": "Yes, as long as the appointee has an NRIC or FIN.",
+        "correct": true
+      },
+      {
+        "text": "Only if the appointee is a Permanent Resident.",
+        "correct": false
+      },
+      {
+        "text": "Yes, but they must visit a Service Centre in person to verify.",
+        "correct": false
+      }
+    ],
+    "explanation": "The form requires the appointee's NRIC/FIN, so as long as they have one, the appointment can be made.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Sarah Jenkins",
+      "age": 43,
+      "bg": "Expat Spouse",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Jenkins"
+    }
+  },
+  {
+    "q": "What happens if a member needs help with a HDB loan due to their employer defaulting on CPF contributions?",
+    "choices": [
+      {
+        "text": "CPF Board will pay the HDB loan for them.",
+        "correct": false
+      },
+      {
+        "text": "They should contact HDB to explore alternative repayment options.",
+        "correct": true
+      },
+      {
+        "text": "The employer will be forced to sell the company to pay the loan.",
+        "correct": false
+      },
+      {
+        "text": "The member's Ordinary Account interest rate will be doubled.",
+        "correct": false
+      }
+    ],
+    "explanation": "If employer defaults affect loan repayments, members should contact HDB for alternative options.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lee Wei Lung",
+      "age": 37,
+      "bg": "Production Worker",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Lee"
+    }
+  },
+  {
+    "q": "If a member selects 'PayNow NRIC-linked bank account' to update their details, what is the next step?",
+    "choices": [
+      {
+        "text": "Visit an ATM to link the NRIC.",
+        "correct": false
+      },
+      {
+        "text": "Submit the form and wait 12 hours for the update.",
+        "correct": true
+      },
+      {
+        "text": "Call the bank to authorize the CPF Board.",
+        "correct": false
+      },
+      {
+        "text": "Mail a hardcopy form to CPF Board.",
+        "correct": false
+      }
+    ],
+    "explanation": "For PayNow NRIC-linked accounts, the member just needs to select the option and submit the form via 'my cpf' digital services.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Gloria Teo",
+      "age": 29,
+      "bg": "Public Relations",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Teo"
+    }
+  },
+  {
+    "q": "Can a Trusted Contact initiate a withdrawal on behalf of the member if the member is overseas?",
+    "choices": [
+      {
+        "text": "Yes, if they have been appointed for more than 1 year.",
+        "correct": false
+      },
+      {
+        "text": "No, they cannot make transactions or change account settings.",
+        "correct": true
+      },
+      {
+        "text": "Only if the member provides a written authorization letter.",
+        "correct": false
+      },
+      {
+        "text": "Yes, but the withdrawal is capped at $5,000.",
+        "correct": false
+      }
+    ],
+    "explanation": "A Trusted Contact's role is strictly notification-based; they have no power to transact or change settings.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "James Tan",
+      "age": 49,
+      "bg": "Business Traveller",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "What is the primary way a member is notified when an appointment is successfully rescheduled?",
+    "choices": [
+      {
+        "text": "A phone call from the Customer Service Executive.",
+        "correct": false
+      },
+      {
+        "text": "Via the 'Book an appointment' portal.",
+        "correct": true
+      },
+      {
+        "text": "A physical letter sent to the registered address.",
+        "correct": false
+      },
+      {
+        "text": "A newspaper announcement.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members can check and confirm their appointment status directly through the online booking portal.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Shirley Koh",
+      "age": 51,
+      "bg": "Housewife",
+      "emoji": "👩‍🍳",
+      "salutation": "Mdm",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "If an employer's contribution is delayed, where can a member find their CPF transaction history to check if it's been credited?",
+    "choices": [
+      {
+        "text": "HealthHub App.",
+        "correct": false
+      },
+      {
+        "text": "CPF Mobile app or my cpf digital services.",
+        "correct": true
+      },
+      {
+        "text": "Any AXS machine.",
+        "correct": false
+      },
+      {
+        "text": "Their personal bank statement.",
+        "correct": false
+      }
+    ],
+    "explanation": "Members can check their transaction history via the CPF Mobile app or the CPF website.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Gary Lim",
+      "age": 32,
+      "bg": "Retail Supervisor",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "What authentication is required to update bank account details online?",
+    "choices": [
+      {
+        "text": "Singpass login only.",
+        "correct": false
+      },
+      {
+        "text": "Singpass login and potentially enhanced authentication measures.",
+        "correct": true
+      },
+      {
+        "text": "An SMS OTP sent to the bank's registered number.",
+        "correct": false
+      },
+      {
+        "text": "A physical thumbprint scan at a Service Centre.",
+        "correct": false
+      }
+    ],
+    "explanation": "Updating bank details requires Singpass and may involve enhanced authentication (like face verification) for security.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Vivian Ong",
+      "age": 46,
+      "bg": "Financial Analyst",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Ong"
+    }
+  },
+  {
+    "q": "Why does CPF Board suggest that members should 'personally inform' their appointee about a Trusted Contact request?",
+    "choices": [
+      {
+        "text": "Because the appointee must sign a physical consent form.",
+        "correct": false
+      },
+      {
+        "text": "To ensure they are aware of the role and respond before the request expires.",
+        "correct": true
+      },
+      {
+        "text": "It is a requirement for the police to verify the relationship.",
+        "correct": false
+      },
+      {
+        "text": "So that the appointee can prepare for a background check.",
+        "correct": false
+      }
+    ],
+    "explanation": "Personal communication ensures the appointee understands their role and accepts the request within the 7-day window.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lawrence Ng",
+      "age": 59,
+      "bg": "Operations Manager",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Ng"
+    }
+  },
+  {
+    "q": "Which of these is NOT an example of a contribution record viewable in CPF Transaction History?",
+    "choices": [
+      {
+        "text": "Platform Contributions.",
+        "correct": false
+      },
+      {
+        "text": "Self-Employed Contributions.",
+        "correct": false
+      },
+      {
+        "text": "Employment Contributions.",
+        "correct": false
+      },
+      {
+        "text": "Overseas Bank Interest.",
+        "correct": true
+      }
+    ],
+    "explanation": "CPF Transaction History covers CPF-related transactions; it does not track personal bank interest.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Nadia Zakaria",
+      "age": 28,
+      "bg": "Creative Director",
+      "emoji": "👩‍🎨",
+      "salutation": "Ms",
+      "lastname": "Zakaria"
+    }
+  },
+  {
+    "q": "What happens after the bank confirms that a new GIRO account belongs to the member during an update?",
+    "choices": [
+      {
+        "text": "The account is activated immediately.",
+        "correct": false
+      },
+      {
+        "text": "It takes up to two working days for the account to be activated.",
+        "correct": true
+      },
+      {
+        "text": "The member must log in again to finalize the activation.",
+        "correct": false
+      },
+      {
+        "text": "A test deposit of $0.01 is made.",
+        "correct": false
+      }
+    ],
+    "explanation": "Once bank verification is complete, it takes up to two working days for the GIRO account to be fully activated in the CPF system.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Benjamin Koh",
+      "age": 63,
+      "bg": "Retired Teacher",
+      "emoji": "👨‍🏫",
+      "salutation": "Mr",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "How can a member verify their appointee has accepted a Trusted Contact request?",
+    "choices": [
+      {
+        "text": "Check the appointee's phone for an SMS.",
+        "correct": false
+      },
+      {
+        "text": "Both the member and the appointee will be notified upon successful acceptance.",
+        "correct": true
+      },
+      {
+        "text": "Visit a CPF Service Centre to confirm.",
+        "correct": false
+      },
+      {
+        "text": "Call the Singpass helpdesk.",
+        "correct": false
+      }
+    ],
+    "explanation": "Both parties are notified once the appointee accepts the request, making the appointment official.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Rachel Liew",
+      "age": 31,
+      "bg": "Content Creator",
+      "emoji": "👩‍🎨",
+      "salutation": "Ms",
+      "lastname": "Liew"
+    }
+  },
+  {
+    "q": "If a member wants to download their contribution history for the last 5 years, which statement should they use?",
+    "choices": [
+      {
+        "text": "Transaction History.",
+        "correct": false
+      },
+      {
+        "text": "Yearly Statement of Account.",
+        "correct": true
+      },
+      {
+        "text": "MediSave Statement.",
+        "correct": false
+      },
+      {
+        "text": "Investment History.",
+        "correct": false
+      }
+    ],
+    "explanation": "The Yearly Statement of Account covers the past 10 years, making it suitable for a 5-year history search.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Tan Boon Heong",
+      "age": 42,
+      "bg": "Technician",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Can a Trusted Contact view critical notifications via the CPF Mobile app?",
+    "choices": [
+      {
+        "text": "No, they only receive notifications via their own registered email and mobile number.",
+        "correct": true
+      },
+      {
+        "text": "Yes, they can log in to the member's profile on the app.",
+        "correct": false
+      },
+      {
+        "text": "Only if they have the member's Singpass password.",
+        "correct": false
+      },
+      {
+        "text": "Yes, there is a 'Trusted Contact' tab in the app.",
+        "correct": false
+      }
+    ],
+    "explanation": "Trusted Contacts receive a copy of the member's notifications via email/SMS; they do not get access to the member's app profile.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Lim Siew Hoon",
+      "age": 57,
+      "bg": "Admin Manager",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "What is the consequence for an employer who fails to pay CPF contributions by the 14th of the following month?",
+    "choices": [
+      {
+        "text": "A warning letter for the first offense.",
+        "correct": false
+      },
+      {
+        "text": "Enforcement action, including late payment interest of 1.5% per month.",
+        "correct": true
+      },
+      {
+        "text": "Suspension of their business license.",
+        "correct": false
+      },
+      {
+        "text": "Mandatory community service for the business owner.",
+        "correct": false
+      }
+    ],
+    "explanation": "Late payment beyond the 14th triggers enforcement actions and a 1.5% monthly interest charge.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Derrick Wong",
+      "age": 27,
+      "bg": "Account Executive",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Wong"
     }
   }
 ];
