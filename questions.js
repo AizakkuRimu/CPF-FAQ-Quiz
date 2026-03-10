@@ -13505,6 +13505,1846 @@ const QUESTIONS = [
       "salutation": "Mr",
       "lastname": "Wong"
     }
+  },
+  {
+    "q": "By what date must an employer pay CPF contributions for wages earned in a given month?",
+    "choices": [
+      { "text": "By the last day of that same month.", "correct": false },
+      { "text": "By the 7th of the following month.", "correct": false },
+      { "text": "By the 14th of the following month (or next working day if it falls on a weekend or public holiday).", "correct": true },
+      { "text": "By the 21st of the following month.", "correct": false }
+    ],
+    "explanation": "Employers must pay CPF contributions by the 14th of the following month (or next working day if that falls on a Saturday, Sunday or Public Holiday). Late payment incurs interest at 1.5% per month.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Rajan Pillai",
+      "age": 34,
+      "bg": "warehouse supervisor",
+      "emoji": "👨‍🏭",
+      "salutation": "Mr",
+      "lastname": "Pillai"
+    }
+  },
+  {
+    "q": "After CPF Board receives an employer's contribution payment, how soon will the funds appear in a member's CPF accounts?",
+    "choices": [
+      { "text": "Immediately upon receipt.", "correct": false },
+      { "text": "Within one working day.", "correct": false },
+      { "text": "Within three working days.", "correct": true },
+      { "text": "Within five working days.", "correct": false }
+    ],
+    "explanation": "Once CPF Board receives the employer's payment, contributions are credited to the member's CPF accounts within three working days, after which the amounts can be viewed via CPF transaction history using Singpass.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Lim Bee Hoon",
+      "age": 29,
+      "bg": "customer service associate",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "A member suspects her employer has not paid CPF contributions. She has already asked her employer for an explanation but received no satisfactory response. What is the correct next step?",
+    "choices": [
+      { "text": "Contact the Ministry of Manpower directly to file a salary dispute.", "correct": false },
+      { "text": "Lodge a report with CPF Board.", "correct": true },
+      { "text": "Wait another month before taking action.", "correct": false },
+      { "text": "Engage a lawyer to send a formal demand letter to the employer.", "correct": false }
+    ],
+    "explanation": "If your employer does not provide a satisfactory response about unpaid CPF contributions, the next step is to lodge a report with CPF Board. The Board takes a serious view of employers who default on contributions.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Nurul Ain",
+      "age": 27,
+      "bg": "retail assistant",
+      "emoji": "👩‍🦱",
+      "salutation": "Ms",
+      "lastname": "Ain"
+    }
+  },
+  {
+    "q": "What is the late payment interest rate charged to employers who pay CPF contributions after the due date?",
+    "choices": [
+      { "text": "0.5% per month", "correct": false },
+      { "text": "1.0% per month", "correct": false },
+      { "text": "1.5% per month", "correct": true },
+      { "text": "2.0% per month", "correct": false }
+    ],
+    "explanation": "Employers who pay CPF contributions after the 14th of the following month may incur late payment interest charged at 1.5% per month, commencing from the first day after the due date.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "David Ong",
+      "age": 41,
+      "bg": "small business owner",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Ong"
+    }
+  },
+  {
+    "q": "How many months of CPF transaction history can a member access in real time through CPF Transaction History?",
+    "choices": [
+      { "text": "6 months", "correct": false },
+      { "text": "12 months", "correct": false },
+      { "text": "15 months", "correct": true },
+      { "text": "24 months", "correct": false }
+    ],
+    "explanation": "CPF Transaction History provides a record of transactions — including contributions, withdrawals, and transfers — for the latest 15 months. For records beyond 15 months, members can refer to their Yearly Statement of Account.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Suresh Nair",
+      "age": 52,
+      "bg": "secondary school teacher",
+      "emoji": "👨‍🏫",
+      "salutation": "Mr",
+      "lastname": "Nair"
+    }
+  },
+  {
+    "q": "A member wants CPF transaction records going back 8 years. Which source should they consult?",
+    "choices": [
+      { "text": "CPF Transaction History on the Mobile app, which stores unlimited history.", "correct": false },
+      { "text": "The Yearly Statement of Account, which covers up to the past 10 years.", "correct": true },
+      { "text": "Write to CPF Board to request a special historical report.", "correct": false },
+      { "text": "Visit a CPF Service Centre to obtain a printed record.", "correct": false }
+    ],
+    "explanation": "For records beyond 15 months, members should refer to their Yearly Statement of Account, which covers up to the past 10 years. CPF Board does not provide records beyond 10 years.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Chan Wai Keng",
+      "age": 58,
+      "bg": "logistics manager",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Chan"
+    }
+  },
+  {
+    "q": "A member notices a discrepancy in her CPF statement. What should she do?",
+    "choices": [
+      { "text": "Wait for the next monthly statement to see if it corrects itself.", "correct": false },
+      { "text": "Call her employer to demand a correction.", "correct": false },
+      { "text": "Notify CPF Board immediately via Write to Us.", "correct": true },
+      { "text": "Visit a Service Centre with her payslips within 30 days.", "correct": false }
+    ],
+    "explanation": "Members who believe their CPF statement information is incorrect should notify CPF Board immediately via Write to Us. Members are also responsible for carefully reviewing their statements and downloading them in a timely manner.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Patricia Fernandez",
+      "age": 38,
+      "bg": "accountant",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Fernandez"
+    }
+  },
+  {
+    "q": "A member receives an email from CPF Board asking them to view their transactions. How should they verify the email is legitimate?",
+    "choices": [
+      { "text": "Click the link in the email and proceed if the CPF logo is shown.", "correct": false },
+      { "text": "Check that the sender's email domain is from a recognised CPF Board address and do not click any links if unsure.", "correct": true },
+      { "text": "Forward the email to a friend to check its legitimacy.", "correct": false },
+      { "text": "Reply to the email to request confirmation from CPF Board.", "correct": false }
+    ],
+    "explanation": "To verify legitimacy, members should ensure the sender's email address is from a recognised CPF Board domain. Monthly notifications are sent to members with registered email addresses to remind them to review transactions. Members should not click links if they are unsure.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Goh Ah Mui",
+      "age": 63,
+      "bg": "retired hawker",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Goh"
+    }
+  },
+  {
+    "q": "Who can view a child's CPF Transaction History statement online?",
+    "choices": [
+      { "text": "Any adult relative with Singpass access.", "correct": false },
+      { "text": "A Singapore Citizen or PR parent whose child is below 21 and has received CPF contributions.", "correct": true },
+      { "text": "Any parent, regardless of citizenship, if the child has a CPF account.", "correct": false },
+      { "text": "Only the child themselves once they turn 18.", "correct": false }
+    ],
+    "explanation": "A parent can view their child's Transaction History (and Healthcare Payments statement if applicable) for the last 15 months if both parent and child are Singapore Citizens or PRs, and the child is below 21 and has received CPF contributions.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Tan Mei Ling",
+      "age": 44,
+      "bg": "nurse",
+      "emoji": "👩‍⚕️",
+      "salutation": "Mdm",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "A member updates their mobile number with Singpass. Will CPF Board automatically reflect this new number?",
+    "choices": [
+      { "text": "Yes, Singpass and CPF Board contact details are automatically synced.", "correct": false },
+      { "text": "Yes, but only after a 12-hour cooling period.", "correct": false },
+      { "text": "No, the member must separately update their contact details via CPF's Account settings.", "correct": true },
+      { "text": "No, the member must visit a Service Centre to update their CPF contact details.", "correct": false }
+    ],
+    "explanation": "Updates to Singpass mobile number and email address are NOT automatically updated with CPF Board. Members must separately update their mobile number and/or email address via my cpf digital services – Account settings with their Singpass.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Kevin Lee",
+      "age": 23,
+      "bg": "fresh graduate, junior analyst",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Lee"
+    }
+  },
+  {
+    "q": "After a member submits a change to their contact details, they want to make another change while the first is still in the 12-hour cooling period. Is this possible?",
+    "choices": [
+      { "text": "No, they must wait for the 12-hour cooling period to end before submitting new changes.", "correct": false },
+      { "text": "Yes, and the most recent request will supersede the previous submission.", "correct": true },
+      { "text": "Yes, but both changes will be processed simultaneously after the original cooling period.", "correct": false },
+      { "text": "No, only one contact detail change is allowed per day.", "correct": false }
+    ],
+    "explanation": "Members can submit further changes to their contact details via Account settings even during the 12-hour cooling period. The most recent request will supersede the previous submission and take effect after the cooling period.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Sharifah Zahra",
+      "age": 31,
+      "bg": "marketing executive",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Zahra"
+    }
+  },
+  {
+    "q": "How should a member update their registered bank account with CPF Board to receive CPF payouts?",
+    "choices": [
+      { "text": "Call the CPF hotline and provide bank details verbally.", "correct": false },
+      { "text": "Mail a completed form to CPF Board with a bank statement.", "correct": false },
+      { "text": "Update via my cpf digital services – Account settings with Singpass.", "correct": true },
+      { "text": "Visit a Service Centre with their bank passbook and NRIC.", "correct": false }
+    ],
+    "explanation": "Members can update their registered bank account details via my cpf digital services – Account settings with their Singpass, to receive payments such as CPF savings withdrawals and monthly payouts.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ismail Hussain",
+      "age": 60,
+      "bg": "retired civil servant",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Hussain"
+    }
+  },
+  {
+    "q": "A member has a pending withdrawal and wants to update their bank account at the same time. What is the recommended approach?",
+    "choices": [
+      { "text": "Update the bank account first, then submit the withdrawal application.", "correct": false },
+      { "text": "Update the bank account and submit the withdrawal simultaneously.", "correct": false },
+      { "text": "Submit the withdrawal first and update the bank account after the withdrawal is complete.", "correct": true },
+      { "text": "Contact CPF Board to process both changes at the same time.", "correct": false }
+    ],
+    "explanation": "If a member has a pending withdrawal, they should update their bank account after the withdrawal is complete, to enable successful processing of the withdrawal application and avoid disruption.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Ho Siew Cheng",
+      "age": 55,
+      "bg": "semi-retired seamstress",
+      "emoji": "👩‍🦳",
+      "salutation": "Mdm",
+      "lastname": "Ho"
+    }
+  },
+  {
+    "q": "Why must a member update their contact details before updating their bank account with CPF Board?",
+    "choices": [
+      { "text": "CPF Board uses contact details to verify your employment status.", "correct": false },
+      { "text": "Notifications are sent via SMS or email whenever bank account details are updated, so contact details must be on record.", "correct": true },
+      { "text": "Contact details are needed to generate a new bank account verification code.", "correct": false },
+      { "text": "It is required for identity verification when visiting the Service Centre.", "correct": false }
+    ],
+    "explanation": "Notifications via SMS or email are sent whenever bank account details are updated. Members must have registered contact details to receive these notifications, which help prevent unauthorised updates.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Vijayalakshmi Menon",
+      "age": 47,
+      "bg": "financial analyst",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Menon"
+    }
+  },
+  {
+    "q": "How far in advance can a member book an appointment at a CPF Service Centre?",
+    "choices": [
+      { "text": "1 week in advance", "correct": false },
+      { "text": "2 weeks in advance", "correct": true },
+      { "text": "1 month in advance", "correct": false },
+      { "text": "3 months in advance", "correct": false }
+    ],
+    "explanation": "Service Centre appointment bookings are opened 2 weeks in advance. This window is designed to meet the needs of most members while ensuring Customer Service Officers remain accessible.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Muhammad Hafiz",
+      "age": 35,
+      "bg": "IT technician",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Hafiz"
+    }
+  },
+  {
+    "q": "A member wants to handle employer-related CPF matters. Which channels are available to them?",
+    "choices": [
+      { "text": "They may visit any CPF Service Centre in person.", "correct": false },
+      { "text": "They can use digital services, the CPF hotline, or Write to Us.", "correct": true },
+      { "text": "They can only use digital services.", "correct": false },
+      { "text": "They must write a letter to CPF Board headquarters.", "correct": false }
+    ],
+    "explanation": "Services for employer or self-employed matters are only available through CPF's digital services, the hotline, or Write to Us. These matters cannot be handled by visiting a Service Centre in person.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Agnes Toh",
+      "age": 39,
+      "bg": "HR manager, small company",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Toh"
+    }
+  },
+  {
+    "q": "A member has renounced her Singapore Citizenship and can no longer use Singpass. How does she access her CPF statement?",
+    "choices": [
+      { "text": "She can still log in using her old NRIC number and password.", "correct": false },
+      { "text": "She must visit a CPF Service Centre with her foreign passport.", "correct": false },
+      { "text": "She should write to CPF Board for CPF-related assistance and contact the Singpass Helpdesk for eligibility.", "correct": true },
+      { "text": "She should contact the Immigration and Checkpoints Authority to restore Singpass access.", "correct": false }
+    ],
+    "explanation": "Members who have renounced citizenship should write to CPF Board for CPF-related assistance. They should also contact the Singpass Helpdesk directly to find out which groups of users are eligible to apply for Singpass.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Chua Li Fen",
+      "age": 42,
+      "bg": "former Singapore citizen living abroad",
+      "emoji": "✈️",
+      "salutation": "Ms",
+      "lastname": "Chua"
+    }
+  },
+  {
+    "q": "A foreign CPF member holds a CPF-issued account number (e.g. SA987654C). Can they still log in to CPF digital services using their old Singpass registered under this number?",
+    "choices": [
+      { "text": "Yes, the old Singpass login with the CPF-issued account number is still fully valid.", "correct": false },
+      { "text": "No, since the OneKey Token was discontinued, they must use a Singpass registered under their FIN instead.", "correct": true },
+      { "text": "Yes, but only for read-only access to statements.", "correct": false },
+      { "text": "No, foreign CPF members are no longer allowed to access digital services at all.", "correct": false }
+    ],
+    "explanation": "With the discontinuation of the OneKey Token from 1 April 2021, foreign CPF members can no longer access CPF digital services using Singpass registered under their CPF-issued account numbers. They must use a Singpass registered under their FIN.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Wang Jianming",
+      "age": 48,
+      "bg": "foreign national working in Singapore",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Wang"
+    }
+  },
+  {
+    "q": "What is the primary purpose of the Trusted Contact notification service?",
+    "choices": [
+      { "text": "To allow a trusted person to manage your CPF account on your behalf.", "correct": false },
+      { "text": "To appoint someone to receive copies of your notifications when important CPF transactions occur, as an extra layer of security.", "correct": true },
+      { "text": "To give a family member full view of your CPF account balances and statements.", "correct": false },
+      { "text": "To nominate someone to receive your CPF savings upon your death.", "correct": false }
+    ],
+    "explanation": "The Trusted Contact notification service lets you appoint a trusted individual to receive copies of your notifications whenever important transactions or updates occur in your CPF account — providing an extra layer of scrutiny against scams.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ng Swee Lan",
+      "age": 66,
+      "bg": "retiree, former cleaner",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Ng"
+    }
+  },
+  {
+    "q": "What can a Trusted Contact do with a CPF member's account?",
+    "choices": [
+      { "text": "View balances, make withdrawals, and update bank account details on the member's behalf.", "correct": false },
+      { "text": "View balances only, but cannot make transactions.", "correct": false },
+      { "text": "Receive copies of the member's transaction notifications and alert the member to unusual activity.", "correct": true },
+      { "text": "Override suspicious transactions to protect the member's savings.", "correct": false }
+    ],
+    "explanation": "A Trusted Contact's role is strictly limited to receiving copies of the member's transaction notifications and alerting the member when they notice unusual or unexpected activities. They cannot view balances, make transactions, or change account settings.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Alan Koh",
+      "age": 30,
+      "bg": "software engineer",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "Which CPF transactions trigger a notification that is copied to the Trusted Contact?",
+    "choices": [
+      { "text": "All CPF transactions including interest crediting and Medisave usage.", "correct": false },
+      { "text": "CPF lump sum withdrawals, contact details updates, bank account updates, and daily withdrawal limit updates.", "correct": true },
+      { "text": "Only CPF investment transactions and housing withdrawals.", "correct": false },
+      { "text": "Only bank account updates and daily withdrawal limit changes.", "correct": false }
+    ],
+    "explanation": "The Trusted Contact service copies notifications for four specific transactions: CPF lump sum withdrawals for immediate retirement needs, contact details updates, bank account updates, and daily withdrawal limit updates. Only these critical transactions are covered.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Priya Devi",
+      "age": 62,
+      "bg": "homemaker",
+      "emoji": "👩‍🦳",
+      "salutation": "Mdm",
+      "lastname": "Devi"
+    }
+  },
+  {
+    "q": "How long does a Trusted Contact appointment remain valid?",
+    "choices": [
+      { "text": "One year, after which it must be renewed.", "correct": false },
+      { "text": "Until the CPF member turns 65.", "correct": false },
+      { "text": "Indefinitely, until either party terminates it or can no longer use the service (e.g. upon demise).", "correct": true },
+      { "text": "Five years, after which the member must resubmit an appointment.", "correct": false }
+    ],
+    "explanation": "Trusted Contact appointments remain valid until either the member or the Trusted Contact terminates the arrangement. CPF Board will also remove the appointment when either party can no longer use the service, such as upon demise.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Tan Boon Huat",
+      "age": 56,
+      "bg": "property agent",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Can a Trusted Contact be held accountable if they fail to alert the member to suspicious CPF transactions?",
+    "choices": [
+      { "text": "Yes, the Trusted Contact is legally obligated to act and can be fined for negligence.", "correct": false },
+      { "text": "Yes, if they acknowledged the notification but did not respond within 24 hours.", "correct": false },
+      { "text": "No, the role is voluntary and they cannot be held accountable for inaction.", "correct": true },
+      { "text": "No, but CPF Board will remove them as Trusted Contact after a missed alert.", "correct": false }
+    ],
+    "explanation": "Although Trusted Contacts receive copies of transaction notifications, the role is voluntary. They cannot be held accountable if they do not alert the member to unusual activities. The member remains responsible for all activities on their CPF account.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Soh Wee Teck",
+      "age": 49,
+      "bg": "compliance officer",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Soh"
+    }
+  },
+  {
+    "q": "What happens to a member's Trusted Contact appointment if the member loses mental capacity?",
+    "choices": [
+      { "text": "The appointment is automatically revoked and the Deputy must reappoint.", "correct": false },
+      { "text": "The appointment remains valid; CPF Board upholds decisions made before the loss of capacity.", "correct": true },
+      { "text": "The appointment is suspended until a Court order is obtained.", "correct": false },
+      { "text": "The Trusted Contact assumes full management of the CPF account.", "correct": false }
+    ],
+    "explanation": "A Trusted Contact appointment is not affected when a member loses mental capacity. CPF Board upholds decisions made by members prior to their loss of mental capacity. A Deputy or Donee may apply to remove the Trusted Contact on the member's behalf if necessary.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Lena Wijaya",
+      "age": 53,
+      "bg": "social worker",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Wijaya"
+    }
+  },
+  {
+    "q": "A member wants to appoint a new Trusted Contact but has already reached the limit. What must they do first?",
+    "choices": [
+      { "text": "Write to CPF Board requesting an exception to the limit.", "correct": false },
+      { "text": "Remove one of their existing Trusted Contacts before appointing a new one.", "correct": true },
+      { "text": "Wait for one of the existing Trusted Contact appointments to expire.", "correct": false },
+      { "text": "Submit an appeal at a CPF Service Centre with valid reasons.", "correct": false }
+    ],
+    "explanation": "Members may appoint up to two Trusted Contacts. To appoint a new one after reaching the limit, a member must first remove one of their existing Trusted Contacts before submitting a new appointment request.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Raymond Seah",
+      "age": 45,
+      "bg": "operations manager",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Seah"
+    }
+  },
+  {
+    "q": "Can a CPF member appoint someone who lives overseas as their Trusted Contact?",
+    "choices": [
+      { "text": "No, the Trusted Contact must be based in Singapore.", "correct": false },
+      { "text": "Yes, as long as the appointee meets the eligibility criteria including being a Singapore Citizen or PR with a Singpass account.", "correct": true },
+      { "text": "Yes, but only if the member visits a CPF Service Centre to complete the appointment in person.", "correct": false },
+      { "text": "No, the Trusted Contact must have a Singapore-registered address.", "correct": false }
+    ],
+    "explanation": "A member may appoint a Trusted Contact who is not based in Singapore, as long as they meet the eligibility criteria: being a CPF member aged 21 or above, a Singapore Citizen or PR with Singpass, and having both a Singapore-registered mobile number and email address registered with CPF Board.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Grace Quek",
+      "age": 37,
+      "bg": "banker",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Quek"
+    }
+  },
+  {
+    "q": "How long does an appointee have to accept a Trusted Contact appointment request before it expires?",
+    "choices": [
+      { "text": "3 days", "correct": false },
+      { "text": "7 days", "correct": true },
+      { "text": "14 days", "correct": false },
+      { "text": "30 days", "correct": false }
+    ],
+    "explanation": "The appointee has seven days to respond to the Trusted Contact appointment request. After seven days, the request automatically expires and the member must submit a new appointment request.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Faridah Osman",
+      "age": 58,
+      "bg": "former nurse, semi-retired",
+      "emoji": "👩‍⚕️",
+      "salutation": "Mdm",
+      "lastname": "Osman"
+    }
+  },
+  {
+    "q": "How can a member differentiate a Trusted Contact notification from a personal CPF account notification?",
+    "choices": [
+      { "text": "Trusted Contact notifications are only delivered via postal mail.", "correct": false },
+      { "text": "Trusted Contact SMS notifications begin with '(To Trusted Contact)' and emails state 'You are receiving this as an appointed Trusted Contact'.", "correct": true },
+      { "text": "Trusted Contact notifications are delivered from a separate CPF email address.", "correct": false },
+      { "text": "There is no difference; the member must check account settings to determine which notifications they are receiving.", "correct": false }
+    ],
+    "explanation": "Trusted Contact SMS notifications begin with '(To Trusted Contact)'. Emails contain the phrase 'You are receiving this notification as an appointed Trusted Contact'. Push notifications via the CPF Mobile app also contain the appointer's name to make the distinction clear.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Bernard Yap",
+      "age": 43,
+      "bg": "accountant",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Yap"
+    }
+  },
+  {
+    "q": "A member wants to remove an existing Trusted Contact but the removal fails because the Trusted Contact's contact details are incomplete. What should the member do?",
+    "choices": [
+      { "text": "Contact CPF Board by phone and request a forced removal.", "correct": false },
+      { "text": "Inform the Trusted Contact to update their contact details with CPF Board, then try removing again.", "correct": true },
+      { "text": "Submit a police report to force the removal.", "correct": false },
+      { "text": "Wait 30 days; the appointment will automatically expire.", "correct": false }
+    ],
+    "explanation": "If removal fails because the Trusted Contact's contact details are incomplete, the member should inform the Trusted Contact to update both a Singapore-registered mobile number and email address with CPF Board. Once updated, the member can proceed to remove via the e-form. If not possible, the member can write to CPF Board via Singpass.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Zainudin Rashid",
+      "age": 50,
+      "bg": "retired army officer",
+      "emoji": "👨‍🦳",
+      "salutation": "Mr",
+      "lastname": "Rashid"
+    }
+  },
+  {
+    "q": "Why does CPF Board only notify Trusted Contacts about critical transactions like withdrawals and bank account changes, and not all CPF transactions?",
+    "choices": [
+      { "text": "Because the Trusted Contact system only processes text messages and has limited storage capacity.", "correct": false },
+      { "text": "To avoid overwhelming Trusted Contacts with less critical notifications, while still alerting them to transactions that pose higher scam risk.", "correct": true },
+      { "text": "Because most CPF transactions are confidential and cannot be shared with third parties.", "correct": false },
+      { "text": "To comply with data protection laws that restrict sharing transaction data.", "correct": false }
+    ],
+    "explanation": "Only critical transactions or updates that expose an account to higher scam risk — such as withdrawals or bank account changes — are copied to Trusted Contacts. This prevents overwhelming them with less critical notifications while ensuring they are alerted when it matters most.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Sylvia Chong",
+      "age": 36,
+      "bg": "cybersecurity analyst",
+      "emoji": "👩‍💻",
+      "salutation": "Ms",
+      "lastname": "Chong"
+    }
+  },
+  {
+    "q": "How does the Trusted Contact notification service differ from CPF Nomination?",
+    "choices": [
+      { "text": "They are the same service with different names.", "correct": false },
+      { "text": "Trusted Contact is for monitoring transactions during your lifetime; CPF Nomination distributes your CPF savings after your death.", "correct": true },
+      { "text": "CPF Nomination allows a contact to manage your account; Trusted Contact only receives notifications.", "correct": false },
+      { "text": "Trusted Contact is only for members above 55; CPF Nomination is for all ages.", "correct": false }
+    ],
+    "explanation": "These are two separate services. The Trusted Contact service lets a trusted individual receive transaction notifications to help protect your account during your lifetime. CPF Nomination allows you to specify who will receive your CPF savings after your death.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Hartono Susanto",
+      "age": 61,
+      "bg": "retired engineer",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Susanto"
+    }
+  },
+  {
+    "q": "A member has submitted a Trusted Contact appointment request. How will the appointee be notified?",
+    "choices": [
+      { "text": "The member must personally inform the appointee; CPF Board does not send any notification.", "correct": false },
+      { "text": "CPF Board will send a notification via email, SMS, and push notification via the CPF Mobile app (if enabled).", "correct": true },
+      { "text": "A physical letter will be mailed to the appointee's registered address.", "correct": false },
+      { "text": "The appointee will only be informed after they log in to CPF digital services.", "correct": false }
+    ],
+    "explanation": "CPF Board will notify the appointee via email, SMS, and push notifications via the CPF Mobile app (if enabled). However, members are strongly encouraged to also personally inform their appointee beforehand to ensure they are aware and understand their role.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Nur Hidayah",
+      "age": 25,
+      "bg": "fresh graduate, administrative executive",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Hidayah"
+    }
+  },
+  {
+    "q": "A member's employer consistently pays CPF contributions on the 20th of the following month. What consequence does the employer face?",
+    "choices": [
+      { "text": "The employer faces no consequence as long as contributions are paid within the same calendar month.", "correct": false },
+      { "text": "The employer may incur late payment interest charged at 1.5% per month from the first day after the due date.", "correct": true },
+      { "text": "The employer receives a written warning only on the first offence.", "correct": false },
+      { "text": "CPF Board will automatically deduct the contributions directly from the employer's bank account.", "correct": false }
+    ],
+    "explanation": "The due date for CPF contributions is the 14th of the following month (or next working day if it falls on a weekend or public holiday). Employers who pay after this incur late payment interest at 1.5% per month, commencing from the first day after the due date.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Derek Phua",
+      "age": 43,
+      "bg": "payroll executive",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Phua"
+    }
+  },
+  {
+    "q": "Through which platforms can a CPF member access their Transaction History?",
+    "choices": [
+      { "text": "Only through the CPF Mobile app.", "correct": false },
+      { "text": "Only through my cpf digital services on a web browser.", "correct": false },
+      { "text": "Through either the CPF Mobile app or my cpf digital services.", "correct": true },
+      { "text": "Through any Singapore government digital service portal.", "correct": false }
+    ],
+    "explanation": "Members can access their CPF Transaction History through either the CPF Mobile app or my cpf digital services. Both platforms allow members to view and filter contributions and other transactions.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Jasmine Kwa",
+      "age": 26,
+      "bg": "junior graphic designer",
+      "emoji": "👩‍🎨",
+      "salutation": "Ms",
+      "lastname": "Kwa"
+    }
+  },
+  {
+    "q": "How does a member generate a monthly CPF transaction statement for January 2026 specifically?",
+    "choices": [
+      { "text": "Select 'January 2026' as the start month and 'December 2026' as the end month.", "correct": false },
+      { "text": "Enter 'January 2026' for both the start and end month in Transaction History.", "correct": true },
+      { "text": "Click the 'Monthly Statement' button and select January from a dropdown.", "correct": false },
+      { "text": "Download the full yearly statement and filter by month.", "correct": false }
+    ],
+    "explanation": "To obtain a statement for a specific month, members enter the same month for both the start and end month in Transaction History. For example, to get January 2026, they select 'Jan 2026' for both start and end month.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Tan Chee Wah",
+      "age": 33,
+      "bg": "financial planner",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "A member wants to save or download their CPF Transaction History statement. What should they click?",
+    "choices": [
+      { "text": "The 'Export' button at the bottom of the page.", "correct": false },
+      { "text": "The PDF icon on the top right corner of the Transaction History page.", "correct": true },
+      { "text": "The 'Share' button and select 'Save to Files'.", "correct": false },
+      { "text": "Right-click the page and select 'Save as PDF'.", "correct": false }
+    ],
+    "explanation": "To save or download their monthly transaction statement, members click the PDF icon on the top right corner of the Transaction History page.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Siti Noraini",
+      "age": 39,
+      "bg": "kindergarten teacher",
+      "emoji": "👩‍🏫",
+      "salutation": "Mdm",
+      "lastname": "Noraini"
+    }
+  },
+  {
+    "q": "What is the maximum number of years of CPF records that a member can retrieve via the Yearly Statement of Account?",
+    "choices": [
+      { "text": "5 years", "correct": false },
+      { "text": "7 years", "correct": false },
+      { "text": "10 years", "correct": true },
+      { "text": "15 years", "correct": false }
+    ],
+    "explanation": "The Yearly Statement of Account covers up to the past 10 years. CPF Board does not provide the service of retrieving CPF statements beyond the past 10 years, so members are responsible for downloading their statements in a timely manner.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ho Kin Fatt",
+      "age": 57,
+      "bg": "retired technician",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Ho"
+    }
+  },
+  {
+    "q": "A parent wants to view their child's CPF Transaction History but the child has never received CPF contributions. Can the parent access the statement?",
+    "choices": [
+      { "text": "Yes, the parent can access it as long as the child is below 21.", "correct": false },
+      { "text": "Yes, any parent with Singpass can access their child's statement.", "correct": false },
+      { "text": "No, the child must have received CPF contributions for the statement to be accessible.", "correct": true },
+      { "text": "No, children below 18 have no accessible CPF records.", "correct": false }
+    ],
+    "explanation": "A parent can only view their child's Transaction History if the child is below 21 AND has received CPF contributions. If the child has never received contributions, there is no transaction history to access.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Rachel Sim",
+      "age": 40,
+      "bg": "paediatrician",
+      "emoji": "👩‍⚕️",
+      "salutation": "Dr",
+      "lastname": "Sim"
+    }
+  },
+  {
+    "q": "A member is granted sole custody of her child after a divorce and wants to remove her ex-spouse's access to the child's CPF statement. What must she provide?",
+    "choices": [
+      { "text": "A statutory declaration signed by a notary public.", "correct": false },
+      { "text": "A written request via Write to Us along with the Court Order as a supporting document.", "correct": true },
+      { "text": "A letter from her lawyer confirming the custody arrangement.", "correct": false },
+      { "text": "She cannot remove ex-spouse access; both parents retain access automatically.", "correct": false }
+    ],
+    "explanation": "A member with sole custody can write to CPF Board via Singpass using Write to Us and attach the Court Order as a supporting document to request removal of the ex-spouse's access to the child's CPF statement.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Lim Siew Hua",
+      "age": 37,
+      "bg": "legal secretary",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "Why is it important for a CPF member to keep their contact details updated with CPF Board?",
+    "choices": [
+      { "text": "So that CPF Board can send promotional newsletters about new schemes.", "correct": false },
+      { "text": "Because notifications are sent for transactions and CPF Board may contact the member for additional verification checks.", "correct": true },
+      { "text": "To ensure the member can receive physical letters about yearly interest.", "correct": false },
+      { "text": "It is optional and only required if the member is above 55.", "correct": false }
+    ],
+    "explanation": "Notifications are sent whenever a member makes a transaction. CPF Board may also contact the member to perform verification checks on transactions for added security. Keeping contact details updated ensures the member receives these important communications.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Muhd Ariffin",
+      "age": 28,
+      "bg": "operations executive",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Ariffin"
+    }
+  },
+  {
+    "q": "How long does it typically take for a bank account update via Interbank GIRO to be activated after submission?",
+    "choices": [
+      { "text": "Immediately upon submission.", "correct": false },
+      { "text": "After 12 hours.", "correct": false },
+      { "text": "Up to two working days after the bank confirms account ownership.", "correct": true },
+      { "text": "Between 5 and 7 working days.", "correct": false }
+    ],
+    "explanation": "For Interbank GIRO, the bank account update generally takes up to two working days to be activated after the bank confirms that the bank account belongs to the member. PayNow updates take effect after 12 hours.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Ganesan Pillai",
+      "age": 51,
+      "bg": "senior accountant",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Pillai"
+    }
+  },
+  {
+    "q": "A member links her bank account via PayNow NRIC. When will the update take effect?",
+    "choices": [
+      { "text": "Immediately upon clicking submit.", "correct": false },
+      { "text": "After 12 hours.", "correct": true },
+      { "text": "After the bank confirms account ownership, usually 2 working days.", "correct": false },
+      { "text": "After a 24-hour cooling period.", "correct": false }
+    ],
+    "explanation": "For PayNow NRIC-linked bank accounts, the update takes effect after 12 hours. This is different from Interbank GIRO which takes up to two working days.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Cheryl Foo",
+      "age": 31,
+      "bg": "marketing manager",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Foo"
+    }
+  },
+  {
+    "q": "Where does a member navigate to update their bank account details on the CPF website?",
+    "choices": [
+      { "text": "'My Dashboard' > 'Financial Settings' > 'Bank Account'.", "correct": false },
+      { "text": "'Account services' > 'Your account information' > 'Update account settings', then click the 'Bank account' tab.", "correct": true },
+      { "text": "'My Profile' > 'Payment Details' > 'Edit'.", "correct": false },
+      { "text": "'Transactions' > 'Withdrawal Settings' > 'Bank Account'.", "correct": false }
+    ],
+    "explanation": "On the CPF website, members navigate to 'Account services' > 'Your account information' > 'Update account settings', then click the 'Bank account' tab and click 'Update'.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Andy Leong",
+      "age": 44,
+      "bg": "IT manager",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Leong"
+    }
+  },
+  {
+    "q": "Why does CPF Board limit Service Centre appointment bookings to a 2-week window?",
+    "choices": [
+      { "text": "Because the Service Centre system can only store two weeks of bookings at a time.", "correct": false },
+      { "text": "To prevent members from booking multiple appointments simultaneously.", "correct": false },
+      { "text": "To reduce missed appointments from changing circumstances and to ensure Customer Service Officers remain accessible.", "correct": true },
+      { "text": "To comply with government regulations on public service capacity.", "correct": false }
+    ],
+    "explanation": "The 2-week booking window is based on CPF Board's experience that it meets the needs of most members. Booking too far in advance can lead to missed appointments when circumstances change. It also ensures Customer Service Officers remain accessible to members needing assistance.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Wong Mei Fong",
+      "age": 48,
+      "bg": "administrator",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Wong"
+    }
+  },
+  {
+    "q": "What is the primary function of the CPF website (cpf.gov.sg)?",
+    "choices": [
+      { "text": "To allow members to invest their CPF savings in stocks and unit trusts.", "correct": false },
+      { "text": "To provide information on CPF schemes and services, latest news, and access to my cpf digital services for transactions.", "correct": true },
+      { "text": "To process employer CPF contribution submissions only.", "correct": false },
+      { "text": "To display a member's Central Provident Fund balance in real time.", "correct": false }
+    ],
+    "explanation": "The CPF website (cpf.gov.sg) gives quick access to information on CPF schemes and services, and the latest CPF news. Members can also perform CPF transactions such as accessing their account information and transacting online through my cpf digital services.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Poh Ah Seng",
+      "age": 70,
+      "bg": "retired coffeeshop owner",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Poh"
+    }
+  },
+  {
+    "q": "A member needs to check or reschedule an existing CPF appointment. How do they do this?",
+    "choices": [
+      { "text": "Call the CPF hotline and request the officer to check the appointment.", "correct": false },
+      { "text": "Visit Book an Appointment on the CPF website.", "correct": true },
+      { "text": "Email CPF Board with their NRIC and appointment details.", "correct": false },
+      { "text": "Log in to Singpass and check the inbox for appointment confirmation.", "correct": false }
+    ],
+    "explanation": "Members who need to check, reschedule, or cancel an appointment with a Customer Service Executive can do so at 'Book an appointment' on the CPF website.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Norhaslinda Karim",
+      "age": 36,
+      "bg": "customer relations officer",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Karim"
+    }
+  },
+  {
+    "q": "How does a member set up their Singpass Two-Factor Authentication (2FA)?",
+    "choices": [
+      { "text": "Visit a CPF Service Centre with their NRIC and request 2FA setup.", "correct": false },
+      { "text": "Follow the steps in the instructional guide on the Singpass website.", "correct": true },
+      { "text": "Call the CPF hotline to activate 2FA over the phone.", "correct": false },
+      { "text": "Download the CPF Mobile app and complete identity verification within the app.", "correct": false }
+    ],
+    "explanation": "To set up Singpass 2FA, members should follow the steps in the instructional guide on the Singpass website. For further assistance, members should contact the Singpass Helpdesk directly.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Tan Wei Jie",
+      "age": 22,
+      "bg": "polytechnic student on internship",
+      "emoji": "🧑‍💼",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Where can a member go to reset their Singpass password online?",
+    "choices": [
+      { "text": "Log in to my cpf digital services and navigate to 'Security Settings'.", "correct": false },
+      { "text": "Visit the Singpass website, select 'Log in', then select 'Reset password' under the 'Services' tab.", "correct": true },
+      { "text": "Visit a CPF Service Centre with their NRIC for a password reset.", "correct": false },
+      { "text": "Call the CPF hotline and request a temporary password.", "correct": false }
+    ],
+    "explanation": "To change or reset a Singpass password online, members visit the Singpass website, select 'Log in', then select 'Reset password' under the 'Services' tab and follow the instructions provided.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ling Hui Min",
+      "age": 30,
+      "bg": "pharmacy assistant",
+      "emoji": "👩‍⚕️",
+      "salutation": "Ms",
+      "lastname": "Ling"
+    }
+  },
+  {
+    "q": "A FIN holder wants to access CPF digital services. How do they log in?",
+    "choices": [
+      { "text": "They cannot access CPF digital services as they hold a FIN and not an NRIC.", "correct": false },
+      { "text": "They log in using their Singpass registered under their FIN.", "correct": true },
+      { "text": "They must visit a CPF Service Centre for in-person access only.", "correct": false },
+      { "text": "They use a special employer-issued token to log in.", "correct": false }
+    ],
+    "explanation": "FIN holders may log in to CPF digital services using their Singpass registered under their FIN. If they also have a CPF-issued account, they will be prompted to select their transaction profile after logging in.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Liu Mingzhi",
+      "age": 35,
+      "bg": "permanent resident, engineer",
+      "emoji": "👨‍🔧",
+      "salutation": "Mr",
+      "lastname": "Liu"
+    }
+  },
+  {
+    "q": "What is Singpass Face Verification?",
+    "choices": [
+      { "text": "A CPF Board feature to verify identity during CPF withdrawals.", "correct": false },
+      { "text": "A method of verifying your identity using a face scan compared against the government's records.", "correct": true },
+      { "text": "A biometric login feature exclusive to the CPF Mobile app.", "correct": false },
+      { "text": "A video call verification service offered at CPF Service Centres.", "correct": false }
+    ],
+    "explanation": "Singpass Face Verification is a method of verifying your identity using a face scan compared against the government's records. Members should contact the Singpass Helpdesk for more information on this feature.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Zulaikha Hassan",
+      "age": 29,
+      "bg": "bank officer",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Hassan"
+    }
+  },
+  {
+    "q": "What is the minimum age requirement for a CPF member to appoint a Trusted Contact?",
+    "choices": [
+      { "text": "18 years old", "correct": false },
+      { "text": "21 years old", "correct": true },
+      { "text": "55 years old", "correct": false },
+      { "text": "There is no minimum age requirement.", "correct": false }
+    ],
+    "explanation": "To appoint a Trusted Contact, you must be a CPF member aged 21 and above, a Singapore Citizen or PR with a Singpass account, and have at least a Singapore-registered mobile number or email address registered with CPF Board.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Faris Hakim",
+      "age": 21,
+      "bg": "national serviceman",
+      "emoji": "🪖",
+      "salutation": "Mr",
+      "lastname": "Hakim"
+    }
+  },
+  {
+    "q": "A member's Trusted Contact is a non-next-of-kin friend. Is this allowed?",
+    "choices": [
+      { "text": "No, only immediate family members (spouse, parents, children) can be Trusted Contacts.", "correct": false },
+      { "text": "Yes, any person who meets the eligibility criteria can be appointed, regardless of relationship.", "correct": true },
+      { "text": "Yes, but only if approved by CPF Board after a background check.", "correct": false },
+      { "text": "No, the Trusted Contact must be a blood relative.", "correct": false }
+    ],
+    "explanation": "A member can appoint any person who meets the eligibility criteria as their Trusted Contact, including someone who is not their next-of-kin. CPF Board strongly recommends choosing someone you trust to help monitor your CPF transactions.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Beatrice Chua",
+      "age": 45,
+      "bg": "social worker",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Chua"
+    }
+  },
+  {
+    "q": "What contact details must a Trusted Contact have registered with CPF Board?",
+    "choices": [
+      { "text": "Either a Singapore-registered mobile number or an email address.", "correct": false },
+      { "text": "Both a Singapore-registered mobile number and an email address.", "correct": true },
+      { "text": "A Singapore-registered mobile number only.", "correct": false },
+      { "text": "A residential address and an email address.", "correct": false }
+    ],
+    "explanation": "A Trusted Contact must have both a Singapore-registered mobile number and an email address registered with CPF Board, as they will receive copies of transaction notifications through both channels.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Karthigeyan Rajan",
+      "age": 38,
+      "bg": "data analyst",
+      "emoji": "👨‍💻",
+      "salutation": "Mr",
+      "lastname": "Rajan"
+    }
+  },
+  {
+    "q": "A member wants to appoint their elderly parent who lives overseas as a Trusted Contact. The parent has a Singpass and both a Singapore mobile number and email registered with CPF Board. Can the appointment proceed?",
+    "choices": [
+      { "text": "No, the Trusted Contact must reside in Singapore.", "correct": false },
+      { "text": "No, the parent is too elderly to be a Trusted Contact.", "correct": false },
+      { "text": "Yes, the parent meets all eligibility criteria and may be appointed.", "correct": true },
+      { "text": "Yes, but only after a video verification call at a CPF Service Centre.", "correct": false }
+    ],
+    "explanation": "A member may appoint someone who is not based in Singapore as a Trusted Contact. The parent meets all criteria: CPF member aged 21+, Singapore Citizen or PR with Singpass, and both contact details registered. Overseas residence is not a disqualifying factor.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Edwin Chew",
+      "age": 46,
+      "bg": "project manager based in Singapore",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Chew"
+    }
+  },
+  {
+    "q": "Two Trusted Contacts are appointed for the same member. Which one has the higher authority over the other?",
+    "choices": [
+      { "text": "The first Trusted Contact appointed, as they are the 'primary' contact.", "correct": false },
+      { "text": "The younger of the two, as they are considered more able.", "correct": false },
+      { "text": "Neither — both have equal roles with no primary or secondary designation.", "correct": true },
+      { "text": "The one with a closer family relationship to the member.", "correct": false }
+    ],
+    "explanation": "Both Trusted Contacts have the same role and responsibilities with no primary or secondary designation. They each independently receive copies of the member's transaction notifications.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Rohani Binte Yusof",
+      "age": 60,
+      "bg": "homemaker",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Rohani"
+    }
+  },
+  {
+    "q": "What should a member do if they receive a Trusted Contact appointment request from someone they do not know?",
+    "choices": [
+      { "text": "Accept the request and report the suspicious person to the police.", "correct": false },
+      { "text": "Ignore the notification; it will expire automatically.", "correct": false },
+      { "text": "Decline the request via the 'Trusted Contacts' section under Account settings.", "correct": true },
+      { "text": "Contact CPF Board immediately to report fraud.", "correct": false }
+    ],
+    "explanation": "If a member receives a Trusted Contact appointment request from an unknown party, they should decline the request at the 'Trusted Contacts' section under their Account settings. No further action is required after declining.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Josephine Tay",
+      "age": 54,
+      "bg": "bookkeeper",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Tay"
+    }
+  },
+  {
+    "q": "What happens to a member's Trusted Contact appointments when they pass away?",
+    "choices": [
+      { "text": "The appointments transfer to the deceased member's next-of-kin.", "correct": false },
+      { "text": "CPF Board revokes all the member's Trusted Contact appointments and their appointments as a Trusted Contact for others.", "correct": true },
+      { "text": "The appointments remain active until the Trusted Contact manually removes them.", "correct": false },
+      { "text": "The appointments are suspended for one year pending estate settlement.", "correct": false }
+    ],
+    "explanation": "Upon a member's demise, CPF Board revokes both the member's appointed Trusted Contacts and the member's own appointment as a Trusted Contact for others.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Loh Ah Mooi",
+      "age": 72,
+      "bg": "retiree",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Loh"
+    }
+  },
+  {
+    "q": "A deputy appointed by a Singapore court wants to remove the Trusted Contacts of a CPF member who has lost mental capacity. What must the deputy provide when writing to CPF Board?",
+    "choices": [
+      { "text": "A statutory declaration and a letter from the member's family.", "correct": false },
+      { "text": "The Deputyship court order.", "correct": true },
+      { "text": "The LPA document and a medical report certifying loss of mental capacity.", "correct": false },
+      { "text": "A certified true copy of the member's NRIC and a doctor's letter.", "correct": false }
+    ],
+    "explanation": "A Court-appointed Deputy must submit the Deputyship court order when writing to CPF Board to request removal of Trusted Contacts on the member's behalf. A Donee under an LPA must provide the LPA document and a medical report instead.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Nicholas Ang",
+      "age": 49,
+      "bg": "lawyer",
+      "emoji": "⚖️",
+      "salutation": "Mr",
+      "lastname": "Ang"
+    }
+  },
+  {
+    "q": "A Trusted Contact suspects their appointer may have fallen for a scam after receiving a withdrawal notification. What should they do?",
+    "choices": [
+      { "text": "Log in to the appointer's CPF account to reverse the transaction.", "correct": false },
+      { "text": "Wait for the appointer to contact them first before taking any action.", "correct": false },
+      { "text": "Check with the appointer to confirm the transaction and contact the 24/7 ScamShield anti-scam helpline (1799) if unsure.", "correct": true },
+      { "text": "File a police report on behalf of the appointer immediately.", "correct": false }
+    ],
+    "explanation": "When a Trusted Contact receives a notification and is unsure if the appointer has been scammed, they should first check with the appointer to confirm the transaction. If still unsure, they should STOP and CHECK with the 24/7 ScamShield anti-scam helpline via 1799.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Cheong Beng Kwang",
+      "age": 33,
+      "bg": "police officer",
+      "emoji": "👮",
+      "salutation": "Mr",
+      "lastname": "Cheong"
+    }
+  },
+  {
+    "q": "Why is a Trusted Contact specifically notified when the appointer changes their daily withdrawal limit?",
+    "choices": [
+      { "text": "Because daily withdrawal limit changes require two-person authorisation under CPF rules.", "correct": false },
+      { "text": "Because scammers may deceive victims or gain unauthorised access to raise the limit and facilitate larger withdrawals.", "correct": true },
+      { "text": "Because CPF Board requires all financial limit changes to be verified by a third party.", "correct": false },
+      { "text": "Because the Trusted Contact must approve any limit changes before they take effect.", "correct": false }
+    ],
+    "explanation": "Scammers may deceive victims into updating their daily withdrawal limit or attempt to do so through unauthorised account access. Notifying the Trusted Contact ensures they can detect and alert the member to such suspicious changes promptly.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Yong Swee Kim",
+      "age": 64,
+      "bg": "retired bank manager",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Yong"
+    }
+  },
+  {
+    "q": "How is the Trusted Contact service different from a Lasting Power of Attorney (LPA)?",
+    "choices": [
+      { "text": "They are essentially the same; both allow someone to act on your behalf.", "correct": false },
+      { "text": "An LPA allows a Donee to make decisions on your behalf if you lose mental capacity; a Trusted Contact can only receive transaction notifications.", "correct": true },
+      { "text": "A Trusted Contact has more powers than an LPA Donee as they can manage CPF transactions.", "correct": false },
+      { "text": "An LPA is for financial matters; the Trusted Contact is for medical decisions.", "correct": false }
+    ],
+    "explanation": "An LPA allows a person to appoint a Donee to make decisions on their behalf if they lose mental capacity, covering personal welfare and/or property and affairs. In contrast, a Trusted Contact can only receive copies of transaction notifications — they cannot make decisions or transact on the member's behalf.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Margaret Lau",
+      "age": 55,
+      "bg": "estate planner",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Lau"
+    }
+  },
+  {
+    "q": "A member tries to make a Trusted Contact appointment but fails the enhanced authentication. What are their options?",
+    "choices": [
+      { "text": "The appointment cannot be made; they must wait 6 months before trying again.", "correct": false },
+      { "text": "Try again later, or visit a CPF Service Centre with their intended appointee for assistance.", "correct": true },
+      { "text": "Submit the appointment by post with notarised documents.", "correct": false },
+      { "text": "Ask the intended appointee to submit the appointment on their behalf.", "correct": false }
+    ],
+    "explanation": "If a member fails enhanced authentication when submitting a Trusted Contact appointment request, they should try again later. Alternatively, they may visit a CPF Service Centre with their intended appointee for assistance. Appointments at Service Centres are by booking only.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Abdul Rahim",
+      "age": 67,
+      "bg": "retired bus driver",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Rahim"
+    }
+  },
+  {
+    "q": "An employer pays CPF contributions on the 14th of the following month, but the 14th falls on a Sunday. When is the actual due date?",
+    "choices": [
+      { "text": "The Friday before, i.e. the 12th.", "correct": false },
+      { "text": "The Monday after, i.e. the 15th.", "correct": true },
+      { "text": "The 14th itself — the date does not shift for weekends.", "correct": false },
+      { "text": "The last working day of the following month.", "correct": false }
+    ],
+    "explanation": "When the 14th falls on a Saturday, Sunday, or Public Holiday, the due date shifts to the next working day. If the 14th is a Sunday, the next working day is Monday the 15th.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Tan Ah Leng",
+      "age": 46,
+      "bg": "small business owner, bakery",
+      "emoji": "🧑‍🍳",
+      "salutation": "Mr",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "A member lodges a report with CPF Board about unpaid contributions. However, the employer's company is in severe financial difficulty. What does CPF Board caution about such cases?",
+    "choices": [
+      { "text": "CPF Board guarantees full recovery of all unpaid contributions regardless of the employer's financial state.", "correct": false },
+      { "text": "CPF arrears may not always be recoverable despite enforcement efforts if the company is in financial difficulty.", "correct": true },
+      { "text": "CPF Board will advance the unpaid contributions to the member from a reserve fund.", "correct": false },
+      { "text": "The member must take the employer to the Employment Claims Tribunal before CPF Board can act.", "correct": false }
+    ],
+    "explanation": "In cases where the company is in financial difficulty, CPF arrears may not always be recoverable despite CPF Board's enforcement efforts. Members facing difficulty servicing HDB loans due to this may contact HDB for alternative repayment options.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Sandra Chia",
+      "age": 39,
+      "bg": "accounts clerk",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Chia"
+    }
+  },
+  {
+    "q": "A member receives her monthly CPF email notification but is unsure if it is legitimate. What is one way to verify the email is authentic?",
+    "choices": [
+      { "text": "Check that the email contains her full name and NRIC number.", "correct": false },
+      { "text": "Verify that the sender's email address is from a recognised CPF Board domain.", "correct": true },
+      { "text": "Check that the email contains a QR code that links to the CPF website.", "correct": false },
+      { "text": "Confirm the email is legitimate by replying and waiting for CPF Board to respond.", "correct": false }
+    ],
+    "explanation": "To verify legitimacy, members should ensure the sender's email address is from a recognised CPF Board domain. Members should not click any links if they are unsure, and should access their CPF account directly via cpf.gov.sg instead.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Mavis Loh",
+      "age": 61,
+      "bg": "part-time cleaner",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Loh"
+    }
+  },
+  {
+    "q": "A member needs transaction records from 12 years ago. Can CPF Board retrieve these?",
+    "choices": [
+      { "text": "Yes, CPF Board keeps all transaction records and can retrieve them upon written request.", "correct": false },
+      { "text": "Yes, but only for members above 55 who are approaching retirement.", "correct": false },
+      { "text": "No, CPF Board does not provide the service of retrieving records beyond the past 10 years.", "correct": true },
+      { "text": "Yes, but a retrieval fee applies for records older than 10 years.", "correct": false }
+    ],
+    "explanation": "CPF Board does not provide the service of retrieving CPF statements beyond the past 10 years. It is the member's responsibility to carefully review and download their statements in a timely manner to maintain their own records.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Goh Teck Soon",
+      "age": 65,
+      "bg": "retired civil servant",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Goh"
+    }
+  },
+  {
+    "q": "Which of the following CPF transaction types can a member filter for in their Transaction History?",
+    "choices": [
+      { "text": "Only CPF investment transactions.", "correct": false },
+      { "text": "Employment and Platform Contributions, and Self-Employed Contributions, among others.", "correct": true },
+      { "text": "Only withdrawal transactions.", "correct": false },
+      { "text": "Only Medisave-related transactions.", "correct": false }
+    ],
+    "explanation": "Members can customise their Transaction History view using filters, including Employment and Platform Contributions as well as Self-Employed Contributions. The history covers all CPF transactions including contributions, withdrawals, and transfers.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Parveen Kaur",
+      "age": 32,
+      "bg": "self-employed freelance photographer",
+      "emoji": "📸",
+      "salutation": "Ms",
+      "lastname": "Kaur"
+    }
+  },
+  {
+    "q": "A member does not have a Singpass or 2FA. What should they do to gain access to CPF digital services?",
+    "choices": [
+      { "text": "Submit a hardcopy request form to CPF Board by post.", "correct": false },
+      { "text": "Visit the Singpass website to obtain a Singpass account and set up 2FA.", "correct": true },
+      { "text": "Contact CPF Board to be issued a temporary one-time login code.", "correct": false },
+      { "text": "Ask a family member with Singpass to access the account on their behalf.", "correct": false }
+    ],
+    "explanation": "Members who do not have a Singpass and/or 2FA should visit the Singpass website to obtain one. Singpass is required to access CPF digital services.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Muthu Krishnan",
+      "age": 68,
+      "bg": "retired factory worker",
+      "emoji": "👴",
+      "salutation": "Mr",
+      "lastname": "Krishnan"
+    }
+  },
+  {
+    "q": "A member's child is 19, a Singapore PR, and has received CPF contributions from a part-time job. Can the parent view the child's CPF transaction history online?",
+    "choices": [
+      { "text": "No, only Singapore Citizens' children are eligible.", "correct": false },
+      { "text": "No, the parent must be a Singapore Citizen to access the child's statement.", "correct": false },
+      { "text": "Yes, as long as both parent and child are Singapore Citizens or PRs and the child is below 21 with CPF contributions.", "correct": true },
+      { "text": "No, once the child turns 18 they manage their own CPF account independently.", "correct": false }
+    ],
+    "explanation": "The parent can view their child's Transaction History if both parent and child are Singapore Citizens or Permanent Residents, the child is below 21, and the child has received CPF contributions. A 19-year-old PR child with contributions qualifies.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Lim Peck Hiang",
+      "age": 48,
+      "bg": "nurse manager",
+      "emoji": "👩‍⚕️",
+      "salutation": "Mdm",
+      "lastname": "Lim"
+    }
+  },
+  {
+    "q": "A member has a pending CPF withdrawal. Their bank account has just been closed and they need to update it. What is the recommended approach?",
+    "choices": [
+      { "text": "Update the bank account immediately to ensure the withdrawal is credited to the new account.", "correct": false },
+      { "text": "Cancel the withdrawal, update the bank account, then resubmit the withdrawal application.", "correct": false },
+      { "text": "Allow the withdrawal to complete first before updating the bank account details.", "correct": true },
+      { "text": "Contact CPF Board to place the withdrawal on hold while updating the bank account.", "correct": false }
+    ],
+    "explanation": "If a member has a pending withdrawal, they should consider updating their bank account after the withdrawal is complete to enable successful processing of their withdrawal application. Updating mid-process could disrupt the withdrawal.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Stanley Foo",
+      "age": 56,
+      "bg": "semi-retired contractor",
+      "emoji": "👷",
+      "salutation": "Mr",
+      "lastname": "Foo"
+    }
+  },
+  {
+    "q": "A member updates her bank account with CPF Board using Interbank GIRO. She submits the form on Monday. From which day is the account expected to be fully active?",
+    "choices": [
+      { "text": "Monday itself — immediately upon submission.", "correct": false },
+      { "text": "Tuesday — the next working day.", "correct": false },
+      { "text": "By Wednesday at the latest — up to two working days after bank confirmation.", "correct": true },
+      { "text": "By the following Monday — up to five working days.", "correct": false }
+    ],
+    "explanation": "For Interbank GIRO, the bank account update generally takes up to two working days to be activated after the bank confirms that the bank account belongs to the member. Submitting on Monday would mean activation by Wednesday at the latest.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Alice Yeo",
+      "age": 52,
+      "bg": "office administrator",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Yeo"
+    }
+  },
+  {
+    "q": "Which of the following payments will be credited to the bank account registered under a member's CPF Account settings?",
+    "choices": [
+      { "text": "Only CPF investment dividends.", "correct": false },
+      { "text": "Monthly payouts and CPF savings withdrawals.", "correct": true },
+      { "text": "Only Medisave reimbursements.", "correct": false },
+      { "text": "All government cash payouts including GST vouchers.", "correct": false }
+    ],
+    "explanation": "Monthly payouts and CPF savings withdrawals will be paid to the bank account registered under the member's Account settings with CPF Board. Members should keep this updated to avoid delays in receiving payments.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Ramesh Gopal",
+      "age": 62,
+      "bg": "retired taxi driver",
+      "emoji": "🚕",
+      "salutation": "Mr",
+      "lastname": "Gopal"
+    }
+  },
+  {
+    "q": "A member may need to verify their identity using enhanced authentication measures when doing what?",
+    "choices": [
+      { "text": "Logging in to my cpf digital services for the first time.", "correct": false },
+      { "text": "Updating their registered bank account details with CPF Board.", "correct": true },
+      { "text": "Viewing their CPF account balance.", "correct": false },
+      { "text": "Downloading their Yearly Statement of Account.", "correct": false }
+    ],
+    "explanation": "When updating registered bank account details with CPF Board, members may need to verify their identity using enhanced authentication measures, as this is a sensitive change that could affect how their CPF payments are received.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Josephine Chan",
+      "age": 41,
+      "bg": "finance executive",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Chan"
+    }
+  },
+  {
+    "q": "For which types of CPF matters are visits to a Service Centre NOT available?",
+    "choices": [
+      { "text": "Retirement withdrawal matters.", "correct": false },
+      { "text": "Employer and self-employed CPF matters.", "correct": true },
+      { "text": "Singpass account issues.", "correct": false },
+      { "text": "Nomination queries.", "correct": false }
+    ],
+    "explanation": "Services for employer or self-employed matters are only available through CPF's digital services, hotline, or Write to Us. Members cannot handle these matters at a Service Centre in person.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Ben Tay",
+      "age": 37,
+      "bg": "self-employed plumber",
+      "emoji": "🔧",
+      "salutation": "Mr",
+      "lastname": "Tay"
+    }
+  },
+  {
+    "q": "A member wants to speak with a CPF Customer Service Executive over the phone. How do they arrange this?",
+    "choices": [
+      { "text": "Call the CPF hotline directly and a Customer Service Executive will answer.", "correct": false },
+      { "text": "Make an appointment via the CPF website to speak with a Customer Service Executive over the phone.", "correct": true },
+      { "text": "Submit a callback request through the CPF Mobile app.", "correct": false },
+      { "text": "Email CPF Board and a Customer Service Executive will call back within 3 working days.", "correct": false }
+    ],
+    "explanation": "Members can make an appointment to speak with a Customer Service Executive over the phone via the CPF website. In-person visits to Service Centres are also available by appointment.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Helen Ng",
+      "age": 70,
+      "bg": "retiree, former seamstress",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Ng"
+    }
+  },
+  {
+    "q": "What does Singpass Face Verification compare a member's face scan against?",
+    "choices": [
+      { "text": "The photo on the member's CPF account profile.", "correct": false },
+      { "text": "The government's records.", "correct": true },
+      { "text": "The member's most recently uploaded Singpass profile photo.", "correct": false },
+      { "text": "The photo on the member's bank account records.", "correct": false }
+    ],
+    "explanation": "Singpass Face Verification verifies identity using a face scan compared against the government's records. For more information, members should contact the Singpass Helpdesk directly.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Darren Koh",
+      "age": 24,
+      "bg": "university student",
+      "emoji": "🧑‍🎓",
+      "salutation": "Mr",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "A foreign CPF member has both a CPF-issued account (e.g. SA987654C) and a FIN. After logging in with their FIN-registered Singpass, what happens?",
+    "choices": [
+      { "text": "They are automatically directed to their CPF-issued account.", "correct": false },
+      { "text": "They will be prompted to select their transaction profile — either their CPF-issued account or FIN.", "correct": true },
+      { "text": "Access to the CPF-issued account is permanently blocked.", "correct": false },
+      { "text": "They can only access the FIN profile and must contact CPF Board to merge accounts.", "correct": false }
+    ],
+    "explanation": "If a foreign CPF member has a CPF-issued account and their FIN is updated with CPF Board, they will be prompted after login to select their transaction profile — either the CPF-issued account or the FIN — before proceeding.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Pradeep Nair",
+      "age": 40,
+      "bg": "foreign national, senior engineer",
+      "emoji": "👨‍🔬",
+      "salutation": "Mr",
+      "lastname": "Nair"
+    }
+  },
+  {
+    "q": "Which of the following is NOT a requirement for a CPF member to appoint a Trusted Contact?",
+    "choices": [
+      { "text": "Being a Singapore Citizen or Permanent Resident.", "correct": false },
+      { "text": "Being aged 21 and above.", "correct": false },
+      { "text": "Having at least a Singapore-registered mobile number or email address registered with CPF Board.", "correct": false },
+      { "text": "Having a minimum CPF balance of $5,000.", "correct": true }
+    ],
+    "explanation": "To appoint a Trusted Contact, the member must be 21 or above, a Singapore Citizen or PR with a Singpass account, and have at least a Singapore-registered mobile number or email registered with CPF Board. There is no minimum CPF balance requirement.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Nur Syafiqah",
+      "age": 21,
+      "bg": "part-time barista",
+      "emoji": "☕",
+      "salutation": "Ms",
+      "lastname": "Syafiqah"
+    }
+  },
+  {
+    "q": "What is the maximum number of Trusted Contacts a CPF member can appoint?",
+    "choices": [
+      { "text": "One", "correct": false },
+      { "text": "Two", "correct": true },
+      { "text": "Three", "correct": false },
+      { "text": "There is no limit.", "correct": false }
+    ],
+    "explanation": "A member may appoint up to two Trusted Contacts. Both have the same role with no primary or secondary designation. To appoint a new one when the limit is reached, the member must first remove an existing Trusted Contact.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Victor Seow",
+      "age": 55,
+      "bg": "property developer",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Seow"
+    }
+  },
+  {
+    "q": "How does CPF Board's limit of two Trusted Contacts protect a member?",
+    "choices": [
+      { "text": "It reduces the administrative load on CPF Board's notification system.", "correct": false },
+      { "text": "It provides optimal protection from scams while keeping CPF information within a close, trusted circle.", "correct": true },
+      { "text": "It prevents family disputes over CPF account information.", "correct": false },
+      { "text": "It is required by the Personal Data Protection Act (PDPA).", "correct": false }
+    ],
+    "explanation": "The two-person limit is designed to provide optimal protection from potential scams while keeping the member's CPF information within a close, trusted circle. Members are encouraged to carefully consider who they appoint.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Lee Siew Buay",
+      "age": 58,
+      "bg": "insurance agent",
+      "emoji": "👩‍💼",
+      "salutation": "Mdm",
+      "lastname": "Lee"
+    }
+  },
+  {
+    "q": "A member submits two Trusted Contact appointment requests on the same day. Is this allowed?",
+    "choices": [
+      { "text": "No, only one appointment request can be submitted per day.", "correct": false },
+      { "text": "Yes, up to two requests can be submitted on the same day, matching the maximum number of Trusted Contacts.", "correct": true },
+      { "text": "No, there must be a 24-hour gap between appointment requests.", "correct": false },
+      { "text": "Yes, unlimited requests can be submitted but only two will be accepted.", "correct": false }
+    ],
+    "explanation": "A member can submit up to two Trusted Contact appointment requests within the same day, which corresponds to the maximum number of Trusted Contacts they can appoint. If the maximum is already reached, an existing one must be removed first.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Marcus Wee",
+      "age": 34,
+      "bg": "risk analyst",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Wee"
+    }
+  },
+  {
+    "q": "Why must an appointee actively accept a Trusted Contact appointment request rather than being automatically enrolled?",
+    "choices": [
+      { "text": "To allow CPF Board to verify the identity of the appointee.", "correct": false },
+      { "text": "Because the role is voluntary and the appointee must understand their responsibilities before accepting.", "correct": true },
+      { "text": "To comply with the Electronic Transactions Act requirements.", "correct": false },
+      { "text": "So that CPF Board can conduct a background check on the appointee.", "correct": false }
+    ],
+    "explanation": "The Trusted Contact role is a voluntary one. The appointee will receive copies of notifications when important CPF transactions occur, so they must understand their role before accepting. This ensures the appointee is genuinely willing and able to help.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Wendy Tan",
+      "age": 44,
+      "bg": "compliance manager",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "A member submitted a Trusted Contact appointment request but wants to change the appointee before they have accepted. What is the correct process?",
+    "choices": [
+      { "text": "Submit a new request with the new appointee's details; the old request is automatically cancelled.", "correct": false },
+      { "text": "Withdraw the pending request via the Activities page and submit a new appointment request.", "correct": true },
+      { "text": "Contact CPF Board by phone to request an amendment to the existing request.", "correct": false },
+      { "text": "Wait for the request to expire after 7 days, then submit a new one.", "correct": false }
+    ],
+    "explanation": "To change an appointee before they have accepted, the member should go to their Activities page, locate the in-progress request, and withdraw it. They can then submit a new appointment request with the preferred appointee.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Koh Beng Huat",
+      "age": 47,
+      "bg": "logistics supervisor",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Koh"
+    }
+  },
+  {
+    "q": "A member receives a notification that their Trusted Contact appointment request has been declined. What should they do next?",
+    "choices": [
+      { "text": "File a complaint with CPF Board about the declined appointment.", "correct": false },
+      { "text": "Contact the appointee to explain the role and resubmit, or consider appointing a different person.", "correct": true },
+      { "text": "The appointment is automatically escalated to a CPF Board officer for review.", "correct": false },
+      { "text": "Wait 30 days before submitting a new request to the same person.", "correct": false }
+    ],
+    "explanation": "If the appointee declines, the member should contact them to explain their request and help them understand the Trusted Contact role before submitting a new appointment request. Alternatively, the member may consider appointing a different person.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Amy Tan",
+      "age": 63,
+      "bg": "retiree",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Tan"
+    }
+  },
+  {
+    "q": "Where can a member check the status of a pending Trusted Contact appointment request?",
+    "choices": [
+      { "text": "Under 'Your Trusted Contacts' in Account settings.", "correct": false },
+      { "text": "Via the Activities page using their Singpass.", "correct": true },
+      { "text": "In the CPF inbox under 'Notifications'.", "correct": false },
+      { "text": "By calling the CPF hotline for a status update.", "correct": false }
+    ],
+    "explanation": "Members can check the status of their Trusted Contact appointment via their Activities page using Singpass. Pending requests will show the 'In-Progress' transaction status. Only accepted appointments appear under 'Your Trusted Contacts' in Account settings.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "James Ong",
+      "age": 29,
+      "bg": "graduate student",
+      "emoji": "🧑‍🎓",
+      "salutation": "Mr",
+      "lastname": "Ong"
+    }
+  },
+  {
+    "q": "A member attempts to appoint someone as a Trusted Contact but gets an error saying the person has reached their appointment limit. What does this mean?",
+    "choices": [
+      { "text": "The person already has two CPF accounts and cannot be a Trusted Contact.", "correct": false },
+      { "text": "The person is already a Trusted Contact for several other individuals and has reached the limit.", "correct": true },
+      { "text": "The person has submitted too many requests in a single day.", "correct": false },
+      { "text": "The person's Singpass account has been suspended.", "correct": false }
+    ],
+    "explanation": "This error means the person you are trying to appoint is already a Trusted Contact for the maximum number of other individuals. CPF Board recommends appointing someone else, or asking this person to remove one of their existing appointments before proceeding.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Suriani Binte Ahmad",
+      "age": 52,
+      "bg": "community volunteer",
+      "emoji": "🤝",
+      "salutation": "Mdm",
+      "lastname": "Suriani"
+    }
+  },
+  {
+    "q": "When a person accepts or declines a Trusted Contact appointment request, who is notified?",
+    "choices": [
+      { "text": "Only CPF Board is notified internally.", "correct": false },
+      { "text": "The appointer is notified via email, SMS and push notifications (if enabled).", "correct": true },
+      { "text": "No one is notified; the member must check their Activities page manually.", "correct": false },
+      { "text": "The appointee's family members are notified as a transparency measure.", "correct": false }
+    ],
+    "explanation": "The person who submitted the appointment request (the appointer) will be notified via email, SMS, and push notifications (if enabled) when their appointee accepts or declines the Trusted Contact appointment request.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Leong Mei Yee",
+      "age": 36,
+      "bg": "HR executive",
+      "emoji": "👩‍💼",
+      "salutation": "Ms",
+      "lastname": "Leong"
+    }
+  },
+  {
+    "q": "How can a Trusted Contact remove themselves from their role?",
+    "choices": [
+      { "text": "Ask the appointer to remove them via the Add or remove Trusted Contact e-form.", "correct": false },
+      { "text": "Submit the Remove yourself from your loved ones' Trusted Contact list e-form with Singpass.", "correct": true },
+      { "text": "Call the CPF hotline to request self-removal.", "correct": false },
+      { "text": "Send a written request by post to CPF Board.", "correct": false }
+    ],
+    "explanation": "A Trusted Contact who no longer wishes to be appointed can remove themselves by submitting the 'Remove yourself from your loved ones' Trusted Contact list' e-form with their Singpass. Removal takes effect immediately upon successful submission.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Huang Wei Liang",
+      "age": 42,
+      "bg": "logistics coordinator",
+      "emoji": "👨‍💼",
+      "salutation": "Mr",
+      "lastname": "Huang"
+    }
+  },
+  {
+    "q": "How quickly does the removal of a Trusted Contact take effect after the e-form is successfully submitted?",
+    "choices": [
+      { "text": "After a 12-hour cooling period.", "correct": false },
+      { "text": "Within two working days.", "correct": false },
+      { "text": "Immediately upon successful submission.", "correct": true },
+      { "text": "After the removed Trusted Contact acknowledges the removal.", "correct": false }
+    ],
+    "explanation": "The removal of a Trusted Contact takes immediate effect upon the successful submission of the Add or remove Trusted Contact e-form. The removed contact will no longer appear under 'Your Trusted Contacts' in Account settings.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": {
+      "name": "Fauziah Binte Hamid",
+      "age": 49,
+      "bg": "primary school principal",
+      "emoji": "👩‍🏫",
+      "salutation": "Mdm",
+      "lastname": "Fauziah"
+    }
+  },
+  {
+    "q": "CPF Board removes a member's Trusted Contact appointment without the member initiating it. What is a likely reason for this?",
+    "choices": [
+      { "text": "The Trusted Contact missed alerting the member about a transaction.", "correct": false },
+      { "text": "The Trusted Contact or the member is no longer eligible to use the service, such as upon demise.", "correct": true },
+      { "text": "The Trusted Contact appointment has exceeded the annual renewal date.", "correct": false },
+      { "text": "CPF Board randomly audits and removes inactive Trusted Contact appointments.", "correct": false }
+    ],
+    "explanation": "CPF Board may remove a Trusted Contact appointment when either the member or the Trusted Contact can no longer use the service — for example, upon the demise of either party or a change in eligibility status.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": {
+      "name": "Teo Suan Choo",
+      "age": 66,
+      "bg": "retiree, former nurse",
+      "emoji": "👵",
+      "salutation": "Mdm",
+      "lastname": "Teo"
+    }
+  },
+  {
+    "q": "A Trusted Contact is appointed by someone who subsequently loses mental capacity. What is the Trusted Contact's appointment status?",
+    "choices": [
+      { "text": "The appointment is automatically revoked once mental capacity is lost.", "correct": false },
+      { "text": "The appointment remains valid; a Deputy or Donee may remove it if they deem it necessary.", "correct": true },
+      { "text": "The appointment is suspended until the appointer recovers mental capacity.", "correct": false },
+      { "text": "The Trusted Contact automatically gains power to manage the appointer's CPF account.", "correct": false }
+    ],
+    "explanation": "If an appointer loses mental capacity, the Trusted Contact's appointment remains valid. A Court-appointed Deputy or Donee under an LPA may remove the Trusted Contact if they deem it necessary.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Valerie Seah",
+      "age": 41,
+      "bg": "occupational therapist",
+      "emoji": "👩‍⚕️",
+      "salutation": "Ms",
+      "lastname": "Seah"
+    }
+  },
+  {
+    "q": "A Donee appointed under an LPA wants to remove a Trusted Contact for a member who has lost mental capacity. What documents must be provided to CPF Board?",
+    "choices": [
+      { "text": "The Deputyship court order only.", "correct": false },
+      { "text": "The LPA document and a medical report certifying the donor's loss of mental capacity.", "correct": true },
+      { "text": "A statutory declaration from the Donee and a letter from the appointer's doctor.", "correct": false },
+      { "text": "The LPA document only.", "correct": false }
+    ],
+    "explanation": "A Donee appointed under an LPA must submit the LPA document together with a medical report certifying the donor's loss of mental capacity when writing to CPF Board to request removal of the Trusted Contact on the member's behalf.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": {
+      "name": "Tan Hwee Leng",
+      "age": 53,
+      "bg": "elder care lawyer",
+      "emoji": "⚖️",
+      "salutation": "Ms",
+      "lastname": "Tan"
+    }
   }
 ];
 
