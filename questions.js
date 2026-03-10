@@ -2979,7 +2979,2611 @@ const QUESTIONS = [
     "category": "Accounts Management",
     "difficulty": "easy",
     "persona": { "name": "Jason Lim", "age": 32, "bg": "analyst", "emoji": "👨‍💻", "salutation": "Mr", "lastname": "Lim" }
+  }, 
+  {
+    "q": "What is the average annual Net Trade Income (NTI) limit for self-employed persons to qualify for Silver Support?",
+    "choices": [
+      { "text": "$20,000", "correct": false },
+      { "text": "$27,600", "correct": true },
+      { "text": "$35,000", "correct": false },
+      { "text": "$42,000", "correct": false }
+    ],
+    "explanation": "Self-employed persons and platform workers must have an average annual NTI of not more than $27,600 when they were aged 45 to 54.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Tan Ah Kow", "age": 66, "bg": "former taxi driver", "emoji": "🚕", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "How much does a senior living in a 1-room HDB flat receive per quarter if their household monthly income per person is $1,500 or less?",
+    "choices": [
+      { "text": "$540", "correct": false },
+      { "text": "$860", "correct": false },
+      { "text": "$1,080", "correct": true },
+      { "text": "$1,500", "correct": false }
+    ],
+    "explanation": "Seniors in 1- and 2-room flats with household income per person of $1,500 or less receive $1,080 per quarter.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mdm Lim", "age": 72, "bg": "retired cleaner", "emoji": "👵", "salutation": "Mdm", "lastname": "Lim" }
+  },
+  {
+    "q": "What is the quarterly Silver Support payment for a senior in a 3-room flat with a household monthly income per person of $2,000?",
+    "choices": [
+      { "text": "$430", "correct": true },
+      { "text": "$860", "correct": false },
+      { "text": "$325", "correct": false },
+      { "text": "$215", "correct": false }
+    ],
+    "explanation": "Seniors in 3-room flats with household income per person between $1,501 and $2,300 receive $430 per quarter.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Robert Ang", "age": 67, "bg": "retired technician", "emoji": "👴", "salutation": "Mr", "lastname": "Ang" }
+  },
+  {
+    "q": "When does a senior turning 65 in October start receiving Silver Support payments?",
+    "choices": [
+      { "text": "In January of the following year.", "correct": false },
+      { "text": "In the July-September quarter.", "correct": false },
+      { "text": "In the October-December quarter.", "correct": true },
+      { "text": "Immediately on their 65th birthday.", "correct": false }
+    ],
+    "explanation": "Eligible seniors turning 65 will start receiving Silver Support in the quarter they turn 65.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Siti Aminah", "age": 64, "bg": "school canteen vendor", "emoji": "👩‍🍳", "salutation": "Mdm", "lastname": "Aminah" }
+  },
+  {
+    "q": "Which organization's website should you visit to reset your Singpass password?",
+    "choices": [
+      { "text": "CPF Board", "correct": false },
+      { "text": "Singpass (GovTech)", "correct": true },
+      { "text": "IRAS", "correct": false },
+      { "text": "Monetary Authority of Singapore", "correct": false }
+    ],
+    "explanation": "Singpass is an authentication service governed by GovTech; password resets are done via the Singpass website.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "John De Souza", "age": 55, "bg": "security officer", "emoji": "👮", "salutation": "Mr", "lastname": "De Souza" }
+  },
+  {
+    "q": "Which of the following is NOT a troubleshooting step for Singpass Face Verification issues?",
+    "choices": [
+      { "text": "Ensure your face is not covered.", "correct": false },
+      { "text": "Use a camera with a minimum resolution of two megapixels.", "correct": false },
+      { "text": "Ensure there is strong lighting directly behind you.", "correct": true },
+      { "text": "Keep still while scanning is in progress.", "correct": false }
+    ],
+    "explanation": "Strong lighting in the background can cause Face Verification to fail. You should avoid strong background lighting.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Lily Tan", "age": 29, "bg": "graphic designer", "emoji": "🎨", "salutation": "Ms", "lastname": "Tan" }
+  },
+  {
+    "q": "What happens if a non-Singaporean does not close their CPF account and transfer their savings after renunciation?",
+    "choices": [
+      { "text": "The savings are transferred to the Unclaimed Monies Fund.", "correct": false },
+      { "text": "The account is automatically closed in the month following renunciation.", "correct": true },
+      { "text": "The account stays open until the member reaches 55.", "correct": false },
+      { "text": "The savings continue to earn 2.5% interest indefinitely.", "correct": false }
+    ],
+    "explanation": "If not closed manually, the account closes automatically in the month following renunciation.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Mark Evans", "age": 41, "bg": "former PR", "emoji": "🛫", "salutation": "Mr", "lastname": "Evans" }
+  },
+  {
+    "q": "What will happen to interest on closed CPF accounts for non-citizens from 1 April 2027 onwards?",
+    "choices": [
+      { "text": "It will be pegged to the SIBOR rate.", "correct": false },
+      { "text": "It will return to the prevailing CPF interest rate.", "correct": false },
+      { "text": "No interest will be paid.", "correct": true },
+      { "text": "It will be fixed at 0.05% per annum.", "correct": false }
+    ],
+    "explanation": "From 1 April 2027, any remaining savings in closed accounts of non-citizens will no longer earn any interest.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Elena Rossi", "age": 45, "bg": "expat banker", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Rossi" }
+  },
+  {
+    "q": "If you closed your CPF account and later reinstate your Singapore Citizenship, what must you refund to your CPF?",
+    "choices": [
+      { "text": "Only the principal amount withdrawn.", "correct": false },
+      { "text": "The withdrawn savings plus accrued interest.", "correct": true },
+      { "text": "The amount you would have contributed while away.", "correct": false },
+      { "text": "A flat administrative fee of $5,000.", "correct": false }
+    ],
+    "explanation": "Reinstating SC/PR requires a refund of the withdrawn CPF savings with accrued interest.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Chen Wei Hong", "age": 50, "bg": "returning Singaporean", "emoji": "🇸🇬", "salutation": "Mr", "lastname": "Chen" }
+  },
+  {
+    "q": "Which service should you use to update your residential address with the CPF Board if you are a Singapore Citizen?",
+    "choices": [
+      { "text": "CPF Board E-service", "correct": false },
+      { "text": "ICA e-Services", "correct": true },
+      { "text": "LifeSG app", "correct": false },
+      { "text": "Singpost counter", "correct": false }
+    ],
+    "explanation": "Singapore Citizens should update their address via ICA's e-Services; CPF is informed automatically via OSCARS.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Sarah Tan", "age": 30, "bg": "administrative officer", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Tan" }
+  },
+  {
+    "q": "Under the Child Dashboard, for how long can you view your child's CPF Transaction History online?",
+    "choices": [
+      { "text": "The last 6 months", "correct": false },
+      { "text": "The last 12 months", "correct": false },
+      { "text": "The last 15 months", "correct": true },
+      { "text": "Since the child's birth", "correct": false }
+    ],
+    "explanation": "Parents can view their child's CPF Transaction History for the last 15 months online.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "David Lim", "age": 42, "bg": "father of a newborn", "emoji": "👨‍🍼", "salutation": "Mr", "lastname": "Lim" }
+  },
+  {
+    "q": "What document is required to remove an ex-spouse's access to a child's CPF statement?",
+    "choices": [
+      { "text": "A signed letter from the ex-spouse", "correct": false },
+      { "text": "A statutory declaration", "correct": false },
+      { "text": "A Court Order granting sole custody", "correct": true },
+      { "text": "The child's birth certificate", "correct": false }
+    ],
+    "explanation": "A member granted sole custody can request removal of an ex-spouse's access by providing the Court Order.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Jane Doe", "age": 38, "bg": "divorcee", "emoji": "👩", "salutation": "Ms", "lastname": "Doe" }
+  },
+  {
+    "q": "What is the Basic Healthcare Sum (BHS) for members turning 65 in 2025?",
+    "choices": [
+      { "text": "$71,500", "correct": false },
+      { "text": "$75,500", "correct": true },
+      { "text": "$79,000", "correct": false },
+      { "text": "$82,000", "correct": false }
+    ],
+    "explanation": "The BHS for the cohort turning 65 in 2025 is $75,500.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Tan Bee Lian", "age": 64, "bg": "retiring in 2025", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "Can you use your MediSave savings for your child's vaccination if they are not SC/PR?",
+    "choices": [
+      { "text": "No, MediSave can only be used for SC/PR family members.", "correct": false },
+      { "text": "Yes, MediSave can be used for your children's medical expenses regardless of citizenship.", "correct": true },
+      { "text": "Only if the vaccination is for COVID-19.", "correct": false },
+      { "text": "Only if the child is below 1 year old.", "correct": false }
+    ],
+    "explanation": "MediSave can be used for the medical expenses of your children, regardless of their citizenship status.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Meera S.", "age": 35, "bg": "mother of non-citizen child", "emoji": "👩‍👦", "salutation": "Mrs", "lastname": "S." }
+  },
+  {
+    "q": "How can you tell if a CPF email about your statement is a scam?",
+    "choices": [
+      { "text": "The sender's email address ends with '@gmail.com'.", "correct": true },
+      { "text": "The email ends with '@e.cpf.gov.sg'.", "correct": false },
+      { "text": "The email uses your principal name.", "correct": false },
+      { "text": "The email contains no clickable links to third-party sites.", "correct": false }
+    ],
+    "explanation": "Legitimate CPF emails regarding statements end with '@e.cpf.gov.sg'. Personal email addresses like Gmail are common signs of scams.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "George Wong", "age": 52, "bg": "bank officer", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "Wong" }
+  },
+  {
+    "q": "What should you check to ensure your browser is compatible with 'my cpf' digital services?",
+    "choices": [
+      { "text": "Ensure it is the 2nd latest version of Chrome or Safari.", "correct": true },
+      { "text": "Ensure it is Internet Explorer 11.", "correct": false },
+      { "text": "Ensure you are using a VPN.", "correct": false },
+      { "text": "Ensure you have disabled all security updates.", "correct": false }
+    ],
+    "explanation": "'my cpf' digital services are compatible with the two most recent versions of commonly used browsers like Chrome and Safari.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Ken Tan", "age": 24, "bg": "IT graduate", "emoji": "👨‍💻", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "Who is the official developer of the CPF Mobile app on the App Store?",
+    "choices": [
+      { "text": "GovTech Singapore", "correct": false },
+      { "text": "Central Provident Fund Board", "correct": true },
+      { "text": "Ministry of Manpower", "correct": false },
+      { "text": "DBS Bank", "correct": false }
+    ],
+    "explanation": "The official developer listed for CPF Mobile is the Central Provident Fund Board.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Linda Ng", "age": 31, "bg": "marketing manager", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Ng" }
+  },
+  {
+    "q": "If you are a non-Singaporean, where can you find information on applying for Permanent Residency?",
+    "choices": [
+      { "text": "CPF Board website", "correct": false },
+      { "text": "MOM website", "correct": false },
+      { "text": "ICA website", "correct": true },
+      { "text": "HDB website", "correct": false }
+    ],
+    "explanation": "Enquiries on applying for Permanent Residency should be submitted to the Immigration & Checkpoints Authority (ICA).",
+    "category": "Account Closure",
+    "difficulty": "easy",
+    "persona": { "name": "Rahul Kapoor", "age": 33, "bg": "employment pass holder", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "Kapoor" }
+  },
+  {
+    "q": "When do Silver Support payments for the July to September period typically occur?",
+    "choices": [
+      { "text": "31 March", "correct": false },
+      { "text": "30 June", "correct": true },
+      { "text": "30 September", "correct": false },
+      { "text": "31 December", "correct": false }
+    ],
+    "explanation": "Payments for July-September are made on 30 June (the last day of the preceding quarter).",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Uncle Lim", "age": 70, "bg": "retired hawker", "emoji": "👴", "salutation": "Mr", "lastname": "Lim" }
+  },
+  {
+    "q": "What is the maximum household monthly income per person to be eligible for Silver Support?",
+    "choices": [
+      { "text": "$1,500", "correct": false },
+      { "text": "$1,800", "correct": false },
+      { "text": "$2,300", "correct": true },
+      { "text": "$2,500", "correct": false }
+    ],
+    "explanation": "To qualify, the monthly household income per person must not be more than $2,300.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Fatimah", "age": 66, "bg": "homemaker", "emoji": "👵", "salutation": "Mdm", "lastname": "Fatimah" }
+  },
+  {
+    "q": "Does a senior qualify for Silver Support if their spouse owns a private property?",
+    "choices": [
+      { "text": "Yes, only the senior's ownership matters.", "correct": false },
+      { "text": "No, the senior and spouse must not own private property.", "correct": true },
+      { "text": "Yes, if the property is rented out.", "correct": false },
+      { "text": "Only if they have been married for less than 10 years.", "correct": false }
+    ],
+    "explanation": "One criteria is that the senior must not own, or have a spouse who owns, a 5-room or larger HDB flat or private property.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mdm Seah", "age": 68, "bg": "retiree", "emoji": "👵", "salutation": "Mdm", "lastname": "Seah" }
+  },
+  {
+    "q": "If you cannot withdraw Silver Support from an ATM, what is the alternative to receive payment?",
+    "choices": [
+      { "text": "By cheque", "correct": false },
+      { "text": "Via PayNow-NRIC", "correct": true },
+      { "text": "In-person at CPF Service Centres", "correct": false },
+      { "text": "Only through your employer", "correct": false }
+    ],
+    "explanation": "Seniors are encouraged to register for PayNow-NRIC to receive their SS payments directly into their bank accounts.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Kandasamy", "age": 71, "bg": "retired storekeeper", "emoji": "👴", "salutation": "Mr", "lastname": "Kandasamy" }
+  },
+  {
+    "q": "Which CPF account is used specifically for hospitalisation expenses?",
+    "choices": [
+      { "text": "Ordinary Account", "correct": false },
+      { "text": "Special Account", "correct": false },
+      { "text": "MediSave Account", "correct": true },
+      { "text": "Retirement Account", "correct": false }
+    ],
+    "explanation": "The MediSave Account is for hospitalisation expenses and approved medical insurance.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Nurul", "age": 28, "bg": "nurse", "emoji": "👩‍⚕️", "salutation": "Ms", "lastname": "Nurul" }
+  },
+  {
+    "q": "What should you do if your Singpass Face Verification keeps failing despite good lighting?",
+    "choices": [
+      { "text": "Contact CPF Board support.", "correct": false },
+      { "text": "Contact the Singpass Helpdesk directly.", "correct": true },
+      { "text": "Try again using a lower resolution camera.", "correct": false },
+      { "text": "Delete your Singpass account.", "correct": false }
+    ],
+    "explanation": "Singpass Face Verification is a GovTech service; contact the Singpass Helpdesk for technical issues.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Ben", "age": 35, "bg": "engineer", "emoji": "👨‍🔧", "salutation": "Mr", "lastname": "Ben" }
+  },
+  {
+    "q": "What happens to your CPF savings if you become a citizen of another country and don't close your account?",
+    "choices": [
+      { "text": "They are automatically donated to charity.", "correct": false },
+      { "text": "They stop earning interest after a grace period.", "correct": true },
+      { "text": "They are transferred to ICA.", "correct": false },
+      { "text": "The account stays active until you are 100.", "correct": false }
+    ],
+    "explanation": "CPF accounts of non-citizens/PRs will be automatically closed, and interest will eventually cease after 31 March 2027.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Tom", "age": 42, "bg": "former resident", "emoji": "🌍", "salutation": "Mr", "lastname": "Tom" }
+  },
+  {
+    "q": "Can you update your name in CPF records to include a 'married name' without updating your NRIC?",
+    "choices": [
+      { "text": "Yes, by providing a marriage certificate.", "correct": false },
+      { "text": "No, CPF follows the principal name on your NRIC.", "correct": true },
+      { "text": "Only if you are a Permanent Resident.", "correct": false },
+      { "text": "Yes, by emailing the CPF Board.", "correct": false }
+    ],
+    "explanation": "CPF uses the principal name registered in your NRIC. If your NRIC is not updated, CPF records will not change.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mrs. Lee", "age": 34, "bg": "newlywed", "emoji": "👰", "salutation": "Mrs", "lastname": "Lee" }
+  },
+  {
+    "q": "What is the age limit for parents to view their child's CPF statement?",
+    "choices": [
+      { "text": "Below 16", "correct": false },
+      { "text": "Below 18", "correct": false },
+      { "text": "Below 21", "correct": true },
+      { "text": "There is no age limit.", "correct": false }
+    ],
+    "explanation": "Parents can view statements of children below age 21 who are SC/PR and have received CPF contributions.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Grace", "age": 45, "bg": "mother", "emoji": "👩‍👧", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "How can a member receive push notifications for CPF updates?",
+    "choices": [
+      { "text": "By subscribing to the CPF newsletter.", "correct": false },
+      { "text": "By downloading and using the CPF Mobile app.", "correct": true },
+      { "text": "By following CPF Board on Facebook.", "correct": false },
+      { "text": "By visiting a CPF Service Centre.", "correct": false }
+    ],
+    "explanation": "CPF Mobile provides push notification alerts and updates regarding personal CPF matters.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Adam", "age": 27, "bg": "digital marketer", "emoji": "📱", "salutation": "Mr", "lastname": "Adam" }
+  },
+  {
+    "q": "What happens to the MediSave balance if it exceeds the BHS and the member is 55+ but hasn't met the FRS?",
+    "choices": [
+      { "text": "It is transferred to the Ordinary Account.", "correct": false },
+      { "text": "It is transferred to the Retirement Account.", "correct": true },
+      { "text": "It stays in the MediSave Account but earns no interest.", "correct": false },
+      { "text": "It is paid out in cash.", "correct": false }
+    ],
+    "explanation": "For those 55 and above, excess MA is channelled to the RA if the FRS has not been met.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Tan Hock Bee", "age": 58, "bg": "clerk", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "Why does CPF limit online statement retrieval to the last 10 years?",
+    "choices": [
+      { "text": "Due to data storage regulations.", "correct": true },
+      { "text": "Because older records are deleted.", "correct": false },
+      { "text": "To encourage members to save physical copies.", "correct": false },
+      { "text": "Because interest rates were different then.", "correct": false }
+    ],
+    "explanation": "CPF Board provides retrieval for the past 10 years; members are encouraged to download statements for their own records.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Alice", "age": 48, "bg": "archivist", "emoji": "📚", "salutation": "Ms", "lastname": "Alice" }
+  },
+  {
+    "q": "What is the purpose of the 8-digit Payment Reference Number (PRN) for Silver Support?",
+    "choices": [
+      { "text": "To login to the CPF website.", "correct": false },
+      { "text": "To withdraw cash via GovCash at OCBC ATMs.", "correct": true },
+      { "text": "To track your CPF contributions.", "correct": false },
+      { "text": "To register for a Singpass account.", "correct": false }
+    ],
+    "explanation": "The PRN is required along with your NRIC to withdraw Silver Support cash benefits from OCBC ATMs.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mdm Zahara", "age": 69, "bg": "retiree", "emoji": "👵", "salutation": "Mdm", "lastname": "Zahara" }
+  },
+  {
+    "q": "How can you check your Silver Support eligibility if you didn't receive a letter?",
+    "choices": [
+      { "text": "Wait for the next year's review.", "correct": false },
+      { "text": "Log in to Silver Support e-services with Singpass.", "correct": true },
+      { "text": "Call your local MP.", "correct": false },
+      { "text": "Check your bank statement.", "correct": false }
+    ],
+    "explanation": "All Singaporeans aged 65 and above can check their SS eligibility by logging in to the SS e-services using Singpass.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Mr. Chan", "age": 66, "bg": "retired driver", "emoji": "👴", "salutation": "Mr", "lastname": "Chan" }
+  },
+  {
+    "q": "Can a senior who lives in a 5-room HDB flat receive Silver Support?",
+    "choices": [
+      { "text": "No, 5-room flats are too large.", "correct": false },
+      { "text": "Yes, if they live in it but do not own it (and meet other criteria).", "correct": true },
+      { "text": "Only if they have more than 5 children.", "correct": false },
+      { "text": "Yes, but they get the smallest amount of $215/quarter.", "correct": false }
+    ],
+    "explanation": "Seniors may live in, but must not own, a 5-room HDB flat to be eligible. If they qualify, they receive $430 or $215 per quarter.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Mdm Tan", "age": 70, "bg": "staying with children", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "What happens if a senior is a ComCare Long Term Assistance (LTA) recipient?",
+    "choices": [
+      { "text": "They are ineligible for Silver Support.", "correct": false },
+      { "text": "They receive $430 per quarter regardless of flat type.", "correct": true },
+      { "text": "They receive $1,080 per quarter regardless of flat type.", "correct": false },
+      { "text": "They receive Silver Support once every year instead of quarterly.", "correct": false }
+    ],
+    "explanation": "ComCare LTA recipients receive a flat Silver Support amount of $430 per quarter.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Ahmad", "age": 75, "bg": "ComCare recipient", "emoji": "👴", "salutation": "Mr", "lastname": "Ahmad" }
+  },
+  {
+    "q": "Does the housing criteria for Silver Support look at the ownership of the senior's spouse?",
+    "choices": [
+      { "text": "No, only the senior's ownership.", "correct": false },
+      { "text": "Yes, the spouse must also not own a 5-room/private property.", "correct": true },
+      { "text": "Only if they have been married for more than 20 years.", "correct": false },
+      { "text": "Only if the spouse is also aged 65 and above.", "correct": false }
+    ],
+    "explanation": "To qualify, the senior and their spouse must not own a 5-room or larger HDB flat or private property.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Koh", "age": 66, "bg": "retired clerk", "emoji": "👴", "salutation": "Mr", "lastname": "Koh" }
+  },
+  {
+    "q": "If a senior's bank account validation fails, how will the CPF Board contact them?",
+    "choices": [
+      { "text": "They will not be contacted; the money is held.", "correct": false },
+      { "text": "The Board will inform them to update their bank account details.", "correct": true },
+      { "text": "A representative will visit their home.", "correct": false },
+      { "text": "The Board will call their children.", "correct": false }
+    ],
+    "explanation": "If bank details are invalid, the Board will inform the senior to update their bank account details.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Mdm Rosnah", "age": 68, "bg": "retired tailor", "emoji": "👵", "salutation": "Mdm", "lastname": "Rosnah" }
+  },
+  {
+    "q": "Where should a non-Singaporean send enquiries about their Work Permit after closing their CPF account?",
+    "choices": [
+      { "text": "CPF Board", "correct": false },
+      { "text": "Ministry of Manpower (MOM)", "correct": true },
+      { "text": "Ministry of Foreign Affairs", "correct": false },
+      { "text": "ICA", "correct": false }
+    ],
+    "explanation": "Enquiries on work permit or employment pass applications should be directed to the Ministry of Manpower.",
+    "category": "Account Closure",
+    "difficulty": "easy",
+    "persona": { "name": "Raj", "age": 30, "bg": "work permit holder", "emoji": "👷", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "Can you still transfer your CPF savings to your bank account after 1 April 2027?",
+    "choices": [
+      { "text": "No, the money will be forfeited.", "correct": false },
+      { "text": "Yes, but it will not have earned interest since April 2027.", "correct": true },
+      { "text": "Only if you pay a late fee.", "correct": false },
+      { "text": "Only if you move back to Singapore.", "correct": false }
+    ],
+    "explanation": "Members can transfer savings at any time, but interest will stop being paid after 1 April 2027.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Sophie", "age": 40, "bg": "former resident", "emoji": "👩", "salutation": "Ms", "lastname": "Sophie" }
+  },
+  {
+    "q": "What happens to the Home Protection Scheme (HPS) cover once a CPF account is closed due to renunciation?",
+    "choices": [
+      { "text": "It continues until the loan is paid.", "correct": false },
+      { "text": "It ceases immediately upon account closure.", "correct": true },
+      { "text": "It can be transferred to a private insurer.", "correct": false },
+      { "text": "It stays active for 12 months.", "correct": false }
+    ],
+    "explanation": "Upon account closure, participation in all CPF-administered schemes, including HPS, will cease.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Wong", "age": 48, "bg": "renouncing citizen", "emoji": "👨‍⚖️", "salutation": "Mr", "lastname": "Wong" }
+  },
+  {
+    "q": "How can a parent prove their relationship to view a child's CPF dashboard if it's not listed?",
+    "choices": [
+      { "text": "Submit the child's birth certificate and your NRIC.", "correct": true },
+      { "text": "Submit a letter from the child's school.", "correct": false },
+      { "text": "Provide a DNA test result.", "correct": false },
+      { "text": "Login with the child's Singpass instead.", "correct": false }
+    ],
+    "explanation": "If a child is not listed, parents can write in with the child's birth certificate and citizenship certificate (if applicable).",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mei Ling", "age": 39, "bg": "mother", "emoji": "👩‍👦", "salutation": "Ms", "lastname": "Mei Ling" }
+  },
+  {
+    "q": "Does updating your mailing address with ICA also update your 'Residential Address' for CPF purposes?",
+    "choices": [
+      { "text": "No, they are separate.", "correct": false },
+      { "text": "Yes, CPF uses the residential address on your IC by default.", "correct": true },
+      { "text": "Only if you are a PR.", "correct": false },
+      { "text": "Only if you manually select 'Sync with CPF'.", "correct": false }
+    ],
+    "explanation": "CPF letters are sent to the residential address on your NRIC. Updating ICA updates this record for CPF.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Wei Kiat", "age": 25, "bg": "student", "emoji": "👨‍🎓", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "Who should a court-appointed Deputy write to for a member's CPF statement?",
+    "choices": [
+      { "text": "Ministry of Law", "correct": false },
+      { "text": "CPF Board", "correct": true },
+      { "text": "Singpass Helpdesk", "correct": false },
+      { "text": "The member's bank", "correct": false }
+    ],
+    "explanation": "A court-appointed Deputy can write to the CPF Board with the court order to request a member's statement.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Sharon", "age": 50, "bg": "legal deputy", "emoji": "👩‍⚖️", "salutation": "Ms", "lastname": "Sharon" }
+  },
+  {
+    "q": "What happens if you use a camera with less than 2 megapixels for Singpass Face Verification?",
+    "choices": [
+      { "text": "It will take longer to scan.", "correct": false },
+      { "text": "It may cause the verification to fail.", "correct": true },
+      { "text": "It will automatically switch to SMS OTP.", "correct": false },
+      { "text": "It is not allowed by the system.", "correct": false }
+    ],
+    "explanation": "Singpass Face Verification recommends a minimum resolution of two megapixels for successful scanning.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Tan", "age": 68, "bg": "retired clerk", "emoji": "👴", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "What information is shown on the 'Child Dashboard' in 'my cpf'?",
+    "choices": [
+      { "text": "School grades and attendance.", "correct": false },
+      { "text": "Transaction History and Healthcare Payments.", "correct": true },
+      { "text": "Future career projections.", "correct": false },
+      { "text": "The child's bank account balance.", "correct": false }
+    ],
+    "explanation": "The Child Dashboard shows the Transaction History and Healthcare Payments/Claims for the last 15 months.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Hafiz", "age": 36, "bg": "father", "emoji": "👨‍👦", "salutation": "Mr", "lastname": "Hafiz" }
+  },
+  {
+    "q": "Is a Singapore Citizen required to inform CPF Board when they change their name officially?",
+    "choices": [
+      { "text": "Yes, within 7 days.", "correct": false },
+      { "text": "No, it is automatically updated once updated with ICA.", "correct": true },
+      { "text": "Only if they are receiving CPF payouts.", "correct": false },
+      { "text": "Only if they have a CPF education loan.", "correct": false }
+    ],
+    "explanation": "If you update your name on your NRIC, it will be automatically updated in CPF records.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Jasmine", "age": 28, "bg": "professional", "emoji": "👩", "salutation": "Ms", "lastname": "Jasmine" }
+  },
+  {
+    "q": "What is the transitory interest rate for non-citizens' closed accounts from 2024 to 2027?",
+    "choices": [
+      { "text": "0.05% per annum", "correct": true },
+      { "text": "1.0% per annum", "correct": false },
+      { "text": "2.5% per annum", "correct": false },
+      { "text": "4.0% per annum", "correct": false }
+    ],
+    "explanation": "The applicable rate is 0.05% per annum, which is based on the 3-month average of local banks' savings rates.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Gupta", "age": 44, "bg": "former resident", "emoji": "👨", "salutation": "Mr", "lastname": "Gupta" }
+  },
+  {
+    "q": "What happens if your device's date and time are not set to 'Automatic' when logging into CPF?",
+    "choices": [
+      { "text": "The website will look different.", "correct": false },
+      { "text": "It may cause login issues with digital services.", "correct": true },
+      { "text": "You will be logged out after 5 minutes.", "correct": false },
+      { "text": "Your interest will be calculated incorrectly.", "correct": false }
+    ],
+    "explanation": "Incorrect date-time settings can interfere with secure login processes for government digital services.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Chloe", "age": 22, "bg": "student", "emoji": "👩‍🎓", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "Can you withdraw Silver Support at a DBS ATM?",
+    "choices": [
+      { "text": "Yes, all bank ATMs work.", "correct": false },
+      { "text": "No, only OCBC ATMs support GovCash withdrawals.", "correct": true },
+      { "text": "Yes, but there is a $5 fee.", "correct": false },
+      { "text": "Only at UOB and OCBC ATMs.", "correct": false }
+    ],
+    "explanation": "GovCash withdrawals for Silver Support are specifically supported at OCBC ATMs.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Auntie Mary", "age": 70, "bg": "retiree", "emoji": "👵", "salutation": "Mdm", "lastname": "Mary" }
+  },
+  {
+    "q": "What should you do if you receive a CPF SMS with a link to a non-government website?",
+    "choices": [
+      { "text": "Click it to see what it is.", "correct": false },
+      { "text": "Delete it and do not click any links.", "correct": true },
+      { "text": "Forward it to your friends.", "correct": false },
+      { "text": "Reply with your NRIC to verify.", "correct": false }
+    ],
+    "explanation": "Official CPF SMS will not link to non-government websites. Links to unofficial sites are typical of phishing scams.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Victor", "age": 35, "bg": "security conscious", "emoji": "🛡️", "salutation": "Mr", "lastname": "Victor" }
+  },
+  {
+    "q": "What is the 'principal name' in the context of CPF records?",
+    "choices": [
+      { "text": "Your first name only.", "correct": false },
+      { "text": "The name registered in your NRIC, excluding aliases.", "correct": true },
+      { "text": "Your family name followed by your given name.", "correct": false },
+      { "text": "The name on your birth certificate.", "correct": false }
+    ],
+    "explanation": "The principal name is the one registered in your NRIC and usually excludes variants like hanyu pinyin or other aliases.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Ming", "age": 30, "bg": "executive", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "Wei Ming" }
+  },
+  {
+    "q": "Are Permanent Residents (PRs) eligible for the Silver Support Scheme?",
+    "choices": [
+      { "text": "Yes, if they meet the income criteria.", "correct": false },
+      { "text": "No, only Singapore Citizens are eligible.", "correct": true },
+      { "text": "Yes, if they have lived in Singapore for 20 years.", "correct": false },
+      { "text": "Only if they are Pioneer Generation members.", "correct": false }
+    ],
+    "explanation": "Only Singapore Citizens are eligible for the Silver Support Scheme.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Mr. Lee", "age": 66, "bg": "Permanent Resident", "emoji": "🇸🇬", "salutation": "Mr", "lastname": "Lee" }
+  },
+  {
+    "q": "Do Pioneer Generation (PG) or Merdeka Generation (MG) members automatically qualify for Silver Support?",
+    "choices": [
+      { "text": "Yes, all PG/MG members qualify automatically.", "correct": false },
+      { "text": "No, they must still meet the means-test and eligibility criteria.", "correct": true },
+      { "text": "Only PG members qualify automatically; MG members do not.", "correct": false },
+      { "text": "Yes, but they receive a reduced amount.", "correct": false }
+    ],
+    "explanation": "PG and MG members are means-tested for Silver Support like all other seniors and must meet the eligibility criteria to receive it.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Raj", "age": 75, "bg": "Pioneer Generation member", "emoji": "👴", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "What is the flat quarterly Silver Support amount for seniors on the ComCare Long Term Assistance (LTA) Scheme?",
+    "choices": [
+      { "text": "$360", "correct": false },
+      { "text": "$430", "correct": true },
+      { "text": "$540", "correct": false },
+      { "text": "$1,080", "correct": false }
+    ],
+    "explanation": "Seniors on ComCare LTA automatically qualify for Silver Support and receive a flat amount of $430 per quarter.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mdm Aminah", "age": 70, "bg": "ComCare recipient", "emoji": "👵", "salutation": "Mdm", "lastname": "Aminah" }
+  },
+  {
+    "q": "How does the CPF Board notify you of your Silver Support payments via SMS?",
+    "choices": [
+      { "text": "By calling you directly.", "correct": false },
+      { "text": "To the mobile number registered in your Account settings.", "correct": true },
+      { "text": "Via a WhatsApp message.", "correct": false },
+      { "text": "Only by physical mail.", "correct": false }
+    ],
+    "explanation": "SMS notifications are sent to the mobile number you have registered with the CPF Board in your Account settings.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Tan Wei Ling", "age": 65, "bg": "smartphone user", "emoji": "📱", "salutation": "Ms", "lastname": "Tan" }
+  },
+  {
+    "q": "What happens to remaining Silver Support funds in GovCash if the beneficiary passes away?",
+    "choices": [
+      { "text": "The funds are forfeited to the government.", "correct": false },
+      { "text": "They are credited to the beneficiary's CPF Ordinary Account.", "correct": true },
+      { "text": "They are paid to the next of kin in cash.", "correct": false },
+      { "text": "They are used to pay for funeral expenses automatically.", "correct": false }
+    ],
+    "explanation": "Remaining GovCash balances are credited to the deceased's CPF Ordinary Account and distributed according to their nomination.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Siti", "age": 40, "bg": "daughter of a beneficiary", "emoji": "👩", "salutation": "Ms", "lastname": "Siti" }
+  },
+  {
+    "q": "What is the primary URL for the official CPF website?",
+    "choices": [
+      { "text": "cpf.com.sg", "correct": false },
+      { "text": "cpf.gov.sg", "correct": true },
+      { "text": "mycpf.sg", "correct": false },
+      { "text": "centralprovidentfund.org", "correct": false }
+    ],
+    "explanation": "The official CPF website is located at cpf.gov.sg.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "John", "age": 25, "bg": "new employee", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "John" }
+  },
+  {
+    "q": "Which of these is a recommended troubleshooting step for login issues on the CPF website?",
+    "choices": [
+      { "text": "Wait 24 hours and try again.", "correct": false },
+      { "text": "Clear your browser cache.", "correct": true },
+      { "text": "Change your Singpass ID.", "correct": false },
+      { "text": "Reinstall your operating system.", "correct": false }
+    ],
+    "explanation": "Clearing your browser cache is a standard troubleshooting step for resolving digital service login issues.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Lily", "age": 30, "bg": "office worker", "emoji": "👩‍💻", "salutation": "Ms", "lastname": "Lily" }
+  },
+  {
+    "q": "CPF digital services are compatible with which versions of browsers like Chrome and Safari?",
+    "choices": [
+      { "text": "Any version since 2010.", "correct": false },
+      { "text": "The two most recent versions.", "correct": true },
+      { "text": "Only the beta versions.", "correct": false },
+      { "text": "Only versions approved by GovTech.", "correct": false }
+    ],
+    "explanation": "For security and functionality, digital services are compatible with the two most recent versions of common browsers.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Ken", "age": 22, "bg": "tech student", "emoji": "👨‍🎓", "salutation": "Mr", "lastname": "Ken" }
+  },
+  {
+    "q": "How can you ensure the CPF Mobile app you are downloading is official?",
+    "choices": [
+      { "text": "Check that the developer is 'Central Provident Fund Board'.", "correct": true },
+      { "text": "Check that the app has at least 5 stars.", "correct": false },
+      { "text": "Check that it is the first result in the search.", "correct": false },
+      { "text": "Check that it is free to download.", "correct": false }
+    ],
+    "explanation": "Always verify that the application developer listed in the App Store or Play Store is 'Central Provident Fund Board'.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Sarah", "age": 35, "bg": "concerned mother", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "What feature of CPF Mobile allows you to get updates even when you are not using the app?",
+    "choices": [
+      { "text": "Automated Emails", "correct": false },
+      { "text": "Push notification alerts", "correct": true },
+      { "text": "SMS text messages", "correct": false },
+      { "text": "Phone calls from CPF staff", "correct": false }
+    ],
+    "explanation": "CPF Mobile provides push notification alerts for personal CPF matters and educational updates.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Ben", "age": 28, "bg": "busy professional", "emoji": "📱", "salutation": "Mr", "lastname": "Ben" }
+  },
+  {
+    "q": "If you are not an SC or PR, what happened to your CPF account in April 2024?",
+    "choices": [
+      { "text": "It was converted into a bank account.", "correct": false },
+      { "text": "It was automatically closed.", "correct": true },
+      { "text": "The interest rate was increased to 5%.", "correct": false },
+      { "text": "It was transferred to your country of origin.", "correct": false }
+    ],
+    "explanation": "CPF accounts for non-SC and non-PR members were automatically closed in April 2024.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Mark", "age": 45, "bg": "former PR", "emoji": "🛫", "salutation": "Mr", "lastname": "Mark" }
+  },
+  {
+    "q": "Until when will savings in closed non-citizen accounts earn interest similar to commercial bank rates?",
+    "choices": [
+      { "text": "31 March 2025", "correct": false },
+      { "text": "31 March 2026", "correct": false },
+      { "text": "31 March 2027", "correct": true },
+      { "text": "Indefinitely", "correct": false }
+    ],
+    "explanation": "As a concession, these savings earn interest similar to commercial bank rates until 31 March 2027.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Elena", "age": 42, "bg": "expat", "emoji": "🌍", "salutation": "Ms", "lastname": "Elena" }
+  },
+  {
+    "q": "What is the fixed interest rate for savings in closed accounts from April 2024 to March 2027?",
+    "choices": [
+      { "text": "2.5% per annum", "correct": false },
+      { "text": "0.05% per annum", "correct": true },
+      { "text": "1.0% per annum", "correct": false },
+      { "text": "0.5% per annum", "correct": false }
+    ],
+    "explanation": "The applicable transitory interest rate is 0.05% per annum.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "David", "age": 50, "bg": "retiring abroad", "emoji": "🚢", "salutation": "Mr", "lastname": "David" }
+  },
+  {
+    "q": "If you renounced SC/PR in May 2024, when would your CPF account be automatically closed?",
+    "choices": [
+      { "text": "Immediately on the day of renunciation.", "correct": false },
+      { "text": "In June 2024 (the following month).", "correct": true },
+      { "text": "On 31 December 2024.", "correct": false },
+      { "text": "After 3 years.", "correct": false }
+    ],
+    "explanation": "If you do not close it manually, your account is automatically closed in the month following your renunciation.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Paul", "age": 38, "bg": "former citizen", "emoji": "🗺️", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "Can a non-citizen still request a CPF transaction statement after renouncing their status?",
+    "choices": [
+      { "text": "No, access is cut off immediately.", "correct": false },
+      { "text": "Yes, but they should download it while they still have Singpass access.", "correct": true },
+      { "text": "Only by visiting a CPF Service Centre in person.", "correct": false },
+      { "text": "Yes, but they must pay a $50 fee.", "correct": false }
+    ],
+    "explanation": "Members are advised to download all required CPF information while they still have Singpass access after renunciation.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "George", "age": 44, "bg": "leaving Singapore", "emoji": "✈️", "salutation": "Mr", "lastname": "George" }
+  },
+  {
+    "q": "What happens if a Singapore Citizen changes their name at ICA?",
+    "choices": [
+      { "text": "They must mail a copy of the deed poll to CPF.", "correct": false },
+      { "text": "CPF records will be automatically updated.", "correct": true },
+      { "text": "The member must visit a CPF Service Centre.", "correct": false },
+      { "text": "They must update their name via the CPF website.", "correct": false }
+    ],
+    "explanation": "For SC/PRs, particulars like names are automatically updated in CPF records once they are updated with ICA.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Jasmine", "age": 29, "bg": "changed name recently", "emoji": "📝", "salutation": "Ms", "lastname": "Jasmine" }
+  },
+  {
+    "q": "Which name does the CPF Board use to transact with you by default?",
+    "choices": [
+      { "text": "Your alias.", "correct": false },
+      { "text": "Your principal name on your NRIC.", "correct": true },
+      { "text": "Your hanyu pinyin name.", "correct": false },
+      { "text": "Your married name.", "correct": false }
+    ],
+    "explanation": "CPF Board uses the principal name registered in your NRIC, which usually excludes aliases or married names unless they are the principal name.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mrs. Tan", "age": 32, "bg": "newly married", "emoji": "👰", "salutation": "Mrs", "lastname": "Tan" }
+  },
+  {
+    "q": "How long can a parent view their child's CPF transaction history via the Child Dashboard?",
+    "choices": [
+      { "text": "The last 6 months.", "correct": false },
+      { "text": "The last 12 months.", "correct": false },
+      { "text": "The last 15 months.", "correct": true },
+      { "text": "Since the child's birth.", "correct": false }
+    ],
+    "explanation": "The Child Dashboard allows parents to view transaction history and healthcare claims for the last 15 months.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Wei Kiat", "age": 38, "bg": "father", "emoji": "👨‍👧‍👦", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "What is required for a parent to view a child's CPF statement if they are not automatically linked?",
+    "choices": [
+      { "text": "The child's birth certificate.", "correct": true },
+      { "text": "A letter from the school.", "correct": false },
+      { "text": "A bank statement from the child.", "correct": false },
+      { "text": "The child's passport.", "correct": false }
+    ],
+    "explanation": "If a child isn't listed, parents can write to the Board with the child's birth certificate to establish the link.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mei Ling", "age": 34, "bg": "mother", "emoji": "👩‍👦", "salutation": "Ms", "lastname": "Mei Ling" }
+  },
+  {
+    "q": "Can a parent remove an ex-spouse's access to a child's CPF statement?",
+    "choices": [
+      { "text": "No, both parents always have access.", "correct": false },
+      { "text": "Yes, if they have sole custody and provide the Court Order.", "correct": true },
+      { "text": "Yes, by simply calling the CPF Board.", "correct": false },
+      { "text": "Only if the ex-spouse agrees in writing.", "correct": false }
+    ],
+    "explanation": "A parent with sole custody can request removal of the ex-spouse's access by providing the relevant Court Order.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Sharon", "age": 40, "bg": "divorced parent", "emoji": "👩‍👧", "salutation": "Ms", "lastname": "Sharon" }
+  },
+  {
+    "q": "What is the CPF account number for Singapore Citizens?",
+    "choices": [
+      { "text": "A randomly generated 10-digit number.", "correct": false },
+      { "text": "Their NRIC number (UIN).", "correct": true },
+      { "text": "Their phone number.", "correct": false },
+      { "text": "Their bank account number.", "correct": false }
+    ],
+    "explanation": "For SCs and PRs, the CPF account number is the Unique Identification Number (UIN) on their NRIC.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Adam", "age": 21, "bg": "first-time worker", "emoji": "👨‍🔧", "salutation": "Mr", "lastname": "Adam" }
+  },
+  {
+    "q": "How is a CPF account officially created for a member?",
+    "choices": [
+      { "text": "By applying at a CPF Service Centre.", "correct": false },
+      { "text": "Automatically when a first top-up or contribution is received.", "correct": true },
+      { "text": "When you turn 18 years old.", "correct": false },
+      { "text": "When you get your first NRIC.", "correct": false }
+    ],
+    "explanation": "A CPF account is automatically created once the first contribution or top-up is processed.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Chloe", "age": 19, "bg": "intern", "emoji": "👩‍🎓", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "How far back can you retrieve your CPF Yearly Statement of Account online?",
+    "choices": [
+      { "text": "The last 5 years.", "correct": false },
+      { "text": "The last 10 years.", "correct": true },
+      { "text": "Since you started working.", "correct": false },
+      { "text": "Only the current year.", "correct": false }
+    ],
+    "explanation": "CPF Board provides online retrieval of statements for the past 10 years.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Robert", "age": 55, "bg": "planning retirement", "emoji": "👴", "salutation": "Mr", "lastname": "Robert" }
+  },
+  {
+    "q": "What should you do to ensure you have CPF statements older than 10 years?",
+    "choices": [
+      { "text": "Nothing, CPF keeps them forever.", "correct": false },
+      { "text": "Download and save them in a timely manner.", "correct": true },
+      { "text": "Request them from your employer.", "correct": false },
+      { "text": "Visit the National Archives.", "correct": false }
+    ],
+    "explanation": "Since the online limit is 10 years, members are encouraged to download and save their statements periodically.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Grace", "age": 45, "bg": "meticulous record-keeper", "emoji": "📋", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "What is the maximum amount you can hold in your MediSave Account (MA)?",
+    "choices": [
+      { "text": "The Full Retirement Sum (FRS).", "correct": false },
+      { "text": "The Basic Healthcare Sum (BHS).", "correct": true },
+      { "text": "There is no limit.", "correct": false },
+      { "text": "$100,000.", "correct": false }
+    ],
+    "explanation": "The Basic Healthcare Sum (BHS) is the maximum amount you can hold in your MediSave Account.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Dr. Tan", "age": 52, "bg": "medical professional", "emoji": "👨‍⚕️", "salutation": "Dr", "lastname": "Tan" }
+  },
+  {
+    "q": "If your MediSave balance is below the BHS at age 65, do you have to top it up?",
+    "choices": [
+      { "text": "Yes, it is compulsory.", "correct": false },
+      { "text": "No, you are not required to top it up.", "correct": true },
+      { "text": "Yes, but only if you are still working.", "correct": false },
+      { "text": "Only if you have a chronic illness.", "correct": false }
+    ],
+    "explanation": "If your MA balance is less than the BHS at age 65, you are not required to top it up, though you may choose to do so.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Lim", "age": 64, "bg": "retiring soon", "emoji": "👴", "salutation": "Mr", "lastname": "Lim" }
+  },
+  {
+    "q": "Can you use your MediSave savings for your spouse's hospital bill if they are a foreigner?",
+    "choices": [
+      { "text": "No, only for SC/PR family members.", "correct": false },
+      { "text": "Yes, MediSave can be used for your spouse regardless of citizenship.", "correct": true },
+      { "text": "Only if the spouse has lived in Singapore for 10 years.", "correct": false },
+      { "text": "Only for emergency surgeries.", "correct": false }
+    ],
+    "explanation": "MediSave can be used for the medical expenses of your spouse, children, parents, and grandparents, regardless of their citizenship.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Meera", "age": 36, "bg": "foreigner married to SC", "emoji": "👩‍❤️‍👨", "salutation": "Mrs", "lastname": "Meera" }
+  },
+  {
+    "q": "What happens if you have reached your BHS and you receive more MediSave contributions?",
+    "choices": [
+      { "text": "The extra money is returned to you as cash.", "correct": false },
+      { "text": "The extra money is channelled to your OA or SA (depending on age).", "correct": true },
+      { "text": "The extra money is donated to a healthcare fund.", "correct": false },
+      { "text": "The contributions are stopped automatically.", "correct": false }
+    ],
+    "explanation": "Amounts above the BHS are channelled to other CPF accounts, such as the Special Account or Retirement Account.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Hock Bee", "age": 54, "bg": "high earner", "emoji": "💰", "salutation": "Mr", "lastname": "Hock Bee" }
+  },
+  {
+    "q": "If you are 55 or older and have met your BHS and FRS, where does your excess MediSave go?",
+    "choices": [
+      { "text": "Special Account.", "correct": false },
+      { "text": "Ordinary Account.", "correct": true },
+      { "text": "Retirement Account.", "correct": false },
+      { "text": "Paid out in cash quarterly.", "correct": false }
+    ],
+    "explanation": "For those 55+ who have met their BHS and FRS, excess MA is channelled to the Ordinary Account.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Wong", "age": 60, "bg": "retiree", "emoji": "👴", "salutation": "Mr", "lastname": "Wong" }
+  },
+  {
+    "q": "Is it possible to maintain a MediSave balance higher than the BHS?",
+    "choices": [
+      { "text": "Yes, if you pay a small fee.", "correct": false },
+      { "text": "No, the BHS is the maximum amount allowed.", "correct": true },
+      { "text": "Only if you are a doctor.", "correct": false },
+      { "text": "Yes, for the first year after turning 65.", "correct": false }
+    ],
+    "explanation": "The BHS is designed to prevent excessive accumulation of funds and is the hard limit for the MediSave account.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Auntie Tan", "age": 66, "bg": "careful saver", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "Where can you find a document to prove you do NOT have a CPF account?",
+    "choices": [
+      { "text": "By calling the CPF hotline.", "correct": false },
+      { "text": "By logging in to 'my cpf' digital services; a message will be displayed.", "correct": true },
+      { "text": "At any police station.", "correct": false },
+      { "text": "From the Ministry of Manpower website.", "correct": false }
+    ],
+    "explanation": "Non-account holders logging into 'my cpf' will see a message stating they have no account, which can be printed.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Rahul", "age": 28, "bg": "foreign worker", "emoji": "👷", "salutation": "Mr", "lastname": "Rahul" }
+  },
+  {
+    "q": "What happens to your Silver Support eligibility if your household income per person increases to $3,000?",
+    "choices": [
+      { "text": "You receive a smaller amount.", "correct": false },
+      { "text": "You become ineligible for the next year.", "correct": true },
+      { "text": "Nothing changes as you are already 65.", "correct": false },
+      { "text": "You must pay back the previous payments.", "correct": false }
+    ],
+    "explanation": "Silver Support eligibility is reviewed annually; if your household income per person exceeds $2,300, you will not qualify for the following year.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Gopal", "age": 67, "bg": "retired clerk", "emoji": "👴", "salutation": "Mr", "lastname": "Gopal" }
+  },
+  {
+    "q": "Who should you contact if you have issues receiving your Singpass SMS OTP?",
+    "choices": [
+      { "text": "Your mobile service provider.", "correct": false },
+      { "text": "Singpass Helpdesk.", "correct": true },
+      { "text": "CPF Board.", "correct": false },
+      { "text": "The police.", "correct": false }
+    ],
+    "explanation": "Singpass is managed by GovTech; issues with OTP or login should be directed to their helpdesk.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Uncle Ahmad", "age": 62, "bg": "security guard", "emoji": "👴", "salutation": "Mr", "lastname": "Ahmad" }
+  },
+  {
+    "q": "If you are living in a 4-room HDB flat and your household income per person is $1,200, how much Silver Support do you get per quarter?",
+    "choices": [
+      { "text": "$325", "correct": false },
+      { "text": "$650", "correct": true },
+      { "text": "$860", "correct": false },
+      { "text": "$1,080", "correct": false }
+    ],
+    "explanation": "Seniors in 4-room flats with household income per person of $1,500 or less receive $650 per quarter.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Mdm Seah", "age": 68, "bg": "retiree", "emoji": "👵", "salutation": "Mdm", "lastname": "Seah" }
+  },
+  {
+    "q": "What determines whether you receive the 'higher' or 'lower' tier of Silver Support?",
+    "choices": [
+      { "text": "Your age.", "correct": false },
+      { "text": "Your household monthly income per person.", "correct": true },
+      { "text": "The number of children you have.", "correct": false },
+      { "text": "Your total savings in the bank.", "correct": false }
+    ],
+    "explanation": "The amount depends on whether your household income per person is $1,500 or less (higher tier) or between $1,501 and $2,300 (lower tier).",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Fatimah", "age": 66, "bg": "part-time worker", "emoji": "👵", "salutation": "Mdm", "lastname": "Fatimah" }
+  },
+  {
+    "q": "If you are eligible for Silver Support but do not have a bank account, how will you receive payment?",
+    "choices": [
+      { "text": "By cheque.", "correct": false },
+      { "text": "Via GovCash (withdrawal from OCBC ATMs).", "correct": true },
+      { "text": "In person at the CPF Building.", "correct": false },
+      { "text": "You cannot receive payment.", "correct": false }
+    ],
+    "explanation": "Those without valid bank accounts will receive their payments via GovCash, which can be withdrawn from OCBC ATMs.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Uncle Hock", "age": 72, "bg": "no bank account", "emoji": "👴", "salutation": "Mr", "lastname": "Hock" }
+  },
+  {
+    "q": "Can you receive Silver Support if you turn 65 in November?",
+    "choices": [
+      { "text": "Yes, you will receive the full year's amount.", "correct": false },
+      { "text": "Yes, you will receive the payment for the Oct-Dec quarter.", "correct": true },
+      { "text": "No, you must wait until the next year.", "correct": false },
+      { "text": "Only if you were born before 1960.", "correct": false }
+    ],
+    "explanation": "Eligible seniors start receiving SS in the quarter they turn 65.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Siti", "age": 64, "bg": "turning 65 soon", "emoji": "👩‍🍳", "salutation": "Mdm", "lastname": "Siti" }
+  },
+  {
+    "q": "What happens to the CPF savings of a deceased member who did NOT make a nomination?",
+    "choices": [
+      { "text": "They are donated to the Community Chest.", "correct": false },
+      { "text": "They are distributed by the Public Trustee according to intestacy laws.", "correct": true },
+      { "text": "They are kept by the CPF Board forever.", "correct": false },
+      { "text": "They are given to the first person who claims them.", "correct": false }
+    ],
+    "explanation": "In the absence of a nomination, CPF savings are handed over to the Public Trustee for distribution according to the law.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "John De Souza", "age": 55, "bg": "lawyer", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "De Souza" }
+  },
+  {
+    "q": "How can you tell if a phone call from 'CPF Board' is a scam?",
+    "choices": [
+      { "text": "The caller asks for your Singpass password.", "correct": true },
+      { "text": "The caller knows your name.", "correct": false },
+      { "text": "The call is made during office hours.", "correct": false },
+      { "text": "The caller provides a return phone number.", "correct": false }
+    ],
+    "explanation": "CPF Board will never ask for your Singpass password or bank PIN over the phone. This is a common scam tactic.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "George", "age": 52, "bg": "bank officer", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "George" }
+  },
+  {
+    "q": "Where can a member check if their CPF contribution for the month has been credited?",
+    "choices": [
+      { "text": "Their bank statement.", "correct": false },
+      { "text": "The 'Transaction History' in 'my cpf' digital services.", "correct": true },
+      { "text": "By calling their boss.", "correct": false },
+      { "text": "Waiting for the Yearly Statement.", "correct": false }
+    ],
+    "explanation": "The Transaction History shows the latest contributions and payments into your account.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Linda", "age": 31, "bg": "executive", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Linda" }
+  },
+  {
+    "q": "What should you do if your 'Residential Address' on CPF records is incorrect?",
+    "choices": [
+      { "text": "Email the CPF Board.", "correct": false },
+      { "text": "Update your address with ICA.", "correct": true },
+      { "text": "Call the CPF hotline.", "correct": false },
+      { "text": "Update it via your employer.", "correct": false }
+    ],
+    "explanation": "CPF uses the residential address registered with ICA. Updating ICA will automatically update CPF records.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Sarah", "age": 30, "bg": "moving house", "emoji": "🏠", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "What happens if a non-citizen member returns to Singapore to work after closing their CPF account?",
+    "choices": [
+      { "text": "They cannot work in Singapore anymore.", "correct": false },
+      { "text": "They can work but will not have a CPF account.", "correct": false },
+      { "text": "They can apply for a work permit or employment pass through MOM.", "correct": true },
+      { "text": "They must pay a fine of $10,000.", "correct": false }
+    ],
+    "explanation": "Closing a CPF account does not prevent you from returning to work in Singapore; you must still follow MOM's application processes.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Rahul", "age": 33, "bg": "EP holder", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "Rahul" }
+  },
+  {
+    "q": "How can a member receive a hardcopy of their Yearly Statement of Account?",
+    "choices": [
+      { "text": "It is mailed to everyone automatically.", "correct": false },
+      { "text": "They can print it from the CPF website or request one via the e-service.", "correct": true },
+      { "text": "They must buy it at a bookstore.", "correct": false },
+      { "text": "They must visit the CPF Building in person.", "correct": false }
+    ],
+    "explanation": "Members can print statements themselves or request hardcopies via CPF e-services.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Tan", "age": 68, "bg": "retired", "emoji": "👴", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "Is a CPF account automatically closed when a member reaches age 100?",
+    "choices": [
+      { "text": "Yes, automatically.", "correct": false },
+      { "text": "No, it remains open as long as there are savings.", "correct": true },
+      { "text": "Yes, and the money is donated to charity.", "correct": false },
+      { "text": "Only if the member has no children.", "correct": false }
+    ],
+    "explanation": "CPF accounts remain open for members of any age as long as they have valid savings.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mdm Lim", "age": 99, "bg": "centenarian soon", "emoji": "👵", "salutation": "Mdm", "lastname": "Lim" }
+  },
+  {
+    "q": "What is 'my cpf' digital services?",
+    "choices": [
+      { "text": "A social media platform for CPF members.", "correct": false },
+      { "text": "An online portal for transactions and account info.", "correct": true },
+      { "text": "A mobile game by the CPF Board.", "correct": false },
+      { "text": "A news website for Singaporeans.", "correct": false }
+    ],
+    "explanation": "'my cpf' digital services allow members to perform transactions and view account details securely online.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Ken", "age": 24, "bg": "graduate", "emoji": "👨‍🎓", "salutation": "Mr", "lastname": "Ken" }
+  },
+  {
+    "q": "What is the primary role of the MediSave Account?",
+    "choices": [
+      { "text": "To pay for a new HDB flat.", "correct": false },
+      { "text": "To save for old age and retirement products.", "correct": false },
+      { "text": "To pay for hospitalisation and approved medical insurance.", "correct": true },
+      { "text": "To fund overseas travel during retirement.", "correct": false }
+    ],
+    "explanation": "MediSave is specifically for healthcare expenses and medical insurance premiums like MediShield Life.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Nurul", "age": 28, "bg": "nurse", "emoji": "👩‍⚕️", "salutation": "Ms", "lastname": "Nurul" }
+  },
+  {
+    "q": "If you move overseas, do you need to inform the CPF Board of your new address?",
+    "choices": [
+      { "text": "No, they will find out from the post office.", "correct": false },
+      { "text": "Yes, you should update your overseas address via ICA e-Services.", "correct": true },
+      { "text": "Only if you are planning to renounce citizenship.", "correct": false },
+      { "text": "Yes, you must send a letter to the Singapore Embassy.", "correct": false }
+    ],
+    "explanation": "Singaporeans living overseas should update their address with ICA, which then informs the CPF Board.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Tom", "age": 42, "bg": "working in London", "emoji": "🇬🇧", "salutation": "Mr", "lastname": "Tom" }
+  },
+  {
+    "q": "What document is needed to update your name in CPF records if you have a deed poll?",
+    "choices": [
+      { "text": "The deed poll and your new NRIC.", "correct": true },
+      { "text": "Only the deed poll.", "correct": false },
+      { "text": "A letter from your parents.", "correct": false },
+      { "text": "A printout from your Facebook profile.", "correct": false }
+    ],
+    "explanation": "You must first update your NRIC with ICA using your deed poll; CPF will then be updated automatically.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Ming", "age": 30, "bg": "changed name", "emoji": "👨", "salutation": "Mr", "lastname": "Wei Ming" }
+  },
+  {
+    "q": "Which organization handles enquiries on applying for Singapore Permanent Residency?",
+    "choices": [
+      { "text": "CPF Board", "correct": false },
+      { "text": "Ministry of Manpower", "correct": false },
+      { "text": "Immigration & Checkpoints Authority (ICA)", "correct": true },
+      { "text": "HDB", "correct": false }
+    ],
+    "explanation": "ICA is the authority responsible for Permanent Residency applications.",
+    "category": "Account Closure",
+    "difficulty": "easy",
+    "persona": { "name": "Raj", "age": 30, "bg": "work permit holder", "emoji": "👷", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "If your device's date and time are incorrect, why might you have trouble with CPF digital services?",
+    "choices": [
+      { "text": "The server will think you are from the future.", "correct": false },
+      { "text": "Secure login protocols require accurate time settings.", "correct": true },
+      { "text": "The website only opens during Singapore office hours.", "correct": false },
+      { "text": "Your CPF interest will be calculated wrong.", "correct": false }
+    ],
+    "explanation": "For security, many government websites require your device's date and time to be correct to establish a secure connection.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": { "name": "Chloe", "age": 22, "bg": "student", "emoji": "👩‍🎓", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "If a Silver Support beneficiary is mentally incapacitated, who can receive the payment on their behalf?",
+    "choices": [
+      { "text": "Their eldest child automatically.", "correct": false },
+      { "text": "A court-appointed Deputy or a donee under a Lasting Power of Attorney (LPA).", "correct": true },
+      { "text": "Their neighbor or a close friend.", "correct": false },
+      { "text": "No one; the money is held until they recover.", "correct": false }
+    ],
+    "explanation": "If a beneficiary is mentally incapacitated, an appointed donee under an LPA or a court-appointed Deputy can handle the transactions.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Siti", "age": 45, "bg": "caregiver for elderly mother", "emoji": "👩‍⚕️", "salutation": "Ms", "lastname": "Siti" }
+  },
+  {
+    "q": "What document is required if an LPA donee wants to receive Silver Support for a beneficiary?",
+    "choices": [
+      { "text": "Only the donee's NRIC.", "correct": false },
+      { "text": "The Lasting Power of Attorney and a recent medical report of the beneficiary.", "correct": true },
+      { "text": "The beneficiary's birth certificate.", "correct": false },
+      { "text": "A letter from the Member of Parliament.", "correct": false }
+    ],
+    "explanation": "The donee must provide the LPA and documentary evidence of the beneficiary's medical condition (e.g., medical report dated within the last year).",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Tan", "age": 50, "bg": "LPA donee", "emoji": "📋", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "What is the CPF contribution rate for a new Singapore Permanent Resident (SPR) in their first year?",
+    "choices": [
+      { "text": "Full rates immediately.", "correct": false },
+      { "text": "A graduated (lower) rate.", "correct": true },
+      { "text": "Zero contributions for 12 months.", "correct": false },
+      { "text": "A flat 20% for both employer and employee.", "correct": false }
+    ],
+    "explanation": "New SPRs and their employers contribute at graduated rates for the first two years to help with the transition.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Carlos", "age": 29, "bg": "New SPR", "emoji": "🇸🇬", "salutation": "Mr", "lastname": "Carlos" }
+  },
+  {
+    "q": "When does an SPR start contributing at the full 'third-year and onwards' rate?",
+    "choices": [
+      { "text": "After exactly 12 months of PR status.", "correct": false },
+      { "text": "From the month following the second anniversary of obtaining SPR status.", "correct": true },
+      { "text": "Immediately after getting the NRIC.", "correct": false },
+      { "text": "Only after they turn 35.", "correct": false }
+    ],
+    "explanation": "The third-year rate applies from the month following your second anniversary as an SPR.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Mei", "age": 32, "bg": "SPR of two years", "emoji": "📅", "salutation": "Ms", "lastname": "Mei" }
+  },
+  {
+    "q": "How can you make a voluntary top-up to your 3 CPF accounts or MediSave?",
+    "choices": [
+      { "text": "By mailing a personal cheque.", "correct": false },
+      { "text": "Using PayNow QR via the CPF website or app.", "correct": true },
+      { "text": "By handing cash to a CPF counter officer.", "correct": false },
+      { "text": "Only via monthly salary deduction.", "correct": false }
+    ],
+    "explanation": "Members can make top-ups easily using the PayNow QR code generated during the application process.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Wei Ling", "age": 27, "bg": "tech-savvy worker", "emoji": "📱", "salutation": "Ms", "lastname": "Wei Ling" }
+  },
+  {
+    "q": "Do you get tax relief for voluntary MediSave top-ups made to your children?",
+    "choices": [
+      { "text": "Yes, up to $8,000.", "correct": false },
+      { "text": "No, there is no tax relief for top-ups to children.", "correct": true },
+      { "text": "Yes, but only if the child is a student.", "correct": false },
+      { "text": "Yes, but only for the first child.", "correct": false }
+    ],
+    "explanation": "There is no tax relief for MediSave top-ups made to children.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "David", "age": 40, "bg": "father of two", "emoji": "👨‍👧‍👦", "salutation": "Mr", "lastname": "David" }
+  },
+  {
+    "q": "What is the deadline for CPF top-ups to be counted towards the current year's annual limit?",
+    "choices": [
+      { "text": "31 January of the next year.", "correct": false },
+      { "text": "The last day of the calendar year (31 December).", "correct": true },
+      { "text": "Tax filing deadline in April.", "correct": false },
+      { "text": "Your birthday.", "correct": false }
+    ],
+    "explanation": "All applications and payments must reach the CPF Board by 31 December to be counted for that calendar year.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Grace", "age": 35, "bg": "tax-conscious saver", "emoji": "📉", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "What is the fixed Basic Healthcare Sum (BHS) for a member who turns 65 in 2026?",
+    "choices": [
+      { "text": "$71,500", "correct": false },
+      { "text": "$75,500", "correct": false },
+      { "text": "$79,000", "correct": true },
+      { "text": "$82,000", "correct": false }
+    ],
+    "explanation": "For members turning 65 in 2026, the cohort BHS is fixed at $79,000 for life.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Uncle Lim", "age": 64, "bg": "turning 65 next year", "emoji": "🎂", "salutation": "Mr", "lastname": "Lim" }
+  },
+  {
+    "q": "For members below age 65, how often is the Basic Healthcare Sum (BHS) adjusted?",
+    "choices": [
+      { "text": "Every 5 years.", "correct": false },
+      { "text": "Annually.", "correct": true },
+      { "text": "It is never adjusted.", "correct": false },
+      { "text": "Only when the GST changes.", "correct": false }
+    ],
+    "explanation": "For members below 65, the BHS is adjusted annually to keep pace with healthcare consumption.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Sarah", "age": 42, "bg": "HR manager", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "Which group of government pensioners does the Basic Healthcare Sum (BHS) NOT apply to?",
+    "choices": [
+      { "text": "Co-payment on Ward Charges Scheme (CPW).", "correct": false },
+      { "text": "Comprehensive Co-Payment Scheme (CCS).", "correct": false },
+      { "text": "Fixed Amount on Ward Charges Scheme (FAW).", "correct": true },
+      { "text": "MediSave-cum-Subsidised Outpatient (MSO) Scheme.", "correct": false }
+    ],
+    "explanation": "The BHS does not apply to pensioners under the FAW scheme; all their MediSave allocations are transferred to other accounts.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Pereira", "age": 72, "bg": "retired civil servant", "emoji": "👴", "salutation": "Mr", "lastname": "Pereira" }
+  },
+  {
+    "q": "If a pensioner is under the Co-payment on Ward Charges Scheme (CPW), is their BHS higher or lower than the standard cohort?",
+    "choices": [
+      { "text": "Higher.", "correct": false },
+      { "text": "Lower.", "correct": true },
+      { "text": "Exactly the same.", "correct": false },
+      { "text": "They do not have a BHS.", "correct": false }
+    ],
+    "explanation": "Pensioners under the CPW scheme have a lower BHS compared to other CPF members in their cohort.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Uncle Raj", "age": 70, "bg": "pensioner", "emoji": "👴", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "Can you use your MediSave to top up your own account if you have outstanding MediSave payables as a self-employed person?",
+    "choices": [
+      { "text": "Yes, any time.", "correct": false },
+      { "text": "No, you must first settle or be on an instalment plan for your payables.", "correct": true },
+      { "text": "Only if you are over 55.", "correct": false },
+      { "text": "Yes, but you only get 50% tax relief.", "correct": false }
+    ],
+    "explanation": "To make voluntary MediSave top-ups, self-employed persons must have settled their MediSave payables or be on an active instalment plan.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Hassan", "age": 38, "bg": "freelance designer", "emoji": "🎨", "salutation": "Mr", "lastname": "Hassan" }
+  },
+  {
+    "q": "What happens if you accidentally scan and pay a PayNow QR code for a top-up twice?",
+    "choices": [
+      { "text": "The second payment is credited to your OA.", "correct": false },
+      { "text": "The second payment is automatically refunded.", "correct": true },
+      { "text": "Both payments are forfeited.", "correct": false },
+      { "text": "The money is held for next year's top-up.", "correct": false }
+    ],
+    "explanation": "Subsequent or duplicate payments made using the same PayNow QR code will be refunded.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Auntie Mary", "age": 60, "bg": "confused by tech", "emoji": "👵", "salutation": "Mdm", "lastname": "Mary" }
+  },
+  {
+    "q": "If you turn 65 in the year 2024, what is your fixed BHS?",
+    "choices": [
+      { "text": "$68,500", "correct": false },
+      { "text": "$71,500", "correct": true },
+      { "text": "$75,500", "correct": false },
+      { "text": "$79,000", "correct": false }
+    ],
+    "explanation": "The BHS for the 2024 cohort (aged 67 in 2026) is fixed at $71,500.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Teo", "age": 67, "bg": "retiree", "emoji": "👴", "salutation": "Mr", "lastname": "Teo" }
+  },
+  {
+    "q": "For members aged 75 and above in 2026, what is their fixed BHS amount?",
+    "choices": [
+      { "text": "$49,800", "correct": true },
+      { "text": "$52,000", "correct": false },
+      { "text": "$60,000", "correct": false },
+      { "text": "$79,000", "correct": false }
+    ],
+    "explanation": "Members who turned 65 in 2016 or earlier (aged 75+ in 2026) have a fixed BHS of $49,800.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mdm Tan", "age": 80, "bg": "elderly senior", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "Where can you find a guide in Chinese, Malay, or Tamil for making MediSave top-ups?",
+    "choices": [
+      { "text": "Only at the CPF Service Centres.", "correct": false },
+      { "text": "By calling the CPF hotline.", "correct": false },
+      { "text": "Available as a PDF download on the CPF website.", "correct": true },
+      { "text": "In the local newspaper.", "correct": false }
+    ],
+    "explanation": "CPF provides multilingual guides (PDF) for top-up processes on their website.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Uncle Muthu", "age": 65, "bg": "prefers Tamil", "emoji": "👴", "salutation": "Mr", "lastname": "Muthu" }
+  },
+  {
+    "q": "What is the purpose of the Basic Healthcare Sum (BHS)?",
+    "choices": [
+      { "text": "To pay for your children's university fees.", "correct": false },
+      { "text": "To cover basic subsidised healthcare expenses and insurance premiums in old age.", "correct": true },
+      { "text": "To determine how much you can withdraw at age 55.", "correct": false },
+      { "text": "To pay for private hospital room upgrades.", "correct": false }
+    ],
+    "explanation": "The BHS is the estimated amount needed for basic healthcare and insurance (like MediShield Life) during retirement.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Linda", "age": 45, "bg": "planning for healthcare", "emoji": "🏥", "salutation": "Ms", "lastname": "Linda" }
+  },
+  {
+    "q": "If you are a self-employed person, how is tax relief for self-top-ups calculated?",
+    "choices": [
+      { "text": "Based on your total bank savings.", "correct": false },
+      { "text": "Based on your assessable net trade income for the year.", "correct": true },
+      { "text": "It is a flat $5,000 for everyone.", "correct": false },
+      { "text": "You do not get tax relief as a self-employed person.", "correct": false }
+    ],
+    "explanation": "Tax relief for SEP self-top-ups is applicable if they have assessable net trade income for that year of assessment.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Ken", "age": 33, "bg": "Grab driver", "emoji": "🚗", "salutation": "Mr", "lastname": "Ken" }
+  },
+  {
+    "q": "Can you use the same PayNow QR code for a second top-up for a different person?",
+    "choices": [
+      { "text": "Yes, it is reusable.", "correct": false },
+      { "text": "No, you must submit a new application for each person or top-up.", "correct": true },
+      { "text": "Yes, but only within the same hour.", "correct": false },
+      { "text": "Only if they are your spouse.", "correct": false }
+    ],
+    "explanation": "A new application must be submitted for each top-up; duplicate use of a QR code will result in a refund.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Paul", "age": 30, "bg": "tech-savvy son", "emoji": "👨‍💻", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "Which service should you use to update your residential address if you move house?",
+    "choices": [
+      { "text": "CPF Mobile App", "correct": false },
+      { "text": "ICA e-Services", "correct": true },
+      { "text": "SingPost", "correct": false },
+      { "text": "HDB Feedback form", "correct": false }
+    ],
+    "explanation": "Updates to residential addresses are done via ICA e-Services; other agencies like CPF are then notified automatically.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Chloe", "age": 28, "bg": "just moved to a new flat", "emoji": "📦", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "What is the 'One-Stop Change of Address Reporting Service' (OSCARS)?",
+    "choices": [
+      { "text": "A service to redirect your mail.", "correct": false },
+      { "text": "A system that informs government agencies of your new address within one day.", "correct": true },
+      { "text": "A moving company service.", "correct": false },
+      { "text": "A way to change your name on your NRIC.", "correct": false }
+    ],
+    "explanation": "OSCARS is the system used by ICA to update multiple government agencies (including CPF) when you report a change of address.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Lee", "age": 55, "bg": "homeowner", "emoji": "🏡", "salutation": "Mr", "lastname": "Lee" }
+  },
+  {
+    "q": "If you update your name with ICA, how long does it take for CPF Board to be notified?",
+    "choices": [
+      { "text": "1 month.", "correct": false },
+      { "text": "Immediately/Automatically via system updates.", "correct": true },
+      { "text": "You must notify them yourself; they are not notified.", "correct": false },
+      { "text": "7 working days.", "correct": false }
+    ],
+    "explanation": "CPF particulars for SC/PRs are updated automatically when changes are made with ICA.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Lily", "age": 25, "bg": "changed surname", "emoji": "✍️", "salutation": "Ms", "lastname": "Lily" }
+  },
+  {
+    "q": "What happens if you have reached your BHS and you make a voluntary top-up to your MediSave?",
+    "choices": [
+      { "text": "The top-up is rejected.", "correct": false },
+      { "text": "The amount is transferred to your other CPF accounts (e.g., SA or RA).", "correct": true },
+      { "text": "The money is kept in a separate 'Excess MediSave' account.", "correct": false },
+      { "text": "The amount is sent back to your bank account with a fee.", "correct": false }
+    ],
+    "explanation": "MediSave savings above the BHS are channelled to other accounts like the Special Account or Retirement Account.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Hock Bee", "age": 52, "bg": "maximum saver", "emoji": "💰", "salutation": "Mr", "lastname": "Hock Bee" }
+  },
+  {
+    "q": "How can you ensure you are downloading the official CPF Mobile app?",
+    "choices": [
+      { "text": "Search for 'CPF' and pick the one with most downloads.", "correct": false },
+      { "text": "Ensure the developer is 'Central Provident Fund Board'.", "correct": true },
+      { "text": "Download it from a link in an SMS.", "correct": false },
+      { "text": "Check if it has a red and white logo.", "correct": false }
+    ],
+    "explanation": "To avoid scams, always verify the developer is 'Central Provident Fund Board' in the App Store or Google Play.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Sarah", "age": 35, "bg": "security conscious", "emoji": "🛡️", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "Which feature of CPF Mobile provides easy access to your personal CPF info on the go?",
+    "choices": [
+      { "text": "CPF WhatsApp Bot.", "correct": false },
+      { "text": "CPF Mobile services.", "correct": true },
+      { "text": "CPF TikTok account.", "correct": false },
+      { "text": "A text-only version of the website.", "correct": false }
+    ],
+    "explanation": "CPF Mobile is the official app for accessing statements and services on mobile devices.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Ben", "age": 22, "bg": "student", "emoji": "📱", "salutation": "Mr", "lastname": "Ben" }
+  },
+  {
+    "q": "Why might a login to 'my cpf' digital services fail if your device's date/time is wrong?",
+    "choices": [
+      { "text": "The app is programmed to work only during office hours.", "correct": false },
+      { "text": "Security protocols (SSL/TLS) require synchronized time for secure connections.", "correct": true },
+      { "text": "The server thinks you are trying to hack the system.", "correct": false },
+      { "text": "Interest calculation requires the correct time.", "correct": false }
+    ],
+    "explanation": "Accurate time settings on your device are essential for establishing secure connections with government websites.",
+    "category": "Digital Services",
+    "difficulty": "hard",
+    "persona": { "name": "Wei Kiat", "age": 30, "bg": "IT support", "emoji": "💻", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "How can you troubleshooting a recurring login issue on the CPF website?",
+    "choices": [
+      { "text": "Restart your router.", "correct": false },
+      { "text": "Clear your browser cache.", "correct": true },
+      { "text": "Reinstall Windows or macOS.", "correct": false },
+      { "text": "Call your mobile provider.", "correct": false }
+    ],
+    "explanation": "Clearing the browser cache is a key troubleshooting step for login or display issues on digital services.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Lily", "age": 31, "bg": "office worker", "emoji": "👩‍💻", "salutation": "Ms", "lastname": "Lily" }
+  },
+  {
+    "q": "What is the official URL for the CPF website?",
+    "choices": [
+      { "text": "www.cpf.com.sg", "correct": false },
+      { "text": "www.cpf.gov.sg", "correct": true },
+      { "text": "www.mycpf.sg", "correct": false },
+      { "text": "www.providentfund.org.sg", "correct": false }
+    ],
+    "explanation": "The official government website for CPF is www.cpf.gov.sg.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "John", "age": 24, "bg": "new employee", "emoji": "👨‍💼", "salutation": "Mr", "lastname": "John" }
+  },
+  {
+    "q": "Can you still access CPF digital services if you are using an extremely old version of Internet Explorer?",
+    "choices": [
+      { "text": "Yes, but it is slow.", "correct": false },
+      { "text": "No, it is compatible with the two most recent versions of modern browsers.", "correct": true },
+      { "text": "Only if you have a special plugin.", "correct": false },
+      { "text": "Yes, but you cannot see your balance.", "correct": false }
+    ],
+    "explanation": "For security, digital services support only the most recent browser versions like Chrome or Safari.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Ahmad", "age": 60, "bg": "using an old laptop", "emoji": "💻", "salutation": "Mr", "lastname": "Ahmad" }
+  },
+  {
+    "q": "If you turn 65 in 2026, when is your BHS fixed?",
+    "choices": [
+      { "text": "On 1 January 2026.", "correct": true },
+      { "text": "On your 65th birthday.", "correct": false },
+      { "text": "At the end of the year 2026.", "correct": false },
+      { "text": "It is never fixed.", "correct": false }
+    ],
+    "explanation": "The BHS is fixed for each cohort in the year they turn 65 and remains unchanged thereafter.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Siti", "age": 64, "bg": "approaching 65", "emoji": "🎂", "salutation": "Mdm", "lastname": "Siti" }
+  },
+  {
+    "q": "What happens to your CPF accounts if you renounced Singapore Citizenship in May 2024?",
+    "choices": [
+      { "text": "They are closed immediately on the day of renunciation.", "correct": false },
+      { "text": "They are automatically closed in June 2024.", "correct": true },
+      { "text": "They remain open until you turn 55.", "correct": false },
+      { "text": "They are transferred to a bank in your new country.", "correct": false }
+    ],
+    "explanation": "Non-SC/PR accounts are automatically closed in the month following renunciation if not closed manually.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Mark", "age": 40, "bg": "former citizen", "emoji": "🌍", "salutation": "Mr", "lastname": "Mark" }
+  },
+  {
+    "q": "Is interest paid on CPF accounts that have been automatically closed for non-citizens?",
+    "choices": [
+      { "text": "No interest is paid at all.", "correct": false },
+      { "text": "Yes, a concessionary rate (0.05%) until 31 March 2027.", "correct": true },
+      { "text": "Yes, the full OA/SA interest rate forever.", "correct": false },
+      { "text": "Only if the balance is above $100,000.", "correct": false }
+    ],
+    "explanation": "As a concession, closed accounts earn interest similar to commercial rates (0.05%) until 31 March 2027.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Elena", "age": 45, "bg": "ex-PR", "emoji": "🚢", "salutation": "Ms", "lastname": "Elena" }
+  },
+  {
+    "q": "Until what date will the 'commercial bank interest rate' concession be paid on closed non-citizen accounts?",
+    "choices": [
+      { "text": "31 December 2024", "correct": false },
+      { "text": "31 March 2026", "correct": false },
+      { "text": "31 March 2027", "correct": true },
+      { "text": "1 April 2028", "correct": false }
+    ],
+    "explanation": "The interest concession for closed non-citizen accounts lasts until 31 March 2027.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "David", "age": 55, "bg": "leaving Singapore", "emoji": "🛫", "salutation": "Mr", "lastname": "David" }
+  },
+  {
+    "q": "What should non-citizens do with their remaining CPF savings after their account is closed?",
+    "choices": [
+      { "text": "Leave it there as a savings account.", "correct": false },
+      { "text": "Transfer it to their bank account as soon as possible.", "correct": true },
+      { "text": "Donate it to a charity.", "correct": false },
+      { "text": "Wait for a physical cheque to be mailed.", "correct": false }
+    ],
+    "explanation": "Since interest stops after the concession period, members are encouraged to transfer funds to their bank accounts.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "George", "age": 44, "bg": "non-citizen", "emoji": "🏦", "salutation": "Mr", "lastname": "George" }
+  },
+  {
+    "q": "If you renounced PR in April 2024, when will your account be automatically closed?",
+    "choices": [
+      { "text": "April 2024", "correct": false },
+      { "text": "May 2024", "correct": true },
+      { "text": "December 2024", "correct": false },
+      { "text": "April 2025", "correct": false }
+    ],
+    "explanation": "The account closes in the month following renunciation (e.g., May 2024 for an April 2024 renunciation).",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Paul", "age": 36, "bg": "renounced PR", "emoji": "🗺️", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "Can you still request a CPF transaction statement after renouncing your citizenship?",
+    "choices": [
+      { "text": "No, access is denied.", "correct": false },
+      { "text": "Yes, you should download it while you still have Singpass access.", "correct": true },
+      { "text": "Only by calling the Singapore Embassy.", "correct": false },
+      { "text": "Yes, but you must pay a $100 fee.", "correct": false }
+    ],
+    "explanation": "Members should download all needed info before losing Singpass access after renunciation.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "John", "age": 42, "bg": "former citizen", "emoji": "📄", "salutation": "Mr", "lastname": "John" }
+  },
+  {
+    "q": "What happens if a Singapore Citizen changes their name at ICA but does not tell CPF Board?",
+    "choices": [
+      { "text": "CPF will continue to use the old name.", "correct": false },
+      { "text": "CPF records are automatically updated.", "correct": true },
+      { "text": "The CPF account is frozen.", "correct": false },
+      { "text": "The member must pay a fine.", "correct": false }
+    ],
+    "explanation": "Particulars for SC/PRs are updated automatically in CPF records via ICA updates.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Jasmine", "age": 29, "bg": "married recently", "emoji": "👰", "salutation": "Ms", "lastname": "Jasmine" }
+  },
+  {
+    "q": "Does the CPF Board use your NRIC alias to transact with you by default?",
+    "choices": [
+      { "text": "Yes, always.", "correct": false },
+      { "text": "No, it uses the principal name on your NRIC.", "correct": true },
+      { "text": "Only if you ask them to.", "correct": false },
+      { "text": "Yes, but only for emails.", "correct": false }
+    ],
+    "explanation": "CPF transacts using the principal name on the NRIC, which usually excludes aliases.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Tan", "age": 32, "bg": "has an alias", "emoji": "📝", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "How many months of a child's CPF transaction history can a parent view on the Child Dashboard?",
+    "choices": [
+      { "text": "6 months.", "correct": false },
+      { "text": "12 months.", "correct": false },
+      { "text": "15 months.", "correct": true },
+      { "text": "24 months.", "correct": false }
+    ],
+    "explanation": "Parents can view 15 months of transaction and healthcare claim history for their children.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mei Ling", "age": 34, "bg": "mother", "emoji": "👩‍👧", "salutation": "Ms", "lastname": "Mei Ling" }
+  },
+  {
+    "q": "What is required for a parent to view a child's CPF statement if they aren't linked automatically?",
+    "choices": [
+      { "text": "A letter from the school.", "correct": false },
+      { "text": "The child's birth certificate.", "correct": true },
+      { "text": "The child's bank statement.", "correct": false },
+      { "text": "A sworn affidavit.", "correct": false }
+    ],
+    "explanation": "If a child isn't listed, parents can provide the birth certificate to establish the link with the CPF Board.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Kiat", "age": 38, "bg": "father", "emoji": "👨‍👦", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "Can a parent with sole custody remove an ex-spouse's access to their child's CPF statement?",
+    "choices": [
+      { "text": "No, it is impossible.", "correct": false },
+      { "text": "Yes, by providing the Court Order showing sole custody.", "correct": true },
+      { "text": "Yes, by calling the hotline.", "correct": false },
+      { "text": "Only if the ex-spouse agrees.", "correct": false }
+    ],
+    "explanation": "With a relevant Court Order, a parent with sole custody can request removal of the ex-spouse's access.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Sharon", "age": 40, "bg": "divorced parent", "emoji": "👩‍👦", "salutation": "Ms", "lastname": "Sharon" }
+  },
+  {
+    "q": "What is the CPF account number for a Singapore Citizen?",
+    "choices": [
+      { "text": "A unique 8-digit number.", "correct": false },
+      { "text": "The UIN (NRIC number).", "correct": true },
+      { "text": "Their phone number.", "correct": false },
+      { "text": "Their date of birth.", "correct": false }
+    ],
+    "explanation": "For SC/PRs, the CPF account number is their NRIC (UIN).",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Adam", "age": 21, "bg": "new worker", "emoji": "👨‍🔧", "salutation": "Mr", "lastname": "Adam" }
+  },
+  {
+    "q": "When is a CPF account officially created for a person?",
+    "choices": [
+      { "text": "At birth.", "correct": false },
+      { "text": "When the first top-up or contribution is received.", "correct": true },
+      { "text": "When they get their first job.", "correct": false },
+      { "text": "When they turn 18.", "correct": false }
+    ],
+    "explanation": "CPF accounts are created automatically upon the first receipt of a contribution or top-up.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Chloe", "age": 19, "bg": "intern", "emoji": "👩‍🎓", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "How far back can you retrieve your CPF Yearly Statement of Account online?",
+    "choices": [
+      { "text": "5 years.", "correct": false },
+      { "text": "10 years.", "correct": true },
+      { "text": "All years since birth.", "correct": false },
+      { "text": "Last 2 years.", "correct": false }
+    ],
+    "explanation": "Online retrieval of Yearly Statements is limited to the past 10 years.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Robert", "age": 55, "bg": "planning retirement", "emoji": "👴", "salutation": "Mr", "lastname": "Robert" }
+  },
+  {
+    "q": "What should you do if you need a CPF statement older than 10 years?",
+    "choices": [
+      { "text": "Request it from the CPF Board for a fee.", "correct": false },
+      { "text": "Nothing; CPF doesn't provide statements beyond 10 years.", "correct": true },
+      { "text": "Check your bank statements.", "correct": false },
+      { "text": "Ask your previous employer.", "correct": false }
+    ],
+    "explanation": "CPF Board does not provide retrieval beyond 10 years; members are advised to save their statements annually.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Grace", "age": 45, "bg": "meticulous record-keeper", "emoji": "📋", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "Can you use MediSave for your spouse's hospital bill if they are a foreigner?",
+    "choices": [
+      { "text": "No, only for SC/PRs.", "correct": false },
+      { "text": "Yes, MediSave can be used for your spouse regardless of citizenship.", "correct": true },
+      { "text": "Only if they have lived in Singapore for 5 years.", "correct": false },
+      { "text": "Only for heart surgeries.", "correct": false }
+    ],
+    "explanation": "MediSave can be used for immediate family members regardless of their citizenship.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Meera", "age": 36, "bg": "foreigner married to SC", "emoji": "👩‍❤️‍👨", "salutation": "Mrs", "lastname": "Meera" }
+  },
+  {
+    "q": "Is it possible to save more than your applicable BHS in your MediSave Account?",
+    "choices": [
+      { "text": "Yes, if you want to save more for medical.", "correct": false },
+      { "text": "No, the BHS is the maximum limit.", "correct": true },
+      { "text": "Only if you are a doctor.", "correct": false },
+      { "text": "Yes, for the first year of retirement.", "correct": false }
+    ],
+    "explanation": "The BHS is the hard limit for the MediSave account to prevent excessive accumulation of funds.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Auntie Tan", "age": 66, "bg": "careful saver", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "How can a non-account holder prove they do NOT have a CPF account?",
+    "choices": [
+      { "text": "By calling the CPF hotline.", "correct": false },
+      { "text": "By logging in to 'my cpf'; a 'No information' message will appear.", "correct": true },
+      { "text": "At a police station.", "correct": false },
+      { "text": "From the MOM website.", "correct": false }
+    ],
+    "explanation": "Non-account holders will see a specific message upon login that they can print as proof.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Rahul", "age": 28, "bg": "foreign worker", "emoji": "👷", "salutation": "Mr", "lastname": "Rahul" }
+  },
+  {
+    "q": "What happens to remaining Silver Support funds in GovCash if the beneficiary passes away?",
+    "choices": [
+      { "text": "They are forfeited.", "correct": false },
+      { "text": "They are credited to the beneficiary's CPF Ordinary Account.", "correct": true },
+      { "text": "They are paid to the next of kin in cash.", "correct": false },
+      { "text": "They are used for funeral expenses automatically.", "correct": false }
+    ],
+    "explanation": "GovCash balances of deceased members are credited to their CPF OA and distributed according to their nomination.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Siti", "age": 40, "bg": "daughter of a beneficiary", "emoji": "👩", "salutation": "Ms", "lastname": "Siti" }
+  },
+  {
+    "q": "If you are a ComCare Long Term Assistance recipient, how much Silver Support do you receive per quarter?",
+    "choices": [
+      { "text": "$360", "correct": false },
+      { "text": "$430", "correct": true },
+      { "text": "$540", "correct": false },
+      { "text": "$1,080", "correct": false }
+    ],
+    "explanation": "ComCare LTA recipients aged 65+ automatically qualify for a flat $430 per quarter in Silver Support.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mdm Aminah", "age": 70, "bg": "ComCare recipient", "emoji": "👵", "salutation": "Mdm", "lastname": "Aminah" }
+  },
+  {
+    "q": "What are the three criteria used to identify eligible seniors for the Silver Support Scheme?",
+    "choices": [
+      { "text": "Age, Gender, and Marital Status.", "correct": false },
+      { "text": "Lifetime wages, housing type, and household support.", "correct": true },
+      { "text": "Number of children, savings account balance, and employment status.", "correct": false },
+      { "text": "Investment portfolio, current salary, and health status.", "correct": false }
+    ],
+    "explanation": "To target seniors who need it most, Silver Support uses lifetime wages, housing type, and household support as criteria.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Lim", "age": 66, "bg": "retired blue-collar worker", "emoji": "👴", "salutation": "Mr", "lastname": "Lim" }
+  },
+  {
+    "q": "Do you need to apply for the Silver Support Scheme if you meet the criteria?",
+    "choices": [
+      { "text": "Yes, via a paper form.", "correct": false },
+      { "text": "No, eligibility is automatically reviewed every year.", "correct": true },
+      { "text": "Yes, but only if you are over 70.", "correct": false },
+      { "text": "Only if you have no CPF savings.", "correct": false }
+    ],
+    "explanation": "CPF Board automatically reviews eligibility every year; no application is required.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Auntie Fatimah", "age": 68, "bg": "homemaker", "emoji": "🧕", "salutation": "Mdm", "lastname": "Fatimah" }
+  },
+  {
+    "q": "How often is the Silver Support cash supplement paid to eligible seniors?",
+    "choices": [
+      { "text": "Monthly.", "correct": false },
+      { "text": "Every quarter (four times a year).", "correct": true },
+      { "text": "Once a year in December.", "correct": false },
+      { "text": "Twice a year during festive seasons.", "correct": false }
+    ],
+    "explanation": "Silver Support is a quarterly cash supplement paid in March, June, September, and December.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Uncle Seng", "age": 72, "bg": "retiree", "emoji": "👴", "salutation": "Mr", "lastname": "Seng" }
+  },
+  {
+    "q": "What is the maximum quarterly Silver Support payment for a senior living in a 1- or 2-room HDB flat?",
+    "choices": [
+      { "text": "$430", "correct": false },
+      { "text": "$1,080", "correct": true },
+      { "text": "$720", "correct": false },
+      { "text": "$900", "correct": false }
+    ],
+    "explanation": "Seniors in 1-room and 2-room HDB flats receive the highest tier of $1,080 per quarter (based on updated 2025 rates).",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Mdm Tan", "age": 75, "bg": "living alone in a 2-room flat", "emoji": "👵", "salutation": "Mdm", "lastname": "Tan" }
+  },
+  {
+    "q": "If you live in a 5-room HDB flat, are you eligible for the maximum Silver Support payment?",
+    "choices": [
+      { "text": "Yes, if your income is low.", "correct": false },
+      { "text": "No, payments are tiered by flat type; 5-room flats receive a lower amount.", "correct": true },
+      { "text": "Yes, everyone gets the same amount.", "correct": false },
+      { "text": "No, people in 5-room flats are excluded completely.", "correct": false }
+    ],
+    "explanation": "Silver Support payments are tiered; those in 5-room flats receive $430 per quarter (if they meet other criteria), while those in smaller flats receive more.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Raj", "age": 67, "bg": "living in a 5-room flat", "emoji": "👴", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "What happens if a Silver Support beneficiary dies before using their GovCash balance?",
+    "choices": [
+      { "text": "The money is returned to the Government.", "correct": false },
+      { "text": "The balance is credited to their CPF Ordinary Account and distributed via nomination.", "correct": true },
+      { "text": "The money is given to the nearest neighbor.", "correct": false },
+      { "text": "The account is frozen forever.", "correct": false }
+    ],
+    "explanation": "Remaining GovCash balances of deceased members are credited to their CPF OA and distributed according to their CPF nomination.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Grace", "age": 42, "bg": "handling late father's estate", "emoji": "🕯️", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "Can you receive Silver Support payments if you own more than one property?",
+    "choices": [
+      { "text": "Yes, if the second property is overseas.", "correct": false },
+      { "text": "No, you (or your spouse) must not own more than one property to be eligible.", "correct": true },
+      { "text": "Yes, if you are over 80.", "correct": false },
+      { "text": "Yes, property ownership is not a criteria.", "correct": false }
+    ],
+    "explanation": "To qualify for Silver Support, the senior (or their spouse) must not own more than one property.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Mr. Koh", "age": 65, "bg": "owns a second small shop", "emoji": "🏠", "salutation": "Mr", "lastname": "Koh" }
+  },
+  {
+    "q": "What is the household monthly income per person threshold for Silver Support eligibility?",
+    "choices": [
+      { "text": "$1,500 or less.", "correct": false },
+      { "text": "$2,300 or less.", "correct": true },
+      { "text": "$3,000 or less.", "correct": false },
+      { "text": "$500 or less.", "correct": false }
+    ],
+    "explanation": "From 2025, the household monthly income per person must be $2,300 or less to qualify for Silver Support.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Siti", "age": 35, "bg": "checking for her parents", "emoji": "👩‍👧‍👦", "salutation": "Ms", "lastname": "Siti" }
+  },
+  {
+    "q": "If you are a self-employed person, how is your 'lifetime wages' checked for Silver Support?",
+    "choices": [
+      { "text": "By your bank balance.", "correct": false },
+      { "text": "Based on your total MediSave contributions made during your working years.", "correct": true },
+      { "text": "By your annual tax filings from the last 2 years only.", "correct": false },
+      { "text": "Self-employed persons are not eligible.", "correct": false }
+    ],
+    "explanation": "For self-employed persons, the Board checks if their average annual net trade income was low during their working years.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Uncle Bob", "age": 69, "bg": "former taxi driver", "emoji": "🚖", "salutation": "Mr", "lastname": "Bob" }
+  },
+  {
+    "q": "How can you check your Silver Support eligibility status online?",
+    "choices": [
+      { "text": "By checking your local newspaper.", "correct": false },
+      { "text": "By logging in to the 'my cpf' digital services.", "correct": true },
+      { "text": "By visiting a community center.", "correct": false },
+      { "text": "You cannot check it online.", "correct": false }
+    ],
+    "explanation": "Members can check their eligibility status by logging in to CPF e-services with their Singpass.",
+    "category": "SSS",
+    "difficulty": "easy",
+    "persona": { "name": "Wei Kiat", "age": 29, "bg": "helping his grandfather", "emoji": "💻", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "When are notifications sent to seniors who qualify for the next year's Silver Support?",
+    "choices": [
+      { "text": "In January of the payout year.", "correct": false },
+      { "text": "In December of the preceding year.", "correct": true },
+      { "text": "On their birthday.", "correct": false },
+      { "text": "Every quarter before the payment.", "correct": false }
+    ],
+    "explanation": "Eligible seniors receive a notification from the CPF Board in December of the year before the payouts begin.",
+    "category": "SSS",
+    "difficulty": "medium",
+    "persona": { "name": "Linda", "age": 64, "bg": "awaiting notification", "emoji": "📬", "salutation": "Ms", "lastname": "Linda" }
+  },
+  {
+    "q": "If a beneficiary has a court-appointed Deputy, how should they inform CPF Board to receive Silver Support?",
+    "choices": [
+      { "text": "Just call the hotline.", "correct": false },
+      { "text": "Submit a scanned copy of the Court Order authorising financial transactions.", "correct": true },
+      { "text": "Show the Deputy's NRIC at any bank.", "correct": false },
+      { "text": "The Deputy doesn't need to do anything.", "correct": false }
+    ],
+    "explanation": "Deputies must provide a court order specifically authorising them to perform financial transactions for the beneficiary.",
+    "category": "SSS",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Tan", "age": 55, "bg": "appointed deputy for his brother", "emoji": "⚖️", "salutation": "Mr", "lastname": "Tan" }
+  },
+  {
+    "q": "What happens if you renounce your Singapore Citizenship in April 2024?",
+    "choices": [
+      { "text": "Your account stays open forever.", "correct": false },
+      { "text": "Your account is automatically closed in May 2024.", "correct": true },
+      { "text": "Your account is closed immediately on the same day.", "correct": false },
+      { "text": "You lose all your savings.", "correct": false }
+    ],
+    "explanation": "If you renounce from 1 April 2024, your account is automatically closed in the following month (May 2024).",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Mark", "age": 38, "bg": "moving to Australia", "emoji": "🛫", "salutation": "Mr", "lastname": "Mark" }
+  },
+  {
+    "q": "What interest rate do closed CPF accounts earn as a transitory measure until March 2027?",
+    "choices": [
+      { "text": "4% (SA rate).", "correct": false },
+      { "text": "2.5% (OA rate).", "correct": false },
+      { "text": "0.05% (commercial bank average).", "correct": true },
+      { "text": "Zero interest immediately.", "correct": false }
+    ],
+    "explanation": "As a concession, closed accounts earn a rate of 0.05% per annum until 31 March 2027.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "David", "age": 50, "bg": "ex-PR", "emoji": "🏦", "salutation": "Mr", "lastname": "David" }
+  },
+  {
+    "q": "After 31 March 2027, what interest will be paid on savings remaining in closed CPF accounts?",
+    "choices": [
+      { "text": "0.01%.", "correct": false },
+      { "text": "No interest will be paid.", "correct": true },
+      { "text": "It will return to 2.5%.", "correct": false },
+      { "text": "It will be 0.05% forever.", "correct": false }
+    ],
+    "explanation": "From 1 April 2027, any remaining savings in closed non-citizen accounts will no longer earn any interest.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "Sarah", "age": 45, "bg": "overseas former citizen", "emoji": "🌍", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "Can a former citizen still use their CPF savings for housing after their account is closed?",
+    "choices": [
+      { "text": "Yes, until the money runs out.", "correct": false },
+      { "text": "No, all participation in CPF schemes ceases once the account is closed.", "correct": true },
+      { "text": "Only if they have a family in Singapore.", "correct": false },
+      { "text": "Yes, but they must pay a fee.", "correct": false }
+    ],
+    "explanation": "Upon account closure, all participation in CPF schemes (housing, investment, etc.) ceases.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "John", "age": 52, "bg": "former PR", "emoji": "🏠", "salutation": "Mr", "lastname": "John" }
+  },
+  {
+    "q": "If you decide to obtain Singapore Citizenship again after closing your account, do you need to refund your savings?",
+    "choices": [
+      { "text": "No, you start from zero.", "correct": false },
+      { "text": "Yes, you must refund the savings transferred to your bank plus accrued interest.", "correct": true },
+      { "text": "Only if you are under 55.", "correct": false },
+      { "text": "Yes, but only the principal amount.", "correct": false }
+    ],
+    "explanation": "To reinstate citizenship, you must refund the transferred savings with accrued interest to your CPF account.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Elena", "age": 40, "bg": "returning to Singapore", "emoji": "🇸🇬", "salutation": "Ms", "lastname": "Elena" }
+  },
+  {
+    "q": "What happens to your Home Protection Scheme (HPS) cover when your CPF account is closed?",
+    "choices": [
+      { "text": "It continues until your loan is paid.", "correct": false },
+      { "text": "It is terminated upon account closure.", "correct": true },
+      { "text": "It is transferred to a private insurer.", "correct": false },
+      { "text": "It is frozen for 3 years.", "correct": false }
+    ],
+    "explanation": "Participation in all CPF schemes, including HPS, ceases when the CPF account is closed.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Paul", "age": 44, "bg": "ex-citizen with HDB", "emoji": "📄", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "How can a non-citizen transfer their remaining CPF savings to their bank account after closure?",
+    "choices": [
+      { "text": "By calling the CPF hotline.", "correct": false },
+      { "text": "By submitting a request online via 'my cpf' (if they have Singpass) or via a manual form.", "correct": true },
+      { "text": "By visiting any local bank.", "correct": false },
+      { "text": "By writing a letter to the Prime Minister.", "correct": false }
+    ],
+    "explanation": "Members can request the transfer online while they still have Singpass, or use manual forms if they have left the country.",
+    "category": "Account Closure",
+    "difficulty": "medium",
+    "persona": { "name": "George", "age": 46, "bg": "living abroad", "emoji": "🏦", "salutation": "Mr", "lastname": "George" }
+  },
+  {
+    "q": "Why is the interest rate for closed accounts set at 0.05%?",
+    "choices": [
+      { "text": "It is the government's tax rate.", "correct": false },
+      { "text": "It is based on the 3-month average of local banks' savings account interest rates.", "correct": true },
+      { "text": "It is a penalty for leaving Singapore.", "correct": false },
+      { "text": "It is the rate for fixed deposits.", "correct": false }
+    ],
+    "explanation": "The 0.05% rate reflects the commercial bank savings rates for accounts that can be withdrawn at any time.",
+    "category": "Account Closure",
+    "difficulty": "hard",
+    "persona": { "name": "Wei Kiat", "age": 31, "bg": "finance analyst", "emoji": "📊", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "Where are CPF letters sent by default?",
+    "choices": [
+      { "text": "To your office address.", "correct": false },
+      { "text": "To the residential address on your Singapore Identity Card.", "correct": true },
+      { "text": "To your email only.", "correct": false },
+      { "text": "To your parents' house.", "correct": false }
+    ],
+    "explanation": "By default, CPF Board uses the residential address registered with ICA (on your NRIC).",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Chloe", "age": 28, "bg": "first-time homebuyer", "emoji": "📬", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "If you move house, do you need to inform CPF Board of your new address separately?",
+    "choices": [
+      { "text": "Yes, within 7 days.", "correct": false },
+      { "text": "No, you only need to update it with ICA; CPF will be notified automatically.", "correct": true },
+      { "text": "Yes, via the CPF Mobile app only.", "correct": false },
+      { "text": "No, you must tell your employer instead.", "correct": false }
+    ],
+    "explanation": "Updating your address with ICA automatically informs other agencies like CPF through the OSCARS system.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Ben", "age": 30, "bg": "just moved house", "emoji": "🏠", "salutation": "Mr", "lastname": "Ben" }
+  },
+  {
+    "q": "What is the 'Child Dashboard' in 'my cpf' digital services used for?",
+    "choices": [
+      { "text": "To book pediatric appointments.", "correct": false },
+      { "text": "To view your child's CPF transaction and healthcare claim history.", "correct": true },
+      { "text": "To apply for school grants.", "correct": false },
+      { "text": "To transfer money to your child's bank account.", "correct": false }
+    ],
+    "explanation": "The Child Dashboard allows parents to view their children's CPF statements and healthcare claims.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Mei Ling", "age": 34, "bg": "mother of a toddler", "emoji": "👩‍👧", "salutation": "Ms", "lastname": "Mei Ling" }
+  },
+  {
+    "q": "Up to what age can parents view their child's CPF statements on the dashboard?",
+    "choices": [
+      { "text": "12 years old.", "correct": false },
+      { "text": "16 years old.", "correct": false },
+      { "text": "21 years old.", "correct": true },
+      { "text": "Until the child starts working.", "correct": false }
+    ],
+    "explanation": "Parents can view statements for children who are below the age of 21.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Kiat", "age": 45, "bg": "father of a teenager", "emoji": "👨‍👦", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "What document is needed to link a child to the dashboard if they don't appear automatically?",
+    "choices": [
+      { "text": "The child's passport.", "correct": false },
+      { "text": "The child's birth certificate.", "correct": true },
+      { "text": "The parent's marriage certificate.", "correct": false },
+      { "text": "A letter from the hospital.", "correct": false }
+    ],
+    "explanation": "A birth certificate is required to establish the relationship and link the child to the parent's dashboard.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Sarah", "age": 32, "bg": "new mother", "emoji": "👶", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "How can you update your contact details (mobile or email) with CPF Board?",
+    "choices": [
+      { "text": "Visit a CPF Service Centre in person.", "correct": false },
+      { "text": "Update via the 'Account settings' page using Singpass.", "correct": true },
+      { "text": "Send a postcard with your new number.", "correct": false },
+      { "text": "You must call the hotline.", "correct": false }
+    ],
+    "explanation": "Contact details like email and mobile numbers can be updated easily via the Account settings online.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Lily", "age": 25, "bg": "changed mobile number", "emoji": "📱", "salutation": "Ms", "lastname": "Lily" }
+  },
+  {
+    "q": "Can two family members share the same contact email for CPF notifications?",
+    "choices": [
+      { "text": "No, every account must have a unique email.", "correct": false },
+      { "text": "Yes, if they choose to share contact details for convenience.", "correct": true },
+      { "text": "Only if they are married.", "correct": false },
+      { "text": "Only if one is over 65.", "correct": false }
+    ],
+    "explanation": "CPF allows family members to share contact details if they wish, often to help seniors manage their accounts.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Hassan", "age": 40, "bg": "helping his elderly mother", "emoji": "👩‍👦", "salutation": "Mr", "lastname": "Hassan" }
+  },
+  {
+    "q": "What should you do if your Singpass is locked or you forgot the password?",
+    "choices": [
+      { "text": "Contact CPF Board support.", "correct": false },
+      { "text": "Contact the Singpass Helpdesk directly.", "correct": true },
+      { "text": "Re-register for a new CPF account.", "correct": false },
+      { "text": "Wait 24 hours for it to unlock automatically.", "correct": false }
+    ],
+    "explanation": "Singpass is managed by GovTech; any login or password issues must be handled by the Singpass Helpdesk.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Uncle Ahmad", "age": 62, "bg": "forgot password", "emoji": "🔑", "salutation": "Mr", "lastname": "Ahmad" }
+  },
+  {
+    "q": "What is the official developer name for the CPF Mobile app in the App Store?",
+    "choices": [
+      { "text": "Singapore Government.", "correct": false },
+      { "text": "Central Provident Fund Board.", "correct": true },
+      { "text": "CPF SG Services.", "correct": false },
+      { "text": "GovTech Singapore.", "correct": false }
+    ],
+    "explanation": "To ensure security, always check that the developer is 'Central Provident Fund Board'.",
+    "category": "Digital Services",
+    "difficulty": "easy",
+    "persona": { "name": "Sarah", "age": 35, "bg": "security conscious", "emoji": "🛡️", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "Which browser versions are typically supported by 'my cpf' digital services?",
+    "choices": [
+      { "text": "Any browser from the last 10 years.", "correct": false },
+      { "text": "The two most recent versions of major browsers like Chrome and Safari.", "correct": true },
+      { "text": "Only Internet Explorer 11.", "correct": false },
+      { "text": "Only Google Chrome.", "correct": false }
+    ],
+    "explanation": "For security and functionality, digital services are optimized for the two most recent versions of modern browsers.",
+    "category": "Digital Services",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Kiat", "age": 30, "bg": "tech support", "emoji": "💻", "salutation": "Mr", "lastname": "Wei Kiat" }
+  },
+  {
+    "q": "How can you get a copy of your CPF Yearly Statement of Account?",
+    "choices": [
+      { "text": "By requesting it via mail only.", "correct": false },
+      { "text": "By logging in to 'my cpf' with Singpass to view, print, or download.", "correct": true },
+      { "text": "From any AXS machine.", "correct": false },
+      { "text": "From your HR department.", "correct": false }
+    ],
+    "explanation": "Yearly statements are available for viewing and download through the official CPF digital services.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Paul", "age": 28, "bg": "filing taxes", "emoji": "📄", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "What is the Basic Healthcare Sum (BHS) for members who turn 65 in 2025?",
+    "choices": [
+      { "text": "$71,500", "correct": false },
+      { "text": "$75,500", "correct": true },
+      { "text": "$79,000", "correct": false },
+      { "text": "$68,500", "correct": false }
+    ],
+    "explanation": "The cohort BHS for those turning 65 in 2025 is $75,500.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mr. Teo", "age": 65, "bg": "retiring in 2025", "emoji": "🎂", "salutation": "Mr", "lastname": "Teo" }
+  },
+  {
+    "q": "Once you reach age 65, what happens to your Basic Healthcare Sum (BHS)?",
+    "choices": [
+      { "text": "It continues to increase every year.", "correct": false },
+      { "text": "It is fixed for the rest of your life.", "correct": true },
+      { "text": "It decreases by 2% annually.", "correct": false },
+      { "text": "It is reset to $0.", "correct": false }
+    ],
+    "explanation": "The BHS is fixed for each cohort at age 65 and remains unchanged for the rest of their lives.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Auntie Mary", "age": 67, "bg": "retiree", "emoji": "👵", "salutation": "Mdm", "lastname": "Mary" }
+  },
+  {
+    "q": "If you are 70 years old in 2026, what is your fixed BHS amount?",
+    "choices": [
+      { "text": "$63,000", "correct": true },
+      { "text": "$60,000", "correct": false },
+      { "text": "$66,000", "correct": false },
+      { "text": "$79,000", "correct": false }
+    ],
+    "explanation": "Based on the BHS table, the 2021 cohort (aged 70 in 2026) has a fixed BHS of $63,000.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Uncle Raj", "age": 70, "bg": "checking BHS", "emoji": "👴", "salutation": "Mr", "lastname": "Raj" }
+  },
+  {
+    "q": "Can you top up your MediSave if you are already at your BHS limit?",
+    "choices": [
+      { "text": "Yes, it will just stay in MediSave.", "correct": false },
+      { "text": "No, any amount exceeding the BHS will be channelled to other CPF accounts.", "correct": true },
+      { "text": "Yes, but you have to pay a penalty.", "correct": false },
+      { "text": "Only for tax relief purposes.", "correct": false }
+    ],
+    "explanation": "The BHS is the maximum limit for MediSave; excess funds are transferred to the Special Account (if under 55) or Retirement Account (if 55+).",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Ken", "age": 52, "bg": "high earner", "emoji": "💰", "salutation": "Mr", "lastname": "Ken" }
+  },
+  {
+    "q": "What determines your CPF contribution rate as a Singapore Permanent Resident (SPR)?",
+    "choices": [
+      { "text": "Your job title.", "correct": false },
+      { "text": "How long you have held SPR status.", "correct": true },
+      { "text": "Your country of origin.", "correct": false },
+      { "text": "Your home address.", "correct": false }
+    ],
+    "explanation": "SPR contribution rates are graduated based on the first, second, and third years of obtaining status.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Carlos", "age": 29, "bg": "new SPR", "emoji": "🇸🇬", "salutation": "Mr", "lastname": "Carlos" }
+  },
+  {
+    "q": "How long does the 'First-year rate' apply for a new SPR?",
+    "choices": [
+      { "text": "Exactly 365 days.", "correct": false },
+      { "text": "From the day of obtaining status until the last day of the month of the first anniversary.", "correct": true },
+      { "text": "For the first 6 months only.", "correct": false },
+      { "text": "Until the next calendar year.", "correct": false }
+    ],
+    "explanation": "The first-year rate applies until the last day of the month in which you reach your first anniversary as an SPR.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Mei", "age": 32, "bg": "SPR", "emoji": "📅", "salutation": "Ms", "lastname": "Mei" }
+  },
+  {
+    "q": "What is the start date for the 'Third-year rate' for an SPR who obtained status on 15 Jan 2024?",
+    "choices": [
+      { "text": "16 Jan 2026", "correct": false },
+      { "text": "1 Feb 2026", "correct": true },
+      { "text": "1 Jan 2026", "correct": false },
+      { "text": "15 Jan 2025", "correct": false }
+    ],
+    "explanation": "The third-year rate begins from the month following the second anniversary (i.e., 1 February 2026).",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "John", "age": 35, "bg": "calculating rates", "emoji": "📊", "salutation": "Mr", "lastname": "John" }
+  },
+  {
+    "q": "If you are an employee, how is the allocation to your MediSave Account determined?",
+    "choices": [
+      { "text": "By your blood type.", "correct": false },
+      { "text": "Based on your age group.", "correct": true },
+      { "text": "It is a flat $100 for everyone.", "correct": false },
+      { "text": "By your employer's choice.", "correct": false }
+    ],
+    "explanation": "MediSave allocation rates change based on the member's age, with higher percentages allocated as you get older.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Linda", "age": 45, "bg": "checking payroll", "emoji": "👩‍💼", "salutation": "Ms", "lastname": "Linda" }
+  },
+  {
+    "q": "Are CPF contributions payable for employees who are neither Singapore Citizens nor SPRs?",
+    "choices": [
+      { "text": "Yes, but at a lower rate.", "correct": false },
+      { "text": "No, they are not payable.", "correct": true },
+      { "text": "Yes, if they earn more than $3,000.", "correct": false },
+      { "text": "Only if they have a work permit.", "correct": false }
+    ],
+    "explanation": "CPF contributions are only mandatory for Singapore Citizens and Permanent Residents.",
+    "category": "Accounts Management",
+    "difficulty": "easy",
+    "persona": { "name": "Paul", "age": 30, "bg": "HR executive", "emoji": "💼", "salutation": "Mr", "lastname": "Paul" }
+  },
+  {
+    "q": "What happens if a self-employed person makes a MediSave top-up but has outstanding payables?",
+    "choices": [
+      { "text": "The top-up is ignored.", "correct": false },
+      { "text": "The amount is used to offset their MediSave payable first.", "correct": true },
+      { "text": "The top-up is returned with a fine.", "correct": false },
+      { "text": "The money is sent to their OA.", "correct": false }
+    ],
+    "explanation": "For SEPs, MediSave top-ups are used to offset outstanding MediSave payables and meet Workfare requirements.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Ken", "age": 38, "bg": "freelancer", "emoji": "🎨", "salutation": "Mr", "lastname": "Ken" }
+  },
+  {
+    "q": "Is tax relief applicable for top-ups made to your own 3 CPF accounts?",
+    "choices": [
+      { "text": "Yes, but only if you are a self-employed person with assessable income.", "correct": true },
+      { "text": "Yes, for everyone up to $16,000.", "correct": false },
+      { "text": "No, only MediSave top-ups get relief.", "correct": false },
+      { "text": "Yes, but only if you are over 55.", "correct": false }
+    ],
+    "explanation": "Tax relief for voluntary 3-account top-ups is specifically for self-employed persons with assessable net trade income.",
+    "category": "Accounts Management",
+    "difficulty": "hard",
+    "persona": { "name": "Grace", "age": 34, "bg": "SEP business owner", "emoji": "📈", "salutation": "Ms", "lastname": "Grace" }
+  },
+  {
+    "q": "Can you backdate a CPF top-up to the previous year if you missed the Dec 31st deadline?",
+    "choices": [
+      { "text": "Yes, until Jan 15th.", "correct": false },
+      { "text": "No, backdating of top-ups is not allowed.", "correct": true },
+      { "text": "Yes, if you pay a late fee.", "correct": false },
+      { "text": "Only if you were hospitalized.", "correct": false }
+    ],
+    "explanation": "Top-ups must reach CPF by 31 December; backdating to previous years is strictly not allowed.",
+    "category": "Accounts Management",
+    "difficulty": "medium",
+    "persona": { "name": "Wei Ling", "age": 27, "bg": "late saver", "emoji": "⏰", "salutation": "Ms", "lastname": "Wei Ling" }
+  },
+  {
+    "q": "What is the purpose of the One-Stop Change of Address Reporting Service (OSCARS)?",
+    "choices": [
+      { "text": "To report a missing NRIC.", "correct": false },
+      { "text": "To update multiple government agencies of a new address simultaneously.", "correct": true },
+      { "text": "To apply for a new passport.", "correct": false },
+      { "text": "To register a new business.", "correct": false }
+    ],
+    "explanation": "OSCARS allows you to update your address once with ICA and have it propagated to other agencies like CPF Board.",
+    "category": "Member Particulars",
+    "difficulty": "easy",
+    "persona": { "name": "Chloe", "age": 28, "bg": "moving house", "emoji": "📦", "salutation": "Ms", "lastname": "Chloe" }
+  },
+  {
+    "q": "How soon will CPF Board be informed of an address change after you report it to ICA?",
+    "choices": [
+      { "text": "Within one week.", "correct": false },
+      { "text": "Within one day.", "correct": true },
+      { "text": "Immediately.", "correct": false },
+      { "text": "In the next billing cycle.", "correct": false }
+    ],
+    "explanation": "The OSCARS system informs participating agencies within one day of the update.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Ben", "age": 30, "bg": "homeowner", "emoji": "🏡", "salutation": "Mr", "lastname": "Ben" }
+  },
+  {
+    "q": "If you want to use your hanyu pinyin name for CPF transactions, what must you do first?",
+    "choices": [
+      { "text": "Email the CPF Board.", "correct": false },
+      { "text": "Update your principal name in your NRIC with ICA first.", "correct": true },
+      { "text": "Just sign your name differently on forms.", "correct": false },
+      { "text": "Change your Singpass display name.", "correct": false }
+    ],
+    "explanation": "CPF Board uses the principal name registered on the NRIC. Any changes must be made with ICA first.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Lily", "age": 25, "bg": "wants to use alias", "emoji": "✍️", "salutation": "Ms", "lastname": "Lily" }
+  },
+  {
+    "q": "What is the maximum history length for healthcare payments and claims visible on the Child Dashboard?",
+    "choices": [
+      { "text": "6 months.", "correct": false },
+      { "text": "12 months.", "correct": false },
+      { "text": "15 months.", "correct": true },
+      { "text": "3 years.", "correct": false }
+    ],
+    "explanation": "Parents can view healthcare payments and claims for the last 15 months online.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Mei Ling", "age": 34, "bg": "mother", "emoji": "👩‍👧", "salutation": "Ms", "lastname": "Mei Ling" }
+  },
+  {
+    "q": "If your child was a foreigner at birth but is now a citizen, what document is needed to link them to your CPF account?",
+    "choices": [
+      { "text": "Their first passport.", "correct": false },
+      { "text": "The citizenship certificate.", "correct": true },
+      { "text": "The parent's employment contract.", "correct": false },
+      { "text": "A school recommendation letter.", "correct": false }
+    ],
+    "explanation": "If a child was a foreigner at birth, their citizenship certificate is required for linking in the CPF system.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Sarah", "age": 40, "bg": "naturalized citizen", "emoji": "🇸🇬", "salutation": "Ms", "lastname": "Sarah" }
+  },
+  {
+    "q": "Can a parent remove their ex-spouse's access to a child's CPF statement if they have a court order for sole custody?",
+    "choices": [
+      { "text": "No, both parents always have access.", "correct": false },
+      { "text": "Yes, by providing the Court Order as a supporting document.", "correct": true },
+      { "text": "Only if the child is over 16.", "correct": false },
+      { "text": "Yes, but they must pay a $50 fee.", "correct": false }
+    ],
+    "explanation": "CPF Board will remove access for an ex-spouse if a relevant Court Order for sole custody is provided.",
+    "category": "Member Particulars",
+    "difficulty": "hard",
+    "persona": { "name": "Sharon", "age": 42, "bg": "divorced mother", "emoji": "👩‍👦", "salutation": "Ms", "lastname": "Sharon" }
+  },
+  {
+    "q": "Is a notification sent to you if your address is updated via OSCARS?",
+    "choices": [
+      { "text": "Yes, via SMS.", "correct": false },
+      { "text": "No, you will not receive an additional acknowledgement from CPF Board.", "correct": true },
+      { "text": "Yes, a physical letter is sent to the new address.", "correct": false },
+      { "text": "No, but it will show up in your next statement.", "correct": false }
+    ],
+    "explanation": "CPF Board does not send a separate acknowledgement for updates performed via the OSCARS system.",
+    "category": "Member Particulars",
+    "difficulty": "medium",
+    "persona": { "name": "Uncle Lim", "age": 60, "bg": "checking his status", "emoji": "👴", "salutation": "Mr", "lastname": "Lim" }
   }
+]
+
+]
+
 ]
 
 ];
