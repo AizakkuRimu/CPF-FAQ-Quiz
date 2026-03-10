@@ -63,6 +63,612 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .choice-letter{width:26px;height:26px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;margin-top:1px}
 .choice-btn.correct .choice-letter{background:var(--accent2)}
 .choice-btn.wrong .choice-letter{background:var(--red)}
+.quiz-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px;position:sticky;bottom:16px}
+.btn-next{padding:12px 24px;border-radius:9px;border:none;background:var(--accent2);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none}
+.btn-next:hover{background:var(--accent)}
+.btn-skip{padding:12px 20px;border-radius:9px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-skip:hover{color:var(--white);border-color:var(--white)}
+#screen-results{background:var(--bg);padding:36px 20px}
+.results-inner{max-width:720px;margin:0 auto}
+.score-wrap{text-align:center;margin-bottom:28px}
+.score-lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.score-circle{width:130px;height:130px;border-radius:50%;margin:0 auto 14px;border:5px solid var(--accent2);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--card)}
+.score-num{font-size:38px;font-weight:700;font-family:'Playfair Display',serif;color:var(--accent);line-height:1}
+.score-denom{font-size:13px;color:var(--muted)}
+.score-msg{font-size:17px;font-weight:600}
+.stats-row{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.stat-box{flex:1;min-width:70px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
+.stat-val{font-size:26px;font-weight:700;font-family:'Playfair Display',serif}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:3px}
+.stat-box.green .stat-val{color:var(--accent)}
+.stat-box.red .stat-val{color:var(--red)}
+.stat-box.gold .stat-val{color:var(--gold)}
+.results-actions{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.btn-action{padding:11px 20px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;flex:1;min-width:130px;text-align:center}
+.btn-action.primary{border:none;background:var(--accent2);color:#fff}
+.btn-action.primary:hover{background:var(--accent)}
+.btn-action.secondary{border:1px solid var(--border);background:transparent;color:var(--white)}
+.btn-action.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.review-section h3{font-size:18px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.review-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px}
+.review-item.ci{border-left:4px solid var(--accent2)}
+.review-item.wi{border-left:4px solid var(--red)}
+.review-top{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.rbadge{padding:3px 10px;border-radius:20px;font-size:12px;font-weight:600}
+.rbadge.c{background:rgba(46,168,98,.2);color:var(--accent)}
+.rbadge.w{background:rgba(224,96,96,.2);color:var(--red)}
+.rpersona{font-size:12px;color:var(--muted)}
+.review-q{font-size:14px;font-weight:600;margin-bottom:8px;line-height:1.5}
+.review-ans{font-size:13px;padding:9px 13px;border-radius:7px;margin-bottom:6px}
+.review-ans.your{background:rgba(224,96,96,.1);border:1px solid rgba(224,96,96,.3)}
+.review-ans.correct{background:rgba(46,168,98,.1);border:1px solid rgba(46,168,98,.3)}
+.review-explain{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.faq-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--gold);text-decoration:none;border:1px solid rgba(232,201,109,.3);border-radius:6px;padding:4px 10px}
+.faq-link:hover{background:rgba(232,201,109,.1)}
+#screen-email{background:var(--bg)}
+.email-header{background:var(--card);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.email-header h2{font-size:19px}
+.btn-back{padding:7px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-back:hover{color:var(--white);border-color:var(--white)}
+.email-body{flex:1;padding:24px;max-width:800px;margin:0 auto;width:100%}
+.email-scorebar{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin-bottom:18px;font-size:14px}
+.email-score-val{font-size:22px;font-weight:700;color:var(--accent);font-family:'Playfair Display',serif}
+.email-scenario{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:18px}
+.email-scenario-label{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.email-from{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.email-from-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:18px}
+.email-from-name{font-weight:600}
+.email-from-detail{font-size:12px;color:var(--muted)}
+.email-subject{font-size:15px;font-weight:600;margin-bottom:8px}
+.email-enquiry{font-size:14px;line-height:1.75;white-space:pre-line}
+.email-date{font-size:12px;color:var(--muted);margin-top:10px}
+.email-reply-area{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:18px}
+.email-reply-area h3{font-size:14px;margin-bottom:14px;color:var(--muted);font-family:'DM Sans',sans-serif;font-weight:600}
+.email-template{font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:16px}
+.slot-label{color:rgba(78,202,127,.7);font-style:italic}
+.email-choices{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.email-choice-btn{width:100%;text-align:left;padding:12px 16px;border-radius:9px;border:1px solid var(--border);background:var(--bg2);color:var(--white);font-size:13px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.email-choice-btn:hover:not(:disabled){border-color:var(--accent);background:var(--card2)}
+.email-choice-btn.sel{border-color:var(--accent);background:rgba(78,202,127,.08)}
+.email-choice-btn.correct{border-color:var(--accent);background:rgba(46,168,98,.14)}
+.email-choice-btn.wrong{border-color:var(--red);background:rgba(224,96,96,.12)}
+.ecl{width:24px;height:24px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.email-choice-btn.sel .ecl{background:var(--accent2)}
+.email-choice-btn.correct .ecl{background:var(--accent2)}
+.email-choice-btn.wrong .ecl{background:var(--red)}
+.email-explain{background:var(--bg2);border:1px solid var(--border);border-radius:9px;padding:14px;font-size:13px;line-height:1.7;display:none;margin-bottom:14px}
+.email-explain.show{display:block}
+.email-actions{display:flex;justify-content:flex-end;gap:10px}
+.btn-email-submit{padding:11px 22px;border-radius:9px;border:none;background:var(--accent2);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-email-submit:hover{background:var(--accent)}
+.btn-email-submit:disabled{opacity:.4;cursor:default}
+.btn-email-new{padding:11px 22px;border-radius:9px;border:1px solid var(--border);background:transparent;color:var(--white);font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-email-new:hover{border-color:var(--accent);color:var(--accent)}
+.dtag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.dtag.easy{background:rgba(46,168,98,.2);color:var(--accent)}
+.dtag.medium{background:rgba(232,201,109,.2);color:var(--gold)}
+.dtag.hard{background:rgba(224,96,96,.2);color:var(--red)}
+.ctag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.ctag-am{background:rgba(78,202,127,.12);color:var(--accent)}
+.ctag-mp{background:rgba(232,201,109,.12);color:var(--gold)}
+.ctag-ac{background:rgba(224,96,96,.12);color:var(--red)}
+.ctag-ds{background:rgba(100,160,240,.12);color:#7ab5ff}
+.ctag-ss{background:rgba(200,150,240,.12);color:#d4a0ff}
+.hidden{display:none!important}
+.fade-in{animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div id="screen-home" class="screen active">
+<div class="home-inner fade-in">
+  <div class="logo-badge">🛡 CPF Training Platform</div>
+  <h1 class="home-title">Knowledge<br><span>Assessment</span> Hub</h1>
+  <p class="home-sub">Master CPF policies through scenario-based quizzes and email reply training. Questions loaded from <code>questions.js</code> — add more anytime without touching this file.</p>
+
+  <div class="mode-tabs">
+    <div class="mode-tab active" onclick="selectMode('quiz',this)">
+      <div class="icon">📝</div><div class="label">Quiz Mode</div><div class="desc">MCQ questions</div>
+    </div>
+    <div class="mode-tab" onclick="selectMode('email',this)">
+      <div class="icon">✉️</div><div class="label">Email Reply Mode</div><div class="desc">Draft member replies</div>
+    </div>
+  </div>
+
+  <div class="settings-card" id="quiz-settings">
+    <h3>Quiz Settings</h3>
+    <div class="setting-row">
+      <span class="setting-label">Difficulty</span>
+      <div class="btn-group">
+        <button class="btn-opt active" onclick="setSetting('difficulty','all',this)">All</button>
+        <button class="btn-opt" onclick="setSetting('difficulty','easy',this)">Easy</button>
+        <button class="btn-opt" onclick="setSetting('difficulty','medium',this)">Medium</button>
+        <button class="btn-opt" onclick="setSetting('difficulty','hard',this)">Hard</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">Timer per question</span>
+      <div class="btn-group">
+        <button class="btn-opt active" onclick="setSetting('timer',0,this)">No timer</button>
+        <button class="btn-opt" onclick="setSetting('timer',30,this)">30s</button>
+        <button class="btn-opt" onclick="setSetting('timer',60,this)">60s</button>
+        <button class="btn-opt" onclick="setSetting('timer',90,this)">90s</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">Category</span>
+      <div class="btn-group">
+        <button class="btn-opt active" onclick="setSetting('category','all',this)">All</button>
+        <button class="btn-opt" onclick="setSetting('category','Accounts Management',this)">Accounts Mgmt</button>
+        <button class="btn-opt" onclick="setSetting('category','Member Particulars',this)">Member Particulars</button>
+        <button class="btn-opt" onclick="setSetting('category','Account Closure',this)">Account Closure</button>
+        <button class="btn-opt" onclick="setSetting('category','Digital Services',this)">Digital Services</button>
+        <button class="btn-opt" onclick="setSetting('category','SSS',this)">Silver Support</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">Questions per quiz</span>
+      <div class="btn-group">
+        <button class="btn-opt" onclick="setSetting('qcount',10,this)">10</button>
+        <button class="btn-opt active" onclick="setSetting('qcount',20,this)">20</button>
+        <button class="btn-opt" onclick="setSetting('qcount',30,this)">30</button>
+        <button class="btn-opt" onclick="setSetting('qcount',999,this)">All</button>
+      </div>
+    </div>
+    <div class="setting-row" id="q-count-info" style="font-size:12px;color:var(--muted);margin-top:-8px"></div>
+  </div>
+
+  <div class="settings-card" id="email-settings" style="display:none">
+    <h3>Email Reply Settings</h3>
+    <div class="setting-row">
+      <span class="setting-label">Scenario type</span>
+      <div class="btn-group">
+        <button class="btn-opt active" onclick="setSetting('emailType','all',this)">All scenarios</button>
+        <button class="btn-opt" onclick="setSetting('emailType','SSS',this)">Silver Support</button>
+        <button class="btn-opt" onclick="setSetting('emailType','Account Closure',this)">Account Closure</button>
+        <button class="btn-opt" onclick="setSetting('emailType','Accounts Management',this)">Accounts Mgmt</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-start" onclick="startSession()">Begin Session →</button>
+</div>
+</div>
+
+<!-- QUIZ -->
+<div id="screen-quiz" class="screen">
+<div class="quiz-header">
+  <div>
+    <div class="quiz-progress-text">Question</div>
+    <div class="quiz-progress-num"><span id="q-cur">1</span>&nbsp;/&nbsp;<span id="q-tot">20</span></div>
+  </div>
+  <div id="timer-display" class="quiz-timer hidden">⏱ <span id="timer-val">60</span></div>
+  <button class="btn-skip" onclick="goHome()" style="border-color:transparent">✕ Exit</button>
+</div>
+<div class="progress-track"><div class="progress-track-fill" id="q-progress" style="width:0%"></div></div>
+<div class="quiz-body">
+  <div class="persona-card fade-in" id="persona-card">
+    <div class="persona-avatar" id="p-emoji">👤</div>
+    <div>
+      <div class="persona-name" id="p-name">—</div>
+      <div class="persona-detail" id="p-detail">—</div>
+    </div>
+    <div class="persona-cat ctag ctag-am" id="p-cat">—</div>
+  </div>
+  <div class="question-card fade-in">
+    <div class="question-meta">
+      <span id="q-num">Question 1</span>
+      <span class="dtag easy" id="q-diff">Easy</span>
+    </div>
+    <div class="question-text" id="q-text">Loading...</div>
+  </div>
+  <div class="choices fade-in" id="choices"></div>
+  <div class="quiz-actions">
+    <button class="btn-skip" id="btn-skip" onclick="skipQ()">Skip →</button>
+    <button class="btn-next hidden" id="btn-next" onclick="nextQ()">Next →</button>
+  </div>
+</div>
+</div>
+
+<!-- RESULTS -->
+<div id="screen-results" class="screen">
+<div class="results-inner fade-in" style="padding:20px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <h2 style="font-size:26px">Quiz Results</h2>
+    <button class="btn-back" onclick="goHome()">← Home</button>
+  </div>
+  <div class="score-wrap">
+    <div class="score-lbl">Your Score</div>
+    <div class="score-circle">
+      <div class="score-num" id="r-score">0</div>
+      <div class="score-denom" id="r-denom">/ 20</div>
+    </div>
+    <div class="score-msg" id="r-msg">—</div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box green"><div class="stat-val" id="st-c">0</div><div class="stat-lbl">Correct</div></div>
+    <div class="stat-box red"><div class="stat-val" id="st-w">0</div><div class="stat-lbl">Wrong</div></div>
+    <div class="stat-box gold"><div class="stat-val" id="st-s">0</div><div class="stat-lbl">Skipped</div></div>
+    <div class="stat-box"><div class="stat-val" id="st-t">—</div><div class="stat-lbl">Avg time</div></div>
+  </div>
+  <div class="results-actions">
+    <button class="btn-action primary" onclick="startSession()">New Quiz</button>
+    <button class="btn-action secondary" onclick="toggleReview()">Show Review ▼</button>
+    <button class="btn-action secondary" onclick="goHome()">Change Settings</button>
+  </div>
+  <div id="review-section" style="display:none"></div>
+</div>
+</div>
+
+<!-- EMAIL -->
+<div id="screen-email" class="screen">
+<div class="email-header">
+  <h2>✉️ Email Reply Training</h2>
+  <button class="btn-back" onclick="goHome()">← Home</button>
+</div>
+<div class="email-body">
+  <div class="email-scorebar">
+    <div>Session Score</div>
+    <div><span class="email-score-val" id="es-val">0</span> / <span id="es-tot">0</span></div>
+  </div>
+  <div class="email-scenario fade-in">
+    <div class="email-scenario-label">📬 Member Enquiry</div>
+    <div class="email-from">
+      <div class="email-from-avatar" id="e-avatar">👤</div>
+      <div>
+        <div class="email-from-name" id="e-name">—</div>
+        <div class="email-from-detail" id="e-detail">—</div>
+      </div>
+    </div>
+    <div class="email-subject" id="e-subject">—</div>
+    <div class="email-enquiry" id="e-enquiry">—</div>
+    <div class="email-date" id="e-date">—</div>
+  </div>
+
+  <div class="email-reply-area fade-in">
+    <h3>Select the best response paragraph for the reply below:</h3>
+    <div class="email-template">
+      Dear <span id="et-sal">Mr/Ms</span> <span id="et-last">—</span>,<br><br>
+      We refer to your enquiry of <span id="et-date">—</span>.<br><br>
+      <span class="slot-label">[Choose the correct paragraph from the options below]</span><br><br>
+      <span id="et-added" style="color:var(--muted)">—</span>
+    </div>
+    <div class="email-choices" id="e-choices"></div>
+    <div class="email-explain" id="e-explain"></div>
+    <div class="email-actions">
+      <button class="btn-email-new" onclick="newEmailScenario()">Next Scenario →</button>
+      <button class="btn-email-submit" id="btn-e-submit" onclick="submitEmail()">Submit Reply</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Load question data from external file -->
+<script src="questions.js"></script>
+
+<script>
+// ── Verify data loaded ──────────────────────────────────────
+if (typeof QUESTIONS === 'undefined' || typeof EMAIL_SCENARIOS === 'undefined') {
+  document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#e06060;text-align:center;padding:40px;background:#0d2318"><div><div style="font-size:48px;margin-bottom:16px">⚠️</div><h2 style="margin-bottom:12px">questions.js not found</h2><p style="color:#89b49a">Make sure <strong>questions.js</strong> is in the same folder as this HTML file.<br>Both files must be served together (e.g. via a local server or GitHub Pages).</p></div></div>';
+}
+
+const FAQ_URLS = {
+  "Accounts Management":"https://www.cpf.gov.sg/member/faq/account-services/account-management",
+  "Member Particulars":"https://www.cpf.gov.sg/member/faq/account-services/member-particulars",
+  "Account Closure":"https://www.cpf.gov.sg/member/faq/account-services/account-closure",
+  "Digital Services":"https://www.cpf.gov.sg/member/faq/account-services/digital-services",
+  "SSS":"https://www.cpf.gov.sg/member/faq/retirement-income/silver-support-scheme"
+};
+
+const CAT_CLASS = {
+  "Accounts Management":"ctag-am","Member Particulars":"ctag-mp",
+  "Account Closure":"ctag-ac","Digital Services":"ctag-ds","SSS":"ctag-ss"
+};
+
+let settings = {mode:'quiz',difficulty:'all',timer:0,category:'all',qcount:20,emailType:'all'};
+let qs = {list:[],cur:0,answers:[],elapsed:[],startTimes:[],timerInterval:null};
+let es = {correct:0,total:0,sel:null,scenarioIdx:0};
+
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
+function goHome(){if(qs.timerInterval)clearInterval(qs.timerInterval);updateQCount();show('screen-home')}
+function selectMode(m,el){settings.mode=m;document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');document.getElementById('quiz-settings').style.display=m==='quiz'?'block':'none';document.getElementById('email-settings').style.display=m==='email'?'block':'none'}
+function setSetting(k,v,el){settings[k]=v;el.closest('.btn-group').querySelectorAll('.btn-opt').forEach(b=>b.classList.remove('active'));el.classList.add('active');if(k==='difficulty'||k==='category')updateQCount()}
+
+function updateQCount(){
+  const pool=QUESTIONS.filter(q=>{
+    const catOk=settings.category==='all'||q.category===settings.category;
+    const diffOk=settings.difficulty==='all'||q.difficulty===settings.difficulty;
+    return catOk&&diffOk;
+  });
+  const el=document.getElementById('q-count-info');
+  if(el)el.textContent=`${pool.length} question${pool.length!==1?'s':''} available with current filters`;
+}
+
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+
+function startSession(){
+  if(settings.mode==='email'){
+    es={correct:0,total:0,sel:null,scenarioIdx:-1};
+    document.getElementById('es-val').textContent='0';
+    document.getElementById('es-tot').textContent='0';
+    newEmailScenario();
+    show('screen-email');
+    return;
+  }
+  let pool=QUESTIONS.filter(q=>{
+    const catOk=settings.category==='all'||q.category===settings.category;
+    const diffOk=settings.difficulty==='all'||q.difficulty===settings.difficulty;
+    return catOk&&diffOk;
+  });
+  if(pool.length===0){alert('No questions match your filter. Try different settings.');return}
+  pool=shuffle(pool);
+  const count=Math.min(settings.qcount,pool.length);
+  qs={list:pool.slice(0,count),cur:0,answers:new Array(count).fill(null),elapsed:new Array(count).fill(0),startTimes:[],timerInterval:null};
+  renderQ(0);
+  show('screen-quiz');
+}
+
+function renderQ(i){
+  const q=qs.list[i];
+  const tot=qs.list.length;
+  document.getElementById('q-cur').textContent=i+1;
+  document.getElementById('q-tot').textContent=tot;
+  document.getElementById('q-progress').style.width=`${(i/tot)*100}%`;
+
+  const p=q.persona;
+  document.getElementById('p-emoji').textContent=p.emoji;
+  document.getElementById('p-name').textContent=`${p.name}, ${p.age}`;
+  document.getElementById('p-detail').textContent=p.bg.charAt(0).toUpperCase()+p.bg.slice(1);
+  const pc=document.getElementById('p-cat');
+  pc.textContent=q.category;
+  pc.className=`persona-cat ctag ${CAT_CLASS[q.category]||'ctag-am'}`;
+
+  document.getElementById('q-num').textContent=`Question ${i+1}`;
+  const qd=document.getElementById('q-diff');
+  qd.textContent=q.difficulty.charAt(0).toUpperCase()+q.difficulty.slice(1);
+  qd.className=`dtag ${q.difficulty}`;
+  document.getElementById('q-text').textContent=q.q;
+
+  const container=document.getElementById('choices');
+  container.innerHTML='';
+  const letters=['A','B','C','D'];
+  q.choices.forEach((ch,ci)=>{
+    const btn=document.createElement('button');
+    btn.className='choice-btn';
+    btn.innerHTML=`<span class="choice-letter">${letters[ci]}</span><span>${ch.text}</span>`;
+    btn.onclick=()=>selectChoice(i,ci,btn);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('btn-next').classList.add('hidden');
+  document.getElementById('btn-skip').style.display='inline-block';
+
+  if(qs.timerInterval)clearInterval(qs.timerInterval);
+  qs.startTimes[i]=Date.now();
+
+  if(settings.timer>0){
+    const td=document.getElementById('timer-display');
+    td.classList.remove('hidden','warning','danger');
+    let rem=settings.timer;
+    document.getElementById('timer-val').textContent=rem;
+    qs.timerInterval=setInterval(()=>{
+      rem--;
+      document.getElementById('timer-val').textContent=rem;
+      if(rem<=10)td.classList.add('danger');
+      else if(rem<=20)td.classList.add('warning');
+      if(rem<=0){clearInterval(qs.timerInterval);skipQ()}
+    },1000);
+  }else{
+    document.getElementById('timer-display').classList.add('hidden');
+  }
+
+  document.getElementById('persona-card').classList.remove('fade-in');
+  void document.getElementById('persona-card').offsetWidth;
+  document.getElementById('persona-card').classList.add('fade-in');
+}
+
+function selectChoice(qi,ci,btn){
+  if(qs.answers[qi]!==null)return;
+  if(qs.timerInterval)clearInterval(qs.timerInterval);
+  qs.answers[qi]=ci;
+  qs.elapsed[qi]=Math.round((Date.now()-(qs.startTimes[qi]||Date.now()))/1000);
+  const q=qs.list[qi];
+  document.querySelectorAll('#choices .choice-btn').forEach((b,i)=>{
+    b.disabled=true;
+    if(q.choices[i].correct)b.classList.add('correct');
+    else if(i===ci)b.classList.add('wrong');
+  });
+  // Show Next button as tap-to-advance, and also auto-advance after 1.5s
+  const nextBtn=document.getElementById('btn-next');
+  nextBtn.classList.remove('hidden');
+  nextBtn.textContent='Next → (tap or wait)';
+  document.getElementById('btn-skip').style.display='none';
+  // Auto-advance after 1.5 seconds
+  qs.autoTimer=setTimeout(()=>nextQ(), 1500);
+}
+
+function skipQ(){
+  const i=qs.cur;
+  if(qs.answers[i]===null)qs.answers[i]=-1;
+  qs.elapsed[i]=Math.round((Date.now()-(qs.startTimes[i]||Date.now()))/1000);
+  nextQ();
+}
+
+function nextQ(){
+  if(qs.timerInterval)clearInterval(qs.timerInterval);
+  if(qs.autoTimer)clearTimeout(qs.autoTimer);
+  qs.cur++;
+  if(qs.cur>=qs.list.length)showResults();
+  else renderQ(qs.cur);
+}
+
+function showResults(){
+  let correct=0,wrong=0,skipped=0,totalTime=0;
+  qs.answers.forEach((a,i)=>{
+    if(a===-1||a===null){skipped++;return}
+    if(qs.list[i].choices[a]?.correct)correct++;
+    else wrong++;
+    totalTime+=qs.elapsed[i]||0;
+  });
+  const tot=qs.list.length;
+  const pct=Math.round((correct/tot)*100);
+  const msgs=['Keep Practising','Getting There','Good Work','Well Done!','Excellent!','Outstanding!'];
+  const msg=pct<40?msgs[0]:pct<55?msgs[1]:pct<70?msgs[2]:pct<80?msgs[3]:pct<90?msgs[4]:msgs[5];
+  const avg=correct+wrong>0?Math.round(totalTime/(correct+wrong)):0;
+
+  document.getElementById('r-score').textContent=correct;
+  document.getElementById('r-denom').textContent='/ '+tot;
+  document.getElementById('r-msg').textContent=`${pct}% — ${msg}`;
+  document.getElementById('st-c').textContent=correct;
+  document.getElementById('st-w').textContent=wrong;
+  document.getElementById('st-s').textContent=skipped;
+  document.getElementById('st-t').textContent=avg>0?`${avg}s`:'—';
+
+  const rev=document.getElementById('review-section');
+  rev.innerHTML='<h3>Question Review</h3>';
+  qs.list.forEach((q,i)=>{
+    const a=qs.answers[i];
+    const isSkip=a===-1||a===null;
+    const isOk=!isSkip&&q.choices[a]?.correct;
+    const el=document.createElement('div');
+    el.className=`review-item ${isOk?'ci':'wi'} fade-in`;
+    const url=FAQ_URLS[q.category]||'https://www.cpf.gov.sg/member/faq';
+    el.innerHTML=`
+      <div class="review-top">
+        <span class="rbadge ${isOk?'c':'w'}">${isOk?'✓ Correct':isSkip?'— Skipped':'✗ Wrong'}</span>
+        <span class="rpersona">${q.persona.name}, ${q.persona.age}</span>
+        <span class="ctag ${CAT_CLASS[q.category]||'ctag-am'}">${q.category}</span>
+        <span class="dtag ${q.difficulty}" style="margin-left:2px">${q.difficulty}</span>
+      </div>
+      <div class="review-q">${q.q}</div>
+      ${!isOk&&!isSkip?`<div class="review-ans your">Your answer: ${q.choices[a]?.text}</div>`:''}
+      ${isSkip?'<div class="review-ans your">Skipped</div>':''}
+      <div class="review-ans correct">Correct: ${q.choices.find(c=>c.correct)?.text}</div>
+      <div class="review-explain">${q.explanation}</div>
+      <a href="${url}" target="_blank" class="faq-link">📖 View ${q.category} FAQs →</a>`;
+    rev.appendChild(el);
+  });
+  document.getElementById('review-section').style.display='none';
+  show('screen-results');
+}
+
+function toggleReview(){
+  const s=document.getElementById('review-section');
+  s.style.display=s.style.display==='none'?'block':'none';
+}
+
+// ── EMAIL MODE ──────────────────────────────────────────────
+function getEmailPool(){
+  if(settings.emailType==='all')return EMAIL_SCENARIOS;
+  return EMAIL_SCENARIOS.filter(s=>s.categories.includes(settings.emailType));
+}
+
+function newEmailScenario(){
+  document.getElementById('e-explain').classList.remove('show');
+  document.getElementById('btn-e-submit').disabled=false;
+  es.sel=null;
+
+  const pool=getEmailPool();
+  es.scenarioIdx=(es.scenarioIdx+1)%pool.length;
+  const sc=pool[es.scenarioIdx];
+
+  const p=sc.persona;
+  document.getElementById('e-avatar').textContent=p.emoji;
+  document.getElementById('e-name').textContent=p.name;
+  document.getElementById('e-detail').textContent=`${p.age} · ${p.bg} · ${sc.categories.join(', ')}`;
+  document.getElementById('e-subject').textContent=sc.subject;
+  document.getElementById('e-enquiry').textContent=sc.enquiry;
+  document.getElementById('e-date').textContent='Sent: '+sc.date;
+  document.getElementById('et-sal').textContent=p.salutation;
+  document.getElementById('et-last').textContent=p.lastname;
+  document.getElementById('et-date').textContent=sc.date;
+  document.getElementById('et-added').textContent=sc.added;
+
+  const choices=shuffleChoices([
+    {text:sc.correct,correct:true},
+    {text:sc.wrong1,correct:false},
+    {text:sc.wrong2,correct:false},
+    {text:sc.wrong3,correct:false}
+  ]);
+
+  const cont=document.getElementById('e-choices');
+  cont.innerHTML='';
+  const letters=['A','B','C','D'];
+  choices.forEach((ch,ci)=>{
+    const btn=document.createElement('button');
+    btn.className='email-choice-btn';
+    btn.innerHTML=`<span class="ecl">${letters[ci]}</span><span>${ch.text}</span>`;
+    btn.onclick=()=>{
+      cont.querySelectorAll('.email-choice-btn').forEach(b=>b.classList.remove('sel'));
+      btn.classList.add('sel');
+      es.sel={idx:ci,choices};
+    };
+    cont.appendChild(btn);
+  });
+}
+
+function shuffleChoices(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+
+function submitEmail(){
+  if(!es.sel){alert('Please select a reply paragraph first.');return}
+  const{idx,choices}=es.sel;
+  const isOk=choices[idx].correct;
+  es.total++;
+  if(isOk)es.correct++;
+  document.getElementById('es-val').textContent=es.correct;
+  document.getElementById('es-tot').textContent=es.total;
+
+  document.querySelectorAll('#e-choices .email-choice-btn').forEach((b,i)=>{
+    b.disabled=true;
+    if(choices[i].correct)b.classList.add('correct');
+    else if(i===idx)b.classList.add('wrong');
+  });
+
+  const pool=getEmailPool();
+  const sc=pool[es.scenarioIdx];
+  const ex=document.getElementById('e-explain');
+  ex.innerHTML=`<strong>${isOk?'✅ Correct!':'❌ Incorrect.'}</strong> ${sc.explain}`;
+  ex.classList.add('show');
+  document.getElementById('btn-e-submit').disabled=true;
+}
+
+// Init
+updateQCount();
+show('screen-home');
+</script>
+</body>
+</html>
+.btn-start{width:100%;padding:16px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#0d2318;font-size:17px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;letter-spacing:.5px}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,202,127,.3)}
+#screen-quiz{background:var(--bg)}
+.quiz-header{background:var(--card);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.quiz-progress-text{font-size:12px;color:var(--muted)}
+.quiz-progress-num{font-size:18px;font-weight:700}
+.quiz-timer{display:flex;align-items:center;gap:7px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:7px 14px;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;min-width:76px;justify-content:center}
+.quiz-timer.warning{color:#e8a030;border-color:#e8a030}
+.quiz-timer.danger{color:var(--red);border-color:var(--red);animation:pulse .5s ease-in-out infinite alternate}
+@keyframes pulse{from{opacity:1}to{opacity:.6}}
+.progress-track{height:3px;background:var(--border)}
+.progress-track-fill{height:100%;background:var(--accent);transition:width .3s}
+.quiz-body{flex:1;padding:24px;max-width:740px;margin:0 auto;width:100%}
+.persona-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.persona-avatar{width:42px;height:42px;border-radius:50%;background:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.persona-name{font-weight:600;font-size:15px}
+.persona-detail{font-size:12px;color:var(--muted);margin-top:2px}
+.persona-cat{margin-left:auto;background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:3px 12px;font-size:11px;color:var(--accent);white-space:nowrap;text-transform:uppercase;letter-spacing:1px}
+.question-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px}
+.question-meta{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.question-text{font-size:17px;line-height:1.6;font-family:'Playfair Display',serif}
+.choices{display:flex;flex-direction:column;gap:9px}
+.choice-btn{width:100%;text-align:left;padding:14px 18px;border-radius:10px;border:1px solid var(--border);background:var(--bg2);color:var(--white);font-size:14px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;display:flex;align-items:flex-start;gap:12px;line-height:1.5}
+.choice-btn:hover:not(:disabled){border-color:var(--accent);background:var(--card2)}
+.choice-btn.correct{border-color:var(--accent);background:rgba(46,168,98,.18)}
+.choice-btn.wrong{border-color:var(--red);background:rgba(224,96,96,.14)}
+.choice-letter{width:26px;height:26px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;margin-top:1px}
+.choice-btn.correct .choice-letter{background:var(--accent2)}
+.choice-btn.wrong .choice-letter{background:var(--red)}
 .quiz-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
 .btn-next{padding:12px 24px;border-radius:9px;border:none;background:var(--accent2);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:none}
 .btn-next:hover{background:var(--accent)}
